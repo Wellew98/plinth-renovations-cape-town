@@ -28,6 +28,16 @@ def save(im: Image.Image, path: Path, quality=82):
     im.save(path, "JPEG", quality=quality, optimize=True, progressive=True)
 
 
+# brand media carried over from the original site: the square logo lockup used
+# in the header, and the 5s brand film used behind the home page hero
+import shutil
+
+BRAND = Path(r"C:\Users\DELL\OneDrive\Desktop\PLINTH")
+shutil.copyfile(BRAND / "logo.jpg", OUT / "logo.jpg")
+(OUT.parent / "hero-video.mp4").parent.mkdir(parents=True, exist_ok=True)
+shutil.copyfile(BRAND / "hero-video.mp4", OUT.parent / "hero-video.mp4")
+
+
 def resized(path: Path, max_w: int) -> Image.Image:
     im = Image.open(path).convert("RGB")
     if im.width > max_w:

@@ -9,7 +9,7 @@
     "title_tag": "Home Renovations Cape Town | Plinth Renovations",
     "meta_description": "Home renovations, waterproofing, kitchens, bathrooms and painting across Cape Town. One team from strip-out to snag list. Free written estimate.",
     "leader": {
-      "eyebrow": "Renovations and construction, Cape Town",
+      "eyebrow": "Renovations and construction",
       "h1": "Home renovations in Cape Town, built to last",
       "cta_line": "Waterproofing, kitchens, bathrooms, painting and extensions. One team, one written scope, from the first site visit to the last snag."
     },
@@ -186,7 +186,8 @@
           "detail": "If the substrate has failed, a coating is money spent twice. We will tell you that before you spend it."
         }
       ],
-      "cta_subtext": "Book a free site visit and we will trace the leak before quoting the repair."
+      "cta_subtext": "Book a free site visit and we will trace the leak before quoting the repair.",
+      "teaser": "Roofs, parapets, balconies, box gutters and basements, with the leak traced before anything is specified or priced."
     },
     {
       "name": "Damp Proofing",
@@ -300,7 +301,8 @@
           "detail": "A drying wall tells you whether the repair worked. We come back and read it."
         }
       ],
-      "cta_subtext": "Get a damp diagnosis and a written estimate. No injection quoted before the cause is known."
+      "cta_subtext": "Get a damp diagnosis and a written estimate. No injection quoted before the cause is known.",
+      "teaser": "Rising damp, penetrating damp and condensation, each treated at the cause instead of painted over."
     },
     {
       "name": "Painting",
@@ -414,7 +416,8 @@
           "detail": "Furniture covered, floors protected, and a clean room at the end of each day."
         }
       ],
-      "cta_subtext": "Get a written painting estimate that separates preparation from paint."
+      "cta_subtext": "Get a written painting estimate that separates preparation from paint.",
+      "teaser": "Interiors, exteriors, roofs and kitchen cabinets, with the preparation that makes a paint job actually last."
     },
     {
       "name": "Kitchen Renovations",
@@ -520,7 +523,8 @@
           "detail": "If moving the sink costs triple what it gains, we will say so before you decide."
         }
       ],
-      "cta_subtext": "Book a free site visit and get a written kitchen estimate with the sequence included."
+      "cta_subtext": "Book a free site visit and get a written kitchen estimate with the sequence included.",
+      "teaser": "Layout, plumbing, electrical, cabinetry and stone, coordinated by one team on one written scope."
     },
     {
       "name": "Bathroom Renovations",
@@ -626,7 +630,8 @@
           "detail": "Rotten timber and failed plumbing are priced as a separate, agreed item rather than a surprise invoice."
         }
       ],
-      "cta_subtext": "Get a written bathroom estimate that shows the waterproofing as a line item, not a hidden cost."
+      "cta_subtext": "Get a written bathroom estimate that shows the waterproofing as a line item, not a hidden cost.",
+      "teaser": "Waterproofing, falls to the drain and flood testing done properly, before a single tile goes down."
     },
     {
       "name": "Home Renovations",
@@ -740,7 +745,8 @@
           "detail": "Work planned around the rooms you still need, with water and power kept on where possible."
         }
       ],
-      "cta_subtext": "Book a free site visit and get a sectioned written estimate for the whole house or just the part you want done."
+      "cta_subtext": "Book a free site visit and get a sectioned written estimate for the whole house or just the part you want done.",
+      "teaser": "Whole-house work, open-plan changes and structural openings in older Cape Town homes."
     },
     {
       "name": "Plastering",
@@ -854,7 +860,8 @@
           "detail": "We hand over a surface that takes paint properly, not one that needs sanding by someone else."
         }
       ],
-      "cta_subtext": "Get a written plastering estimate, including an honest view of what is repair and what is replacement."
+      "cta_subtext": "Get a written plastering estimate, including an honest view of what is repair and what is replacement.",
+      "teaser": "Skimming, crack repair, cornices, external plaster and plasterboard ceilings, finished ready to paint."
     },
     {
       "name": "Home Extensions",
@@ -968,7 +975,8 @@
           "detail": "From excavation to the final coat, sequenced by the same person who quoted it."
         }
       ],
-      "cta_subtext": "Start with a free site visit and an honest view of what your extension will involve."
+      "cta_subtext": "Start with a free site visit and an honest view of what your extension will involve.",
+      "teaser": "Extra rooms, open-plan additions and covered patios, from the plans through to the roof tie-in."
     }
   ],
   "areas": [
@@ -997,7 +1005,8 @@
           "detail": "The same crew from strip-out to snag list, within about 25 km of our Goodwood base."
         }
       ],
-      "cta_subtext": "Book a free site visit in Durbanville and get a written estimate before anything is opened up."
+      "cta_subtext": "Book a free site visit in Durbanville and get a written estimate before anything is opened up.",
+      "teaser": "Older town-centre homes and newer estates, where north-westerly winter rain finds every weak junction."
     },
     {
       "name": "Bellville",
@@ -1024,7 +1033,8 @@
           "detail": "Bellville is close to Goodwood, so site visits and call-backs are easy to schedule."
         }
       ],
-      "cta_subtext": "Get a written estimate for your Bellville home, including a proper look at where the damp is coming from."
+      "cta_subtext": "Get a written estimate for your Bellville home, including a proper look at where the damp is coming from.",
+      "teaser": "Dense 1960s and 1970s housing on plaster over brick, where damp shows first at skirting level."
     },
     {
       "name": "Parow",
@@ -1051,7 +1061,8 @@
           "detail": "Parow is minutes from our Goodwood base, so site visits do not cost you a call-out fee."
         }
       ],
-      "cta_subtext": "Ask for a free site visit in Parow. We will show you where the water is getting in."
+      "cta_subtext": "Ask for a free site visit in Parow. We will show you where the water is getting in.",
+      "teaser": "Family homes and small commercial buildings, many of them due for their first proper waterproofing."
     },
     {
       "name": "Table View",
@@ -1078,7 +1089,8 @@
           "detail": "Not every rust mark means a rebuild. We separate the urgent from the cosmetic in writing."
         }
       ],
-      "cta_subtext": "Free site visit in Table View or Blouberg, including a look at the sea-facing side of the house."
+      "cta_subtext": "Free site visit in Table View or Blouberg, including a look at the sea-facing side of the house.",
+      "teaser": "West-facing coastal homes where salt air, wind and balcony edges test every waterproofing detail."
     },
     {
       "name": "Brackenfell",
@@ -1105,7 +1117,8 @@
           "detail": "We phase the work so the house stays usable while it happens."
         }
       ],
-      "cta_subtext": "Talk to us about your Brackenfell extension or renovation. Free site visit, written estimate."
+      "cta_subtext": "Talk to us about your Brackenfell extension or renovation. Free site visit, written estimate.",
+      "teaser": "Family homes and additions, where a roofline that ties into the old house badly lets water straight in."
     },
     {
       "name": "Southern Suburbs",
@@ -1132,7 +1145,8 @@
           "detail": "Repair is quoted alongside replacement so you can see the real cost of both."
         }
       ],
-      "cta_subtext": "Request a free site visit in the Southern Suburbs and a written estimate that separates repair from replacement."
+      "cta_subtext": "Request a free site visit in the Southern Suburbs and a written estimate that separates repair from replacement.",
+      "teaser": "Older Edwardian and Victorian homes in Rondebosch, Claremont, Wynberg and Plumstead, handled with care."
     }
   ]
 }

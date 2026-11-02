@@ -28,6 +28,31 @@ inputs = json.loads((SRC / "site-inputs.json").read_text(encoding="utf-8"))
 BUSINESS_NAME = "Plinth Renovations and Construction"
 PHONE = "+27661505770"
 SERVICE_NAMES = [s["name"] for s in content["services"]]
+TEL = "+27661505770"
+
+VIDEO_TAG = (
+    '<video class="hero__video" autoplay muted loop playsinline preload="metadata"'
+    ' poster="assets/images/hero.jpg" aria-hidden="true">'
+    '<source src="assets/hero-video.mp4" type="video/mp4"></video>'
+)
+
+TRUST_PILLS = (
+    '<div class="hero__trust">'
+    '<span>Based in Goodwood</span>'
+    '<span>Free written estimate</span>'
+    '<span>Cape Town and surrounds</span>'
+    '</div>'
+)
+
+FLOATERS = (
+    '<button class="to-top" id="toTop" aria-label="Back to top">&uarr;</button>'
+    f'<a class="fab-call" href="tel:{TEL}" aria-label="Call Plinth Renovations">'
+    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"'
+    ' stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'
+    '<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/>'
+    '</svg></a>'
+)
+
 AREA_NAMES = [a["name"] for a in content["areas"]]
 
 # ---------------------------------------------------------------- shell
@@ -491,13 +516,13 @@ problems = []
 # Each page gets a hero that matches what the page is about, and an alt that
 # describes the actual photo instead of repeating the primary service.
 HERO_MAP = {
-    "waterproofing": "img-5.jpg",       # exterior wall and window detail
-    "damp-proofing": "img-6.jpg",       # room with walls opened up
+    "waterproofing": None,              # the house itself: roof and walls in one frame
+    "damp-proofing": "img-5.jpg",       # wall and window detail, where damp shows
     "painting": "img-3.jpg",            # finished painted corridor
     "kitchen-renovations": "img-1.jpg", # finished kitchen
     "bathroom-renovations": "img-2.jpg",# finished bathroom
     "home-renovations": "img-4.jpg",    # covered outdoor room
-    "plastering": "img-7.jpg",          # fresh plaster and new downlight
+    "plastering": "img-6.jpg",          # walls opened and made good
     "home-extensions": "img-4.jpg",     # covered outdoor room
     "service-areas": "img-3.jpg",
     "about": "img-8.jpg",
@@ -532,7 +557,7 @@ for p in pages:
     # page-specific hero, described by what the page is actually about
     h1m = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.S)
     hero_alt = re.sub(r"<[^>]+>", "", h1m.group(1)).strip() if h1m else "Plinth Renovations"
-    hero_file = HERO_MAP.get(slug, "hero.jpg")
+    hero_file = HERO_MAP.get(slug) or "hero.jpg"
     html = re.sub(r'<img src="assets/images/hero\.jpg" alt="[^"]*">',
                   f'<img src="assets/images/{hero_file}" alt="{hero_alt}">',
                   html, count=1)
@@ -563,6 +588,53 @@ for p in pages:
     )
     html = html.replace("</head>", head_bits + "</head>", 1)
 
+    # ---------------------------------------------------------------- premium theme markup
+    if '<div class="topbar">' not in html:
+        html = html.replace(
+            '<header class="site-header">',
+            '<div class="topbar"><div class="wrap">'
+            '<span>Mon to Fri 7am to 6pm &middot; Sat 8am to 2pm</span>'
+            '<span class="badge">Free written estimates &middot; Cape Town wide</span>'
+            '</div></div><header class="site-header">', 1)
+
+    # the engine emits index.html here, not "/", so match both forms
+    for _href in ("index.html", "/"):
+        html = html.replace(
+            '<a class="nav__logo" href="%s"><strong>Plinth Renovations</strong></a>' % _href,
+            ('<a class="nav__logo" href="%s">' % _href)
+            + '<img src="assets/images/logo.jpg" alt="Plinth Renovations and Construction"'
+            ' width="58" height="58">'
+            '<span class="lockup"><strong>PLINTH</strong>'
+            '<span class="sub">Renovations and Construction</span>'
+            '<span class="tag">Built on vision &middot; Crafted with precision</span>'
+            '<span class="rule"></span></span></a>', 1)
+
+    if not slug:
+        hero_img = re.search(r'<img src="assets/images/hero\.jpg"[^>]*>', html)
+        if hero_img:
+            html = html[:hero_img.end()] + VIDEO_TAG + html[hero_img.end():]
+    else:
+        html = html.replace('<section class="hero">',
+                            '<section class="hero hero--page">', 1)
+
+    html = re.sub(r'(<div class="hero__cta">.*?</div>)', r'\1' + TRUST_PILLS,
+                  html, count=1, flags=re.S)
+
+    html = re.sub(r'<li>\s*<a href="/?meet-the-team(?:\.html)?">.*?</a>\s*</li>', '', html, flags=re.S)
+    html = re.sub(r'<li>\s*<a href="/?careers(?:\.html)?">.*?</a>\s*</li>', '', html, flags=re.S)
+
+    # the engine's card template ignores the teaser field, so the real
+    # summaries are written in here where the copy can be trusted
+    if slug in ("services", "service-areas"):
+        for _item in content["services"] + content["areas"]:
+            html = re.sub(
+                r'(<h3><a href="[^"]*">' + re.escape(_item["name"]) + r'</a></h3><p>).*?(</p>)',
+                lambda m, t=_item.get("teaser", ""): m.group(1) + t + m.group(2),
+                html, count=1, flags=re.S)
+
+    if 'id="toTop"' not in html:
+        html = html.replace('</body>', FLOATERS + '</body>', 1)
+
     # cache-bust the stylesheet so a stale edge copy cannot lie to us
     html = html.replace('href="assets/style.css"', f'href="assets/style.css?v={BUILD_TS}"')
     html = html.replace('src="assets/main.js"', f'src="assets/main.js?v={BUILD_TS}"')
@@ -576,12 +648,14 @@ for p in pages:
         problems.append(f"{p.name}: inline onclick still present")
 
     html = html.replace("\u2014", " - ").replace("\u2013", "-")
+    # the engine emits these as entities; the house style has no em dashes
+    html = html.replace("&mdash;", "-").replace("&ndash;", "-")
     p.write_text(html, encoding="utf-8")
     urls.append((slug or "", title, desc))
 
-# ---------------------------------------------------------------- nav js
+# ---------------------------------------------------------------- site js
 
-NAV_JS = """
+SITE_JS = """
 document.addEventListener('DOMContentLoaded', function () {
   var toggle = document.getElementById('navToggle');
   var links = document.getElementById('navlinks');
@@ -591,37 +665,53 @@ document.addEventListener('DOMContentLoaded', function () {
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
     });
     links.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A' && window.innerWidth <= 900) {
+      if (e.target.tagName === 'A' && window.innerWidth <= 1120) {
         links.classList.remove('open');
         toggle.setAttribute('aria-expanded', 'false');
       }
     });
   }
+
+  var header = document.querySelector('.site-header');
+  function onScroll() {
+    if (header) header.classList.toggle('scrolled', window.scrollY > 8);
+    var btn = document.getElementById('toTop');
+    if (btn) btn.classList.toggle('show', window.scrollY > 640);
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  var top = document.getElementById('toTop');
+  if (top) {
+    top.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    document.querySelectorAll('.section > .wrap > *').forEach(function (block) {
+      if (block.offsetHeight < 60) return;
+      block.classList.add('reveal');
+      io.observe(block);
+    });
+  }
 });
 """
-(ROOT / "assets" / "main.js").write_text(NAV_JS.lstrip(), encoding="utf-8")
+(ROOT / "assets" / "main.js").write_text(SITE_JS.lstrip(), encoding="utf-8")
 
-# header logo sizing (the builder has no img rule for it)
+# stylesheet: the premium Plinth system, written over the builder's own classes
 css_path = ROOT / "assets" / "style.css"
-css = css_path.read_text(encoding="utf-8")
-css += """
-/* Plinth: header logo is a square gold-on-ink lockup */
-.nav__logo img { height: 54px; width: auto; border-radius: 6px; display: block; }
-.nav__logo { display: flex; align-items: center; gap: 12px; }
-@media (max-width: 600px) { .nav__logo img { height: 42px; } }
-
-/* Plinth: brand presence in the text lockup */
-.nav__logo strong { font-family: var(--font-head); font-size: 1.18rem; letter-spacing: .01em; color: var(--brand); }
-
-/* Plinth: stacked calls to action match on a phone */
-@media (max-width: 600px) {
-  .hero__cta { flex-direction: column; align-items: stretch; }
-  .hero__cta .btn { text-align: center; }
-  .hero { min-height: 0; }
-  .hero__inner { padding: 64px 20px 56px; }
-}
-"""
-css_path.write_text(css, encoding="utf-8")
+css_path.write_text((Path(__file__).resolve().parent / "premium.css").read_text(encoding="utf-8"),
+                    encoding="utf-8")
 
 # ---------------------------------------------------------------- sitemap, robots, headers
 

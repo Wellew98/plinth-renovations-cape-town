@@ -112,7 +112,8 @@
           "detail": "If the substrate has failed, a coating is money spent twice. We will tell you that before you spend it."
         }
       ],
-      "cta_subtext": "Book a free site visit and we will trace the leak before quoting the repair."
+      "cta_subtext": "Book a free site visit and we will trace the leak before quoting the repair.",
+      "teaser": "Roofs, parapets, balconies, box gutters and basements, with the leak traced before anything is specified or priced."
     },
     {
       "name": "Damp Proofing",
@@ -226,7 +227,8 @@
           "detail": "A drying wall tells you whether the repair worked. We come back and read it."
         }
       ],
-      "cta_subtext": "Get a damp diagnosis and a written estimate. No injection quoted before the cause is known."
+      "cta_subtext": "Get a damp diagnosis and a written estimate. No injection quoted before the cause is known.",
+      "teaser": "Rising damp, penetrating damp and condensation, each treated at the cause instead of painted over."
     },
     {
       "name": "Painting",
@@ -340,7 +342,8 @@
           "detail": "Furniture covered, floors protected, and a clean room at the end of each day."
         }
       ],
-      "cta_subtext": "Get a written painting estimate that separates preparation from paint."
+      "cta_subtext": "Get a written painting estimate that separates preparation from paint.",
+      "teaser": "Interiors, exteriors, roofs and kitchen cabinets, with the preparation that makes a paint job actually last."
     },
     {
       "name": "Kitchen Renovations",
@@ -446,7 +449,8 @@
           "detail": "If moving the sink costs triple what it gains, we will say so before you decide."
         }
       ],
-      "cta_subtext": "Book a free site visit and get a written kitchen estimate with the sequence included."
+      "cta_subtext": "Book a free site visit and get a written kitchen estimate with the sequence included.",
+      "teaser": "Layout, plumbing, electrical, cabinetry and stone, coordinated by one team on one written scope."
     }
   ]
 }
