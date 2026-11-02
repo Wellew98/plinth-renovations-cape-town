@@ -1,0 +1,452 @@
+{
+  "services": [
+    {
+      "name": "Waterproofing",
+      "title_tag": "Waterproofing Cape Town | Roof, Balcony and Wall Repairs",
+      "meta_description": "Waterproofing in Cape Town for roofs, parapets, balconies, box gutters and basements. We find where the water enters before we quote. Free site visit.",
+      "leader": {
+        "eyebrow": "Waterproofing, Cape Town",
+        "h1": "Waterproofing in Cape Town",
+        "cta_line": "Most leaks are not in the middle of the roof. They are at a junction, a parapet or a balcony edge that was never detailed properly. We start there."
+      },
+      "intro_heading": "Where Cape Town roofs actually leak",
+      "intro_body": "Cape Town's rain arrives with a north-westerly front that pushes water sideways across roofs and up under tiles. That is why so many leaks here are nowhere near the middle of the roof. They are at the upstand where a flat roof meets a wall, in the box gutter that has silted up, behind the flashing around a chimney, or at the edge of a balcony where the membrane was laid over a dirty surface.\n\nWaterproofing fails in two ways. The material itself reaches the end of its life, which is predictable. Or the detail was wrong from the start, which is not, and it is the far more common of the two. A membrane laid without a proper primer, a fall that runs back towards the wall, a tile roof re-flashed with sealant instead of lead. You can redo the surface every year and still have a leak, because the water never entered where the surface is.\n\nSo we work from the water's point of view. We get into the ceiling void, read moisture through the plaster, and where it is not obvious we run a hose test on the suspect area and watch what happens inside. Only then do we specify a system, because the right answer on a fibre-cement roof is not the right answer on a concrete slab, and neither is the right answer on a wall that has to stay breathable.",
+      "detail_heading": "What we waterproof",
+      "detail_intro": "Every one of these is a different substrate and a different detail. We treat them as separate jobs rather than one product applied everywhere.",
+      "subitems": [
+        {
+          "name": "Roof waterproofing",
+          "desc": "Torch-on membranes, liquid-applied systems and acrylic coatings, chosen for the roof type and the pitch."
+        },
+        {
+          "name": "Parapets and flashings",
+          "desc": "Upstands rebuilt to height, flashings replaced in metal rather than sealant, and wall junctions opened and re-detailed."
+        },
+        {
+          "name": "Balconies and terraces",
+          "desc": "Falls corrected to the outlet, upstands raised, and the edge detail that fails first rebuilt from scratch."
+        },
+        {
+          "name": "Box gutters and valleys",
+          "desc": "Silt removed, outlets resized, and the lining replaced where standing water has already gone through it."
+        },
+        {
+          "name": "Basement and retaining walls",
+          "desc": "Positive-side treatment where we can get to it, drainage where we cannot, and a realistic explanation of what each buys you."
+        },
+        {
+          "name": "Penetrations",
+          "desc": "Skylights, vents, solar mounts, TV aerials and plumbing stacks. Small openings, disproportionate amount of the damage."
+        }
+      ],
+      "cost": {
+        "heading": "What changes the price of waterproofing",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Area and access",
+            "A roof you can walk on is cheaper than one that needs scaffolding, a boom or a rope access team."
+          ],
+          [
+            "Substrate and condition",
+            "Sound concrete takes a coating. A crumbled screed, a rotten timber deck or a failed old membrane has to come off first."
+          ],
+          [
+            "Number of details",
+            "Ten penetrations and four upstands cost more in labour than 40 square metres of open field, even though the field is bigger."
+          ],
+          [
+            "System specified",
+            "A torch-on membrane, a liquid system and a cementitious coating sit at different price points and suit different roofs."
+          ],
+          [
+            "What is underneath",
+            "If water has reached the ceiling, the plaster and insulation may need replacing as well. We price that separately and only if it is needed."
+          ]
+        ],
+        "note": "We quote after a site visit and a moisture check. We do not price waterproofing per square metre over the phone, because the details decide the job."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Inspect",
+            "detail": "Roof surface, parapets, flashings, gutters and the inside of the ceiling void if we can reach it."
+          },
+          {
+            "step": "2. Trace the water",
+            "detail": "Moisture readings and a controlled hose test on the suspect area, so we know the entry point rather than the exit point."
+          },
+          {
+            "step": "3. Specify",
+            "detail": "A written system and prep method matched to the substrate, the pitch and the exposure."
+          },
+          {
+            "step": "4. Prepare and apply",
+            "detail": "Failed material stripped, surface primed, every junction detailed before the field is covered."
+          },
+          {
+            "step": "5. Test and hand over",
+            "detail": "A final water test, plus photographs of each layer before it was covered, so you know what is under there."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "We find the entry point",
+          "detail": "A hose test and a moisture meter cost us an hour and save you a second roof."
+        },
+        {
+          "point": "Details before surface",
+          "detail": "Upstands, flashings and outlets get rebuilt before any membrane is laid."
+        },
+        {
+          "point": "Photographed at every layer",
+          "detail": "You get pictures of the prep and the membrane, because once it is covered you cannot check it."
+        },
+        {
+          "point": "Honest about what a coating can do",
+          "detail": "If the substrate has failed, a coating is money spent twice. We will tell you that before you spend it."
+        }
+      ],
+      "cta_subtext": "Book a free site visit and we will trace the leak before quoting the repair."
+    },
+    {
+      "name": "Damp Proofing",
+      "title_tag": "Damp Proofing Cape Town | Rising Damp and Wall Repair",
+      "meta_description": "Damp proofing in Cape Town. Rising damp, penetrating damp and condensation diagnosed properly, then treated at the source. Free written estimate.",
+      "leader": {
+        "eyebrow": "Damp proofing, Cape Town",
+        "h1": "Damp proofing in Cape Town",
+        "cta_line": "Rising damp, penetrating damp and condensation look similar on a wall and need completely different repairs. Getting the diagnosis right is most of the job."
+      },
+      "intro_heading": "Three kinds of damp, three different repairs",
+      "intro_body": "Damp is a symptom, not a diagnosis. The same bubbling paint and tide mark at skirting height can come from groundwater rising through a failed damp course, from rain entering a wall from outside, or from warm air condensing on a cold internal surface. Treat the wrong one and the damp returns within a season, which is why so many owners end up repainting the same wall every year.\n\nRising damp is groundwater moving up through the brickwork because the original damp proof course has failed, been bridged by a later concrete path or patio, or was never there. It stops at roughly a metre and leaves a horizontal tide mark. Penetrating damp comes in from outside: a cracked render, a failed window seal, a leaking gutter soaking the wall head, or a plinth that sits below the external ground level. Condensation is different again, and common in Cape Town's older houses where windows have been sealed and heating added without any ventilation.\n\nWe identify which one you have before quoting. That means moisture readings at different heights, a look at the external ground level and drainage, and a check on how the room is ventilated and heated.",
+      "detail_heading": "What we treat",
+      "detail_intro": "Each of these needs its own method. A chemical injection will not fix a leaking gutter, and a coat of sealant will not fix rising damp.",
+      "subitems": [
+        {
+          "name": "Rising damp",
+          "desc": "Damp course injection, plus removal of the plaster that has absorbed salts, replaced with a salt-resistant render."
+        },
+        {
+          "name": "Penetrating damp",
+          "desc": "Found on the outside and repaired there: render, sealant, flashings, sills and the ground level against the wall."
+        },
+        {
+          "name": "Condensation and mould",
+          "desc": "Ventilation, extraction and surface treatment. Mould is a symptom of moist air, not of a leaking wall."
+        },
+        {
+          "name": "Bridged damp course",
+          "desc": "Paths, patios and paving laid above the damp course, cut back and detailed so the wall can dry."
+        },
+        {
+          "name": "Salt-damaged plaster",
+          "desc": "Contaminated plaster removed to a sound base and replaced with a render that tolerates salt."
+        },
+        {
+          "name": "Plinth and foundation level",
+          "desc": "The base of the wall where ground water sits against the structure, including the plinth detail many older Cape homes rely on."
+        }
+      ],
+      "cost": {
+        "heading": "What changes the price of damp repair",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Which damp it is",
+            "A condensation problem needs ventilation. Rising damp needs a damp course and new plaster. The costs are not comparable."
+          ],
+          [
+            "Length of affected wall",
+            "Injection and replastering are priced by the metre of wall treated, inside and out."
+          ],
+          [
+            "Access to the base",
+            "Paving, patios and planted beds against the wall have to be opened or cut back to treat it properly."
+          ],
+          [
+            "Internal finish",
+            "If the plaster has to come off, the skirting, paint and sometimes the floor finish come with it."
+          ],
+          [
+            "Whether the outside is the cause",
+            "Fixing the external detail is often the cheaper half and the only one that lasts."
+          ]
+        ],
+        "note": "We diagnose first and quote the repair that matches the cause. If a cheaper repair will genuinely hold, we will price that instead."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Read the wall",
+            "detail": "Moisture readings at several heights and positions to establish the pattern."
+          },
+          {
+            "step": "2. Check the outside",
+            "detail": "Ground levels, drainage, render condition, sills, gutters and any later addition bridging the damp course."
+          },
+          {
+            "step": "3. Diagnose in writing",
+            "detail": "Which damp it is, what is causing it and what the repair involves, before any work is priced."
+          },
+          {
+            "step": "4. Treat the cause",
+            "detail": "Injection, external repair, drainage or ventilation, depending on what the diagnosis says."
+          },
+          {
+            "step": "5. Replaster and monitor",
+            "detail": "Salt-resistant render where needed, and a return visit to confirm the wall is drying."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "Diagnosis before treatment",
+          "detail": "We will not sell you an injection for a problem caused by a leaking gutter."
+        },
+        {
+          "point": "We fix the outside too",
+          "detail": "Most damp repairs fail because only the inside was treated. We price both sides."
+        },
+        {
+          "point": "Salt-aware replastering",
+          "detail": "Contaminated plaster comes off and goes back with a render that tolerates salt, not standard skim."
+        },
+        {
+          "point": "We return to check",
+          "detail": "A drying wall tells you whether the repair worked. We come back and read it."
+        }
+      ],
+      "cta_subtext": "Get a damp diagnosis and a written estimate. No injection quoted before the cause is known."
+    },
+    {
+      "name": "Painting",
+      "title_tag": "Painting Contractors Cape Town | Interior and Exterior",
+      "meta_description": "Painting contractors in Cape Town for interiors, exteriors, roofs and kitchen cabinets. Proper surface preparation before a coat goes on. Free estimate.",
+      "leader": {
+        "eyebrow": "Painting and surface preparation, Cape Town",
+        "h1": "Painting contractors in Cape Town",
+        "cta_line": "Paint is the last five percent of a painting job. The other ninety-five is preparation, and it is where most repaints fail."
+      },
+      "intro_heading": "Why repaints fail in one season",
+      "intro_body": "A coat of paint over a damp wall will blister. Paint over chalky, powdery plaster will peel in sheets. Paint over a crack that is still moving will crack again, in the same line, within months. None of these are paint problems. They are preparation problems, and Cape Town's coastal air and winter rain find every one of them.\n\nWe prepare before we paint. That means washing and degreasing, scraping back anything loose, cutting out cracks and filling them with something that can move, sealing bare plaster with the right primer, and only then applying a system matched to the surface. On exterior work it also means waiting for the wall to be dry, which in winter can mean rescheduling a day rather than painting wet masonry and hoping.\n\nWe also do the work that sits between painting and building: repairing blown plaster, replacing rotten window beads, re-puttying glass, sealing joints that have opened, and coating roofs that are sound but have lost their protection.",
+      "detail_heading": "What we paint and prep",
+      "detail_intro": "The surface decides the system. Enamel on a wall that needs a breathable coating is a mistake that shows up in the first wet winter.",
+      "subitems": [
+        {
+          "name": "Interior walls and ceilings",
+          "desc": "Crack repair, skimming where needed, primer and two coats, with sheeting and daily clean-up."
+        },
+        {
+          "name": "Exterior walls",
+          "desc": "Crack cutting, plaster repair, fungicidal wash and a coating chosen for the exposure."
+        },
+        {
+          "name": "Roof coating",
+          "desc": "Cleaning, priming and a reflective or protective coating where the roof is sound but unprotected."
+        },
+        {
+          "name": "Kitchen cabinets",
+          "desc": "Doors and frames removed, degreased, sanded, primed and sprayed or brushed, then rehung."
+        },
+        {
+          "name": "Doors, windows and trim",
+          "desc": "Sanding back, filling, priming and enamel, including the bottom edge that weathers first."
+        },
+        {
+          "name": "Damp-affected walls",
+          "desc": "Only after the source is fixed. Painting a damp wall is a delay, not a repair."
+        }
+      ],
+      "cost": {
+        "heading": "What changes the price of a repaint",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Preparation required",
+            "A sound wall takes two coats. A wall with blown plaster, cracks and old enamel takes days before the first coat."
+          ],
+          [
+            "Surface area and height",
+            "Double-volume rooms, stairwells and exteriors above one storey need access equipment and more time."
+          ],
+          [
+            "Coating system",
+            "A standard acrylic, a breathable mineral paint and a roof membrane are three different products at three price points."
+          ],
+          [
+            "Number of colours",
+            "Feature walls, ceilings in a different colour and trim all add cutting-in time."
+          ],
+          [
+            "What is being moved",
+            "Furniture, blinds, air conditioners and light fittings all have to come down or be protected."
+          ]
+        ],
+        "note": "We price painting per room or per elevation after seeing the surface, not per square metre on a phone call."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Assess the surface",
+            "detail": "Sound, chalky, damp or previously coated with something that will not accept new paint."
+          },
+          {
+            "step": "2. Prepare",
+            "detail": "Wash, scrape, cut out cracks, repair plaster, sand, and mask everything that is staying."
+          },
+          {
+            "step": "3. Prime",
+            "detail": "The right primer for bare plaster, masonry, timber or a glossy existing coat."
+          },
+          {
+            "step": "4. Apply",
+            "detail": "Two coats in the specified system, with the finish checked in daylight rather than under a work light."
+          },
+          {
+            "step": "5. Inspect together",
+            "detail": "We walk the job with you, mark anything that needs attention and fix it before we pack up."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "Preparation is the job",
+          "detail": "We would rather spend an extra day prepping than come back next winter to fix peeling paint."
+        },
+        {
+          "point": "We repair before we paint",
+          "detail": "Blown plaster, rotten beads and open joints are fixed, not filled and hidden."
+        },
+        {
+          "point": "Weathered in, not painted over",
+          "detail": "Exterior work is scheduled around dry walls, not around the calendar."
+        },
+        {
+          "point": "Neat in a lived-in house",
+          "detail": "Furniture covered, floors protected, and a clean room at the end of each day."
+        }
+      ],
+      "cta_subtext": "Get a written painting estimate that separates preparation from paint."
+    },
+    {
+      "name": "Kitchen Renovations",
+      "title_tag": "Kitchen Renovations Cape Town | Design, Cabinets and Tiling",
+      "meta_description": "Kitchen renovations in Cape Town. Layout, plumbing, electrical, cabinetry, stone and tiling handled by one team. Free written estimate after a site visit.",
+      "leader": {
+        "eyebrow": "Kitchen renovations, Cape Town",
+        "h1": "Kitchen renovations in Cape Town",
+        "cta_line": "A kitchen is a plumbing job, an electrical job and a carpentry job in the same room. The order they happen in decides how it turns out."
+      },
+      "intro_heading": "The sequence matters more than the finish",
+      "intro_body": "Most kitchen renovations that go wrong were not let down by the cabinets. They were let down by the order of work. A new layout decided after the plumbing was moved. A stone top templated before the cabinets were level. An extractor chosen before anyone checked where the duct could go. Tiling started before the electrical second fix, so the sockets ended up in the wrong place.\n\nWe plan the sequence before demolition. That means agreeing the layout and the appliance list, marking the services, confirming what can move and what should stay, and writing all of it down. Only then do we strip the room.\n\nWe work with your design if you have one, and we will tell you honestly when a layout will cost more than it is worth because of where the waste pipe or the distribution board sits. If you do not have a design, we will plan a practical layout with you: working triangle, landing space beside the oven and fridge, and enough counter where you actually prepare food.",
+      "detail_heading": "What a kitchen renovation covers",
+      "detail_intro": "We take the room from strip-out to the last bead of silicone, including the trades that usually hold up the schedule.",
+      "subitems": [
+        {
+          "name": "Layout and planning",
+          "desc": "Working triangle, appliance sizes and service positions agreed before anything is removed."
+        },
+        {
+          "name": "Plumbing and electrical",
+          "desc": "Water, waste, sockets, lighting and the extractor duct, first-fixed and signed off before closing up."
+        },
+        {
+          "name": "Cabinetry",
+          "desc": "Supply and fit, or fitting your supplied units, with the carcasses levelled and fixed to the wall properly."
+        },
+        {
+          "name": "Worktops",
+          "desc": "Stone or engineered tops templated after the units are in and level, with cut-outs for sink and hob."
+        },
+        {
+          "name": "Tiling and splashbacks",
+          "desc": "Floor and wall tiling with the falls and the grout lines planned, not fitted around the cabinets afterwards."
+        },
+        {
+          "name": "Finishing",
+          "desc": "Silicone, trims, plinths, appliance installation and the snag list walked with you."
+        }
+      ],
+      "cost": {
+        "heading": "Indicative kitchen renovation ranges in Cape Town",
+        "columns": [
+          "Scope",
+          "Typical Cape Town market range (2026)"
+        ],
+        "rows": [
+          [
+            "Refresh: new doors, worktop and splashback, same layout",
+            "Lower end of the market"
+          ],
+          [
+            "Full renovation: new cabinetry, worktop, tiling and appliances, services largely in place",
+            "Middle of the market"
+          ],
+          [
+            "Layout change: walls moved, plumbing and electrical relocated, new window or opening",
+            "Upper end of the market"
+          ]
+        ],
+        "note": "These are market ranges published by Cape Town kitchen contractors in 2026, not a quote from us. We give you a fixed written price for your actual room after a site visit, and it separates the essential work from the optional."
+      },
+      "process": {
+        "heading": "How a kitchen runs",
+        "steps": [
+          {
+            "step": "1. Measure and plan",
+            "detail": "Room measured, appliances chosen, layout and services agreed, scope written."
+          },
+          {
+            "step": "2. Strip out",
+            "detail": "Old units and finishes removed, floor and walls exposed, dust contained and a temporary kitchen set up."
+          },
+          {
+            "step": "3. First fix",
+            "detail": "Plumbing, electrical and extraction roughed in and checked before anything is closed up."
+          },
+          {
+            "step": "4. Fit and finish",
+            "detail": "Cabinets levelled and fixed, stone templated and fitted, tiling, second fix and appliances."
+          },
+          {
+            "step": "5. Snag and hand over",
+            "detail": "We walk the room with you and work through the list before the final payment stage."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "One team for the whole room",
+          "detail": "Plumbing, electrical, carpentry and tiling sequenced by the same person, not three subcontractors blaming each other."
+        },
+        {
+          "point": "Services checked before closing",
+          "detail": "We test the water and the circuits while the walls are still open."
+        },
+        {
+          "point": "A usable kitchen during the work",
+          "detail": "We plan a temporary setup so the family is not eating out for the whole job."
+        },
+        {
+          "point": "Honest about layout costs",
+          "detail": "If moving the sink costs triple what it gains, we will say so before you decide."
+        }
+      ],
+      "cta_subtext": "Book a free site visit and get a written kitchen estimate with the sequence included."
+    }
+  ]
+}

@@ -1,0 +1,452 @@
+{
+  "services": [
+    {
+      "name": "Bathroom Renovations",
+      "title_tag": "Bathroom Renovations Cape Town | Waterproofed and Tiled",
+      "meta_description": "Bathroom renovations in Cape Town with the waterproofing done properly: falls to the drain, flood-tested membranes and tiling that lasts. Free estimate.",
+      "leader": {
+        "eyebrow": "Bathroom renovations, Cape Town",
+        "h1": "Bathroom renovations in Cape Town",
+        "cta_line": "A bathroom is a waterproofing job with tiles on top. If the layer under the tiles is wrong, the finish does not matter."
+      },
+      "intro_heading": "The part you cannot see is the whole job",
+      "intro_body": "Most failed bathrooms in Cape Town fail the same way. Water gets behind the tiles, sits on the slab or in the wall, and finds the ceiling of the room below. By the time the paint blisters downstairs, the damage has been happening for months. Retiling over a failed waterproofing membrane is the single most common way owners spend money twice.\n\nSo the sequence we insist on is: strip the room back to the structure, repair whatever the water has damaged, fall the floor to the drain, waterproof the floor and the wet walls, flood test it, and only then tile. The flood test is not optional for us. Filling the floor with water and leaving it there tells you whether the membrane is sound before it disappears under tile.\n\nWe also look at the things that make a bathroom work after the photos are taken: where the water goes when the shower is running, whether the extractor actually vents outside, whether the door clears the new floor level, and whether there is somewhere to put a towel that is not the back of a chair.",
+      "detail_heading": "What a bathroom renovation covers",
+      "detail_intro": "From strip-out to the last silicone bead, including the waterproofing and the services that usually need moving.",
+      "subitems": [
+        {
+          "name": "Strip-out and repairs",
+          "desc": "Tiles, screed and sanitaryware removed, and any rotten timber or damaged plasterboard replaced."
+        },
+        {
+          "name": "Waterproofing and flood test",
+          "desc": "Membrane to the floor and wet walls, upstands at every junction, tested with standing water before tiling."
+        },
+        {
+          "name": "Falls and drainage",
+          "desc": "Screed falls to the outlet, shower recesses formed properly, and no ponding where the floor meets the wall."
+        },
+        {
+          "name": "Tiling",
+          "desc": "Floor and wall tiling with the layout set out from the room's centre lines rather than a corner."
+        },
+        {
+          "name": "Plumbing and sanitaryware",
+          "desc": "Geyser, mixer and waste positions adjusted, then taps, toilet, basin and shower installed and tested."
+        },
+        {
+          "name": "Ventilation and finishes",
+          "desc": "Extraction ducted to outside, silicone, trims, mirrors and fittings, then the snag list."
+        }
+      ],
+      "cost": {
+        "heading": "Indicative bathroom renovation ranges in Cape Town",
+        "columns": [
+          "Scope",
+          "Typical Cape Town market range (2026)"
+        ],
+        "rows": [
+          [
+            "Refresh: retile, new sanitaryware, same layout and waterproofing sound",
+            "R25 000 to R45 000"
+          ],
+          [
+            "Full renovation: strip to structure, new waterproofing, tiling, plumbing and fittings",
+            "R45 000 to R80 000"
+          ],
+          [
+            "Layout change: walls moved, shower enlarged, plumbing relocated, new window or door",
+            "R80 000 to R150 000"
+          ]
+        ],
+        "note": "These bands reflect ranges published by Cape Town bathroom contractors in 2026. They are market context, not a quote from Plinth. Your written estimate follows a site visit and states exactly what is included."
+      },
+      "process": {
+        "heading": "How a bathroom runs",
+        "steps": [
+          {
+            "step": "1. Measure and specify",
+            "detail": "Room measured, fittings chosen, waterproofing system and tile layout agreed in writing."
+          },
+          {
+            "step": "2. Strip out",
+            "detail": "Water isolated, room stripped to the structure, existing damage assessed and priced if it changes the scope."
+          },
+          {
+            "step": "3. First fix and falls",
+            "detail": "Plumbing and electrical moved, screed falls formed to the outlet, substrate prepared and primed."
+          },
+          {
+            "step": "4. Waterproof and test",
+            "detail": "Membrane applied with upstands at every junction, then flood tested and photographed before tiling."
+          },
+          {
+            "step": "5. Tile, fit and snag",
+            "detail": "Tiling, sanitaryware, glass and finishes, then a walk-through with you and a written snag list."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "We flood test before we tile",
+          "detail": "Standing water on the membrane for a day, photographed, before anything covers it."
+        },
+        {
+          "point": "Falls that actually drain",
+          "detail": "Formed to the outlet with a proper recess, so you are not squeegeeing the floor after every shower."
+        },
+        {
+          "point": "Ventilation that vents outside",
+          "detail": "Extractors ducted to the exterior, not into the ceiling void where the moisture just moves."
+        },
+        {
+          "point": "We expect the unexpected",
+          "detail": "Rotten timber and failed plumbing are priced as a separate, agreed item rather than a surprise invoice."
+        }
+      ],
+      "cta_subtext": "Get a written bathroom estimate that shows the waterproofing as a line item, not a hidden cost."
+    },
+    {
+      "name": "Home Renovations",
+      "title_tag": "Home Renovations Cape Town | Full House Refurbishment",
+      "meta_description": "Home renovations in Cape Town. Layout changes, structural openings, kitchens, bathrooms and finishes run by one team with a written scope. Free estimate.",
+      "leader": {
+        "eyebrow": "Home renovations, Cape Town",
+        "h1": "Home renovations in Cape Town",
+        "cta_line": "Whole-house work, or one part of the house done properly. Same team, same written scope, same sequence."
+      },
+      "intro_heading": "What a full renovation actually involves",
+      "intro_body": "A whole-house renovation is not one big job. It is a dozen jobs that have to happen in the right order, and the order is what separates a smooth project from a house that is open for months. Structural work before services. Services before closing walls. Waterproofing before finishes. Finishes before the snag list.\n\nCape Town's housing stock makes this more interesting than it sounds. A 1950s Goodwood house has solid brick walls, no cavity and a damp course that may or may not still work. A 1970s Bellville house may have been extended twice, each time with a roof tied into the last one. A newer Durbanville home has modern services but detailing at parapets and balconies that was value-engineered at construction.\n\nWe plan around the structure you actually have. Sometimes that means keeping a wall that a plan said to remove, because it is carrying more than the drawing showed. Sometimes it means opening a room differently to avoid moving a drain. We will always tell you which is which, and what each option costs, before demolition starts.",
+      "detail_heading": "What we take on",
+      "detail_intro": "Anything from a single room to a full refurbishment, with the trades sequenced by one team.",
+      "subitems": [
+        {
+          "name": "Open-plan changes",
+          "desc": "Walls removed or opened, with the structural support designed and installed properly, not assumed."
+        },
+        {
+          "name": "Structural openings",
+          "desc": "Lintels and beams sized and fitted, temporary support during the work, and the finish made good."
+        },
+        {
+          "name": "Kitchens and bathrooms",
+          "desc": "Both handled as part of the same programme so the plumbing and electrical work happens once."
+        },
+        {
+          "name": "Flooring and ceilings",
+          "desc": "Screed repair, tiling, timber and laminate, plus ceilings and cornices matched to the house."
+        },
+        {
+          "name": "Doors and windows",
+          "desc": "Replacement, new openings, and the flashing and sealing details that keep water out."
+        },
+        {
+          "name": "Full refurbishment",
+          "desc": "Strip to structure, rewire, re-plumb, replaster, waterproof and finish, phased so the house stays usable."
+        }
+      ],
+      "cost": {
+        "heading": "What changes the price of a home renovation",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Whether walls move",
+            "Removing a wall means structural support, making good and often new finishes on both sides."
+          ],
+          [
+            "Services condition",
+            "Old wiring and galvanised pipes found behind a wall turn a cosmetic job into a first-fix job."
+          ],
+          [
+            "How much is replaced",
+            "Keeping and restoring original floors and doors can cost less than new, and look better."
+          ],
+          [
+            "Water damage found",
+            "Roof and damp problems are usually discovered once ceilings are open. We price the repair, not a rebuild."
+          ],
+          [
+            "Phasing",
+            "Working room by room so the family stays in the house takes longer but costs less in disruption."
+          ]
+        ],
+        "note": "We quote a full-house job in sections, so you can see the cost of each part and decide what to do now and what to do later."
+      },
+      "process": {
+        "heading": "How a renovation runs",
+        "steps": [
+          {
+            "step": "1. Survey",
+            "detail": "Every room measured, services checked, roof and damp assessed, and priorities agreed with you."
+          },
+          {
+            "step": "2. Scope and sequence",
+            "detail": "A written scope split into essential and optional, with the order of work and who does what."
+          },
+          {
+            "step": "3. Structure and first fix",
+            "detail": "Openings formed, walls removed with support, plumbing and electrical roughed in."
+          },
+          {
+            "step": "4. Close up and finish",
+            "detail": "Plaster, waterproofing, tiling, joinery, paint and the fittings, in the planned order."
+          },
+          {
+            "step": "5. Snag and hand over",
+            "detail": "A joint walk-through, a written snag list, and the fixes completed before final payment."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "One point of contact",
+          "detail": "The person who quoted the job is the person you call while it runs."
+        },
+        {
+          "point": "Sectioned pricing",
+          "detail": "You see the cost of each part, so you can phase the work instead of financing all of it at once."
+        },
+        {
+          "point": "Structure checked, not assumed",
+          "detail": "We confirm what a wall is carrying before it comes out."
+        },
+        {
+          "point": "Phased for a lived-in house",
+          "detail": "Work planned around the rooms you still need, with water and power kept on where possible."
+        }
+      ],
+      "cta_subtext": "Book a free site visit and get a sectioned written estimate for the whole house or just the part you want done."
+    },
+    {
+      "name": "Plastering",
+      "title_tag": "Plastering Cape Town | Skimming, Cracks and Cornices",
+      "meta_description": "Plastering in Cape Town: skimming, crack repair, cornices, external plaster and plasterboard ceilings. Surface prepared properly before paint.",
+      "leader": {
+        "eyebrow": "Plastering and surface repair, Cape Town",
+        "h1": "Plastering in Cape Town",
+        "cta_line": "A wall is only as good as the plaster under the paint. Cracks, hollow patches and blown render all start here."
+      },
+      "intro_heading": "Fix the plaster, or paint it twice",
+      "intro_body": "Plaster fails in Cape Town for reasons that are usually visible once you know what to look for. Movement cracks follow the line of a lintel or a joint between two materials. Hollow-sounding patches mean the plaster has lost its bond to the brick behind it. Powdering, salt-stained plaster at low level means moisture is coming through the wall, and no amount of skim will hold it.\n\nWe treat plaster as a repair job before a finishing job. Cracks are opened, not filled. Hollow plaster is cut back to sound material, not skimmed over. Where damp is the cause, the source is fixed before the wall is re-plastered, and where the wall needs to breathe we use a render that lets it.\n\nFor interior work, skimming an old wall flat is often the fastest way to make a room feel new without touching the structure. For exteriors, the priorities are different: weather resistance, crack control and a finish that can take the wind and the sun.",
+      "detail_heading": "What we plaster",
+      "detail_intro": "Interior and exterior, new work and repair, including the ceilings and mouldings that usually need attention at the same time.",
+      "subitems": [
+        {
+          "name": "Skimming",
+          "desc": "A thin, flat finish over sound plaster or plasterboard, ready for paint."
+        },
+        {
+          "name": "Crack repair",
+          "desc": "Cracks opened, reinforced where they are likely to move again, filled and finished flush."
+        },
+        {
+          "name": "Hollow and blown plaster",
+          "desc": "Unsound plaster cut back to a keyed surface and replaced, so the patch does not sound different from the wall."
+        },
+        {
+          "name": "Cornices and mouldings",
+          "desc": "Replacement and repair, with profiles matched to what is already in the house."
+        },
+        {
+          "name": "External plaster and render",
+          "desc": "Weather-facing repair and re-render, with the mix chosen for exposure and breathability."
+        },
+        {
+          "name": "Plasterboard ceilings",
+          "desc": "New ceilings, bulkheads and repairs, taped and skimmed ready for paint."
+        }
+      ],
+      "cost": {
+        "heading": "What changes the price of plastering",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Repair or replace",
+            "Skimming a sound wall is quick. Cutting out and replacing blown plaster is not."
+          ],
+          [
+            "Height and access",
+            "Double volumes and stairwells need scaffolding, which costs as much as the plastering."
+          ],
+          [
+            "What is on the wall",
+            "Old enamel, wallpaper glue and multiple paint layers all have to be removed before new plaster will bond."
+          ],
+          [
+            "Matching existing",
+            "Cornice profiles and textured finishes take time to match, and sometimes a mould has to be made."
+          ],
+          [
+            "Drying time",
+            "New plaster has to dry before paint. Rushing it is how you get a finish that fails in the first winter."
+          ]
+        ],
+        "note": "We price plastering per wall or per room after seeing the surface, and we tell you when plaster is not the real problem."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Assess",
+            "detail": "Tap for hollow areas, check crack patterns, and establish whether moisture is involved."
+          },
+          {
+            "step": "2. Prepare",
+            "detail": "Cut back unsound plaster, open cracks, remove failed coatings and key the surface."
+          },
+          {
+            "step": "3. Repair the cause",
+            "detail": "Where damp or movement is behind the failure, that is dealt with before new plaster goes on."
+          },
+          {
+            "step": "4. Plaster",
+            "detail": "Base coat and finish coat applied to the right thickness, with corners and reveals set true."
+          },
+          {
+            "step": "5. Finish ready for paint",
+            "detail": "Sanded, checked under light and handed over dry, so the painter is not correcting our work."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "We cut back, not cover up",
+          "detail": "Hollow plaster is removed to a sound base, so the repair does not fail beside the patch."
+        },
+        {
+          "point": "We check for moisture first",
+          "detail": "Plastering over a damp wall is a waste of both our time and your money."
+        },
+        {
+          "point": "Cornices matched",
+          "detail": "Existing profiles reproduced rather than replaced with a near-enough modern section."
+        },
+        {
+          "point": "Ready for the painter",
+          "detail": "We hand over a surface that takes paint properly, not one that needs sanding by someone else."
+        }
+      ],
+      "cta_subtext": "Get a written plastering estimate, including an honest view of what is repair and what is replacement."
+    },
+    {
+      "name": "Home Extensions",
+      "title_tag": "Home Extensions Cape Town | Additions and Extra Rooms",
+      "meta_description": "Home extensions in Cape Town: extra rooms, open-plan additions and covered patios, with the roof tie-in and waterproofing detailed properly.",
+      "leader": {
+        "eyebrow": "Home extensions, Cape Town",
+        "h1": "Home extensions in Cape Town",
+        "cta_line": "An extension is judged by the join. Where the new roof meets the old one is where most of them fail."
+      },
+      "intro_heading": "The join decides whether it lasts",
+      "intro_body": "Adding a room is straightforward in principle: foundations, walls, a roof, and a hole in the existing house to connect the two. What decides whether the extension is still sound in ten years is the detailing at the junction, and that is the part that gets rushed.\n\nA new roof tied into an old one needs the flashing to be rebuilt, not sealed. A new slab meeting an old wall needs the damp course to be continuous, or the old wall starts drawing water from the new floor. A new opening in an existing wall needs a lintel of the right size and bearing, and the wall above it supported while the opening is formed.\n\nWe build extensions as structural work first and finishes second. Where the City of Cape Town requires plans and approval, we work with your architect or draughtsman, or tell you what needs to be submitted before we start. We would rather delay a start than build something that has to be undone.",
+      "detail_heading": "What we build",
+      "detail_intro": "From a single extra room to a full-width addition, including the outdoor rooms that Cape Town houses always end up wanting.",
+      "subitems": [
+        {
+          "name": "Extra bedrooms and suites",
+          "desc": "New room, wardrobe wall, window and door positions planned around light and privacy."
+        },
+        {
+          "name": "Open-plan additions",
+          "desc": "Living space extended into the garden or into an existing room, with the structural opening formed properly."
+        },
+        {
+          "name": "Covered patios and braai rooms",
+          "desc": "Roofed outdoor space that ties into the house and drains away from it."
+        },
+        {
+          "name": "Garage and carport conversions",
+          "desc": "Floor levels, damp proofing, insulation and services, done so the new room does not feel like a garage."
+        },
+        {
+          "name": "Second storeys and lofts",
+          "desc": "Structural assessment, stair position and roof rework, planned before anything is lifted."
+        },
+        {
+          "name": "Roof tie-ins and re-roofing",
+          "desc": "Flashings, valleys and junctions rebuilt where an addition meets the original roof."
+        }
+      ],
+      "cost": {
+        "heading": "What changes the price of an extension",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Ground conditions",
+            "Slope, rock and old foundations all change the excavation and the foundation design."
+          ],
+          [
+            "The junction",
+            "A simple lean-to roof against a wall is cheaper than tying a new pitched roof into an existing one."
+          ],
+          [
+            "Approvals",
+            "Plans, engineer input and council submission add cost and time before the first brick."
+          ],
+          [
+            "Services",
+            "Extending water, waste, power and drainage to the new room is often underestimated."
+          ],
+          [
+            "Finishes",
+            "Matching the existing house costs more than making the extension obviously new."
+          ]
+        ],
+        "note": "We quote the structure and the finishes separately, so the cost of the building work is visible before you choose fittings."
+      },
+      "process": {
+        "heading": "How an extension runs",
+        "steps": [
+          {
+            "step": "1. Feasibility",
+            "detail": "Site visit, measured survey and an honest view of what the plot and the existing house will allow."
+          },
+          {
+            "step": "2. Plans and approval",
+            "detail": "Working with your draughtsman or architect on submission to the City of Cape Town where required."
+          },
+          {
+            "step": "3. Foundations and structure",
+            "detail": "Excavation, foundation, slab or suspended floor, walls and the structural opening into the house."
+          },
+          {
+            "step": "4. Roof and weatherproof",
+            "detail": "New roof, tie-in to the existing roof, flashings, and the extension closed before finishes begin."
+          },
+          {
+            "step": "5. Fit out and connect",
+            "detail": "Services connected, plaster, tiling, joinery, paint, and the junction made good on both sides."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "The junction is the job",
+          "detail": "Flashings, damp course continuity and movement joints at the tie-in are specified before we start."
+        },
+        {
+          "point": "We tell you when plans are needed",
+          "detail": "Structural changes need City of Cape Town approval. We say so early rather than after demolition."
+        },
+        {
+          "point": "Structure before finishes",
+          "detail": "Foundations, lintels and roof loads confirmed before anyone chooses a tile."
+        },
+        {
+          "point": "One team through the whole build",
+          "detail": "From excavation to the final coat, sequenced by the same person who quoted it."
+        }
+      ],
+      "cta_subtext": "Start with a free site visit and an honest view of what your extension will involve."
+    }
+  ]
+}
