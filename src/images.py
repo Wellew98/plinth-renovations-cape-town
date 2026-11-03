@@ -7,7 +7,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 SRC = Path(r"C:\Users\DELL\OneDrive\Desktop\PLINTH\images")
 LOGO = Path(r"C:\Users\DELL\OneDrive\Desktop\PLINTH\logo.jpg")
-OUT = Path(r"C:\Users\DELL\OneDrive\Desktop\Plinth Microsite\site-output\assets\images")
+OUT = Path(__file__).resolve().parent / "_images"
 OUT.mkdir(parents=True, exist_ok=True)
 
 # hero: the finished exterior with garden and paving

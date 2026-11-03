@@ -60,6 +60,11 @@ const PAGES = [
           ` vw=${report.vw} ${bad ? 'OVERFLOW' : 'ok'}`
       );
       if (bad) for (const w of report.wide) console.log(`        ${w.tag}.${w.cls} w=${w.w} right=${w.right}`);
+      // scroll the whole page so IntersectionObserver reveals fire before capture
+      await page.evaluate(() => {
+        document.querySelectorAll('.reveal').forEach((el) => el.classList.add('visible'));
+      });
+      await new Promise((r) => setTimeout(r, 400));
       await page.screenshot({ path: path.join(SHOTS, `${name}-${label}.png`), fullPage: true });
     }
     await page.close();

@@ -1,0 +1,44 @@
+/* Additions the original stylesheet does not carry: long-form prose, cost
+   tables and form field labels. Everything else comes from styles.css. */
+
+/* keep every card's link on the same baseline */
+.card{display:flex;flex-direction:column}
+.card .more{margin-top:auto;padding-top:14px}
+
+.prose{max-width:74ch;margin:0 auto}
+.prose p{font-size:17.5px;line-height:1.78;color:#3d3a33;margin:0 0 20px}
+.prose p:last-child{margin-bottom:0}
+
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:#fff;box-shadow:var(--shadow);margin-top:8px}
+.cost-table{width:100%;border-collapse:collapse;font-size:15.5px;min-width:560px}
+.cost-table th{background:#0d0d0c;color:var(--gold);text-align:left;padding:16px 20px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+.cost-table td{padding:15px 20px;border-top:1px solid var(--line);color:#3d3a33;vertical-align:top;line-height:1.6}
+.cost-table td:first-child{font-weight:700;color:#171309;width:30%}
+.table-note{margin-top:14px;font-size:13.5px;line-height:1.65;color:#6b6455}
+
+.form-card form > div{margin-bottom:18px}
+.form-card label{display:block;font-size:11.5px;letter-spacing:.13em;text-transform:uppercase;font-weight:700;color:#6b6455;margin:0 0 8px}
+.form-card .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.form-card .btn{margin-top:6px}
+
+@media (max-width:700px){
+  /* at phone width the hero photo sits directly behind dark text, so it gets a
+     cream scrim: the film still reads, the copy stays legible */
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(180deg,rgba(255,253,247,.55),rgba(255,253,247,.86))}
+  .hero .wrap{position:relative;z-index:3}
+}
+
+@media (max-width:600px){
+  .form-card .two{grid-template-columns:1fr}
+  .prose p{font-size:16.5px}
+  /* the cost table becomes stacked rows rather than a sideways scroll */
+  .cost-table{min-width:0}
+  .cost-table thead{display:none}
+  .cost-table,.cost-table tbody,.cost-table tr,.cost-table td{display:block;width:auto}
+  .cost-table tr{padding:16px 18px;border-top:1px solid var(--line)}
+  .cost-table tr:first-child{border-top:0}
+  .cost-table td{border:0;padding:0 0 8px}
+  .cost-table td:first-child{width:auto;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:#8a5f1e}
+  .cost-table td:last-child{padding-bottom:0}
+}
