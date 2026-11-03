@@ -1,41 +1,28 @@
 """Builds the site's image set from Plinth's own project photographs.
 
-No stock, no remote URLs: every image is a real Plinth job, resized for web.
+No stock, no remote URLs: every image is a real Plinth job, resized for web and
+written under its search-facing filename from photos.py.
 """
+import shutil
 from pathlib import Path
+
 from PIL import Image, ImageDraw, ImageFont
 
+from photos import HERO, PHOTOS
+
 SRC = Path(r"C:\Users\DELL\OneDrive\Desktop\PLINTH\images")
-LOGO = Path(r"C:\Users\DELL\OneDrive\Desktop\PLINTH\logo.jpg")
+BRAND = Path(r"C:\Users\DELL\OneDrive\Desktop\PLINTH")
+LOGO = BRAND / "logo.jpg"
 OUT = Path(__file__).resolve().parent / "_images"
 OUT.mkdir(parents=True, exist_ok=True)
 
-# hero: the finished exterior with garden and paving
-HERO = "IMG-20260903-WA0034.jpg"
-POOL = [
-    "IMG-20260903-WA0033.jpg",  # kitchen, finished          -> img-1
-    "svc-bathroom.jpg",         # bathroom                   -> img-2
-    "IMG-20260902-WA0018.jpg",  # corridor, finished         -> img-3
-    "IMG-20260903-WA0028.jpg",  # covered outdoor room       -> img-4
-    "IMG-20260902-WA0022.jpg",  # exterior wall and window   -> img-5
-    "IMG-20260902-WA0013.jpg",  # room mid-renovation        -> img-6
-    "IMG-20260902-WA0015.jpg",  # fresh plaster and downlight-> img-7 (hero only)
-    "IMG-20260902-WA0005.jpg",  # exterior slab              -> img-8 (hero only)
-]
+# drop the old img-N names so nothing stale ships
+for stale in OUT.glob("img-*.jpg"):
+    stale.unlink()
 
 
 def save(im: Image.Image, path: Path, quality=82):
     im.save(path, "JPEG", quality=quality, optimize=True, progressive=True)
-
-
-# brand media carried over from the original site: the square logo lockup used
-# in the header, and the 5s brand film used behind the home page hero
-import shutil
-
-BRAND = Path(r"C:\Users\DELL\OneDrive\Desktop\PLINTH")
-shutil.copyfile(BRAND / "logo.jpg", OUT / "logo.jpg")
-(OUT.parent / "hero-video.mp4").parent.mkdir(parents=True, exist_ok=True)
-shutil.copyfile(BRAND / "hero-video.mp4", OUT.parent / "hero-video.mp4")
 
 
 def resized(path: Path, max_w: int) -> Image.Image:
@@ -45,14 +32,16 @@ def resized(path: Path, max_w: int) -> Image.Image:
     return im
 
 
-# hero at 1920 wide
-hero = resized(SRC / HERO, 1920)
-save(hero, OUT / "hero.jpg")
+# brand media carried over from the original site
+shutil.copyfile(BRAND / "logo.jpg", OUT / "logo.jpg")
+shutil.copyfile(BRAND / "hero-video.mp4", OUT.parent / "hero-video.mp4")
 
-# content pool at 1200 wide
-for i, name in enumerate(POOL, start=1):
-    im = resized(SRC / name, 1200)
-    save(im, OUT / f"img-{i}.jpg")
+# hero: wide, because it is the video poster and the social crop source
+save(resized(SRC / HERO["src"], 1920), OUT / HERO["file"])
+
+# project photography at 1600 wide, which is all a 2x phone or a retina tile needs
+for p in PHOTOS:
+    save(resized(SRC / p["src"], 1600), OUT / p["file"])
 
 # header logo: the square gold-on-black lockup, small
 logo = Image.open(LOGO).convert("RGB")
@@ -65,7 +54,7 @@ fav.save(OUT / "favicon.png", "PNG", optimize=True)
 
 # social cover 1200x630: hero cropped, darkened at the base, brand line over it
 cover = Image.new("RGB", (1200, 630), (13, 13, 12))
-base = Image.open(OUT / "hero.jpg").convert("RGB")
+base = Image.open(OUT / HERO["file"]).convert("RGB")
 scale = max(1200 / base.width, 630 / base.height)
 base = base.resize((round(base.width * scale), round(base.height * scale)), Image.LANCZOS)
 left = (base.width - 1200) // 2
@@ -101,5 +90,5 @@ cover.save(OUT.parent / "og-cover.jpg", "JPEG", quality=86, optimize=True)
 total = sum(p.stat().st_size for p in OUT.glob("*")) // 1024
 print("images written to", OUT)
 for p in sorted(OUT.glob("*")):
-    print(f"  {p.name:16} {p.stat().st_size // 1024:>4} KB")
+    print(f"  {p.name:52} {p.stat().st_size // 1024:>4} KB")
 print("total", total, "KB")

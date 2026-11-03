@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url><loc>https://plinth-renovations-cape-town.pages.dev/</loc><priority>1.0</priority></url>
   <url><loc>https://plinth-renovations-cape-town.pages.dev/services</loc><priority>0.9</priority></url>
   <url><loc>https://plinth-renovations-cape-town.pages.dev/waterproofing</loc><priority>0.9</priority></url>
   <url><loc>https://plinth-renovations-cape-town.pages.dev/damp-proofing</loc><priority>0.9</priority></url>
-  <url><loc>https://plinth-renovations-cape-town.pages.dev/painting</loc><priority>0.9</priority></url>
-  <url><loc>https://plinth-renovations-cape-town.pages.dev/kitchen-renovations</loc><priority>0.9</priority></url>
-  <url><loc>https://plinth-renovations-cape-town.pages.dev/bathroom-renovations</loc><priority>0.9</priority></url>
-  <url><loc>https://plinth-renovations-cape-town.pages.dev/home-renovations</loc><priority>0.9</priority></url>
-  <url><loc>https://plinth-renovations-cape-town.pages.dev/plastering</loc><priority>0.9</priority></url>
-  <url><loc>https://plinth-renovations-cape-town.pages.dev/home-extensions</loc><priority>0.9</priority></url>
+  <url><loc>https://plinth-renovations-cape-town.pages.dev/painting</loc><priority>0.9</priority><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/renovation-strip-out-cape-town.jpg</image:loc></image:image></url>
+  <url><loc>https://plinth-renovations-cape-town.pages.dev/kitchen-renovations</loc><priority>0.9</priority><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/kitchen-renovation-cape-town.jpg</image:loc></image:image></url>
+  <url><loc>https://plinth-renovations-cape-town.pages.dev/bathroom-renovations</loc><priority>0.9</priority><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/bathroom-renovation-cape-town.jpg</image:loc></image:image></url>
+  <url><loc>https://plinth-renovations-cape-town.pages.dev/home-renovations</loc><priority>0.9</priority><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/interior-renovation-in-progress-cape-town.jpg</image:loc></image:image></url>
+  <url><loc>https://plinth-renovations-cape-town.pages.dev/plastering</loc><priority>0.9</priority><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/plasterboard-bulkhead-ceiling-cape-town.jpg</image:loc></image:image><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/curved-ceiling-plaster-detail-cape-town.jpg</image:loc></image:image></url>
+  <url><loc>https://plinth-renovations-cape-town.pages.dev/home-extensions</loc><priority>0.9</priority><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/glass-roof-patio-extension-cape-town.jpg</image:loc></image:image><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/home-extension-under-construction-cape-town.jpg</image:loc></image:image></url>
+  <url><loc>https://plinth-renovations-cape-town.pages.dev/our-work</loc><priority>0.7</priority><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/kitchen-renovation-cape-town.jpg</image:loc></image:image><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/bathroom-renovation-cape-town.jpg</image:loc></image:image><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/glass-roof-patio-extension-cape-town.jpg</image:loc></image:image><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/interior-renovation-in-progress-cape-town.jpg</image:loc></image:image><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/plasterboard-bulkhead-ceiling-cape-town.jpg</image:loc></image:image><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/curved-ceiling-plaster-detail-cape-town.jpg</image:loc></image:image><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/renovation-strip-out-cape-town.jpg</image:loc></image:image><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/home-extension-under-construction-cape-town.jpg</image:loc></image:image><image:image><image:loc>https://plinth-renovations-cape-town.pages.dev/images/renovated-home-exterior-cape-town.jpg</image:loc></image:image></url>
   <url><loc>https://plinth-renovations-cape-town.pages.dev/service-areas</loc><priority>0.7</priority></url>
   <url><loc>https://plinth-renovations-cape-town.pages.dev/home-renovations-in-durbanville</loc><priority>0.8</priority></url>
   <url><loc>https://plinth-renovations-cape-town.pages.dev/home-renovations-in-bellville</loc><priority>0.8</priority></url>

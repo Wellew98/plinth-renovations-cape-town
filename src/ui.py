@@ -6,6 +6,8 @@ pages use, so the site runs on that stylesheet and script unchanged.
 
 from html import escape
 
+import photos
+
 BUSINESS = "Plinth Renovations and Construction"
 PHONE = "066 150 5770"
 TEL = "+27661505770"
@@ -29,6 +31,7 @@ ICONS = {
 NAV = [
     ("/", "Home"),
     ("/services", "Services"),
+    ("/our-work", "Our Work"),
     ("/service-areas", "Areas"),
     ("/about", "About"),
     ("/faq", "FAQ"),
@@ -66,7 +69,8 @@ def header(active=""):
     )
 
 
-def hero(kicker, h1, lead, trust, actions, video=None, poster="images/hero.jpg"):
+def hero(kicker, h1, lead, trust, actions, video=None, poster=None):
+    poster = poster or "images/" + photos.HERO["file"]
     media = ""
     if video:
         media = (
@@ -95,6 +99,20 @@ def page_hero(crumb, h1, lead="", kicker=""):
         f'<div class="crumb"><a href="/" style="color:#c9a86a">Home</a> &rsaquo; {escape(crumb)}</div>'
         f"{kick}<h1>{escape(h1)}</h1>{lead_html}</div></section>"
     )
+
+
+def gallery(items, eager=0, layout=None):
+    """The original .gallery-grid: rounded figures, hover zoom, pill caption."""
+    figs = []
+    for i, p in enumerate(items):
+        load = "eager" if i < eager else "lazy"
+        figs.append(
+            f'<figure><img src="images/{p["file"]}" alt="{escape(p["alt"])}" '
+            f'loading="{load}" decoding="async">'
+            f'<figcaption>{escape(p["caption"])}</figcaption></figure>'
+        )
+    cls = "gallery-grid" + (f" {layout}" if layout else "")
+    return f'<div class="{cls}">' + "".join(figs) + "</div>"
 
 
 def section(inner, cls="", style=""):

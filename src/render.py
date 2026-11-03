@@ -11,10 +11,11 @@ import shutil
 from html import escape
 from pathlib import Path
 
+import photos
 import ui
 from ui import (
     BUSINESS, CITY, DOMAIN, PHONE, STREET, TEL,
-    card, checklist, cta_band, faq, floaters, footer, grid, head, header,
+    card, checklist, cta_band, faq, floaters, footer, gallery, grid, head, header,
     hero, page_hero, section, steps, ticks, topbar,
 )
 
@@ -102,7 +103,7 @@ def page(slug, title, description, body, schema=None, crumbs=None):
     if schema:
         ld = '<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False) + "</script>"
 
-    og_img = f"{DOMAIN}/images/hero.jpg"
+    og_img = f'{DOMAIN}/images/{photos.HERO["file"]}'
     return f"""<!DOCTYPE html>
 <html lang="en-ZA">
 <head>
@@ -154,7 +155,7 @@ def business_schema(extra=None):
         "name": BUSINESS,
         "url": DOMAIN + "/",
         "telephone": TEL,
-        "image": DOMAIN + "/images/hero.jpg",
+        "image": DOMAIN + "/images/" + photos.HERO["file"],
         "address": {
             "@type": "PostalAddress",
             "streetAddress": STREET,
@@ -240,20 +241,37 @@ def build_home():
              "Same flow as our estimate page, clear, written, no pressure.")
         + steps(FLOW)
     )
+    home_gallery = [
+        photos.by_file("kitchen-renovation-cape-town.jpg"),
+        photos.by_file("bathroom-renovation-cape-town.jpg"),
+        photos.by_file("glass-roof-patio-extension-cape-town.jpg"),
+        photos.by_file("plasterboard-bulkhead-ceiling-cape-town.jpg"),
+        photos.by_file("interior-renovation-in-progress-cape-town.jpg"),
+        photos.by_file("home-extension-under-construction-cape-town.jpg"),
+    ]
+    body += section(
+        head("04", "Recent Work", "Our own jobs, photographed as we work",
+             "No stock images anywhere on this site. Every photograph is a Plinth job, from the "
+             "stripped-out room through to the finished kitchen.")
+        + gallery(home_gallery)
+        + '<div class="center-cta"><a class="btn btn-ghost" href="/our-work">'
+          "See all our work &rarr;</a></div>",
+    )
+
     area_cards = [
         card("Service area", a["name"], a["teaser"], f'/home-renovations-in-{slugify(a["name"])}',
              link_label="See this area", icon=None)
         for a in AREAS
     ]
     body += section(
-        head("04", "Where We Work", "Areas we cover across Cape Town", HOME["areas_body"])
+        head("05", "Where We Work", "Areas we cover across Cape Town", HOME["areas_body"])
         + grid(area_cards[:6])
         + '<div class="center-cta reveal"><a class="btn btn-gold" href="/service-areas">'
           "All service areas &rarr;</a></div>",
         cls="sage",
     )
     body += section(
-        head("05", "FAQ", "Cape Town Renovation FAQ") + faq([(f["q"], f["a"]) for f in HOME["faq"]])
+        head("06", "FAQ", "Cape Town Renovation FAQ") + faq([(f["q"], f["a"]) for f in HOME["faq"]])
         + cta_band("Get a Free Estimate on Your Project", HOME["cta_subtext"]),
         cls="cream",
     )
@@ -315,9 +333,11 @@ def build_service(svc):
     body = page_hero(
         svc["name"], lead["h1"], lead["cta_line"], kicker=lead["eyebrow"],
     )
+    svc_photos = [ph for ph in photos.PHOTOS if ph["service"] == slug]
     body += section(
         head("01", svc["name"], svc["intro_heading"])
         + f'<div class="prose reveal"><p>{escape(svc["intro_body"])}</p></div>'
+        + (gallery(svc_photos, layout="single" if len(svc_photos) == 1 else "pair") if svc_photos else "")
     )
     body += section(
         head("02", "What it covers", svc["detail_heading"], svc["detail_intro"]) + grid(sub_cards),
@@ -369,8 +389,12 @@ def build_area(area):
         + "</div>" + checklist("The Plinth Standard", STANDARD) + "</div>",
         cls="blueprint",
     )
+    i = [a["name"] for a in AREAS].index(area["name"])
+    rot = [photos.PHOTOS[(i * 2) % len(photos.PHOTOS)],
+           photos.PHOTOS[(i * 2 + 1) % len(photos.PHOTOS)]]
+    body += section(head("02", "Recent work", "Work from around the city") + gallery(rot, layout="pair"))
     body += section(
-        head("02", "Services here", f'What we do in {area["name"]}') + grid(svc_cards)
+        head("03", "Services here", f'What we do in {area["name"]}') + grid(svc_cards)
         + cta_band(f'Get a free estimate in {area["name"]}', area["cta_subtext"]),
         cls="ghost",
     )
@@ -451,7 +475,14 @@ def build_about():
         cls="blueprint",
     )
     body += section(
-        head("02", "How It Works", "From first call to final walkthrough") + steps(FLOW)
+        head("02", "Our work", "What the work actually looks like",
+             "Finished rooms and the stages that get you there. All photographs are our own.")
+        + gallery([photos.by_file("kitchen-renovation-cape-town.jpg"),
+                   photos.by_file("bathroom-renovation-cape-town.jpg"),
+                   photos.by_file("renovated-home-exterior-cape-town.jpg")])
+    )
+    body += section(
+        head("03", "How It Works", "From first call to final walkthrough") + steps(FLOW)
         + cta_band("Meet us on site, free estimate", "No obligation, no hourly surprises.")
     )
     return page(
@@ -459,6 +490,27 @@ def build_about():
         "Plinth Renovations and Construction is based at 64 Oxford Street, Richmond Estate, "
         "Goodwood, serving Cape Town with written scopes and fixed prices.", body,
         schema=business_schema(), crumbs=[("About", "/about")],
+    )
+
+
+def build_work():
+    body = page_hero(
+        "Our Work", "Our Work: Renovations in Cape Town",
+        "Kitchens, bathrooms, ceilings and extensions we have built, plus the stages most "
+        "contractors never photograph.", kicker="Our own photographs",
+    )
+    body += section(
+        head("01", "Recent work", "Every photograph on this site is a Plinth job",
+             "Finished rooms and work in progress, in the order a job actually runs: stripped out, "
+             "framed, plastered, finished.")
+        + gallery(photos.PHOTOS + [photos.HERO], eager=3)
+        + cta_band("Want your home done like this?",
+                   "Send photos of the space and you will get a written estimate, free.")
+    )
+    return page(
+        "our-work", "Our Work | Plinth Renovations, Cape Town",
+        "Kitchens, bathrooms, ceilings and extensions built by Plinth Renovations in Cape Town, "
+        "photographed on site.", body, crumbs=[("Our Work", "/our-work")],
     )
 
 
@@ -618,7 +670,8 @@ def copy_assets():
     shutil.copyfile(ORIG / "logo.jpg", OUT / "logo.jpg")
     shutil.copyfile(ORIG / "hero-video.mp4", OUT / "hero-video.mp4")
     # only the photos this build actually points at
-    for name in ["hero.jpg"] + [f"img-{i}.jpg" for i in range(1, 8)] + ["IMG-20260902-WA0017.jpg"]:
+    img_names = [photos.HERO["file"]] + [ph["file"] for ph in photos.PHOTOS] + ["IMG-20260902-WA0017.jpg"]
+    for name in img_names:
         src = SRC / "_images" / name
         if not src.exists():
             src = ORIG / "images" / name
@@ -628,13 +681,20 @@ def copy_assets():
             print("missing image:", name)
 
 
-def write_sitemap(slugs):
+def write_sitemap(slugs, images=None):
+    """Image entries are declared per URL so the photographs are indexed too."""
+    images = images or {}
     rows = []
     for slug, prio in slugs:
         loc = f"{DOMAIN}/{slug}" if slug else DOMAIN + "/"
-        rows.append(f"  <url><loc>{loc}</loc><priority>{prio}</priority></url>")
+        inner = "".join(
+            f"<image:image><image:loc>{DOMAIN}/images/{f}</image:loc></image:image>"
+            for f in images.get(slug, [])
+        )
+        rows.append(f"  <url><loc>{loc}</loc><priority>{prio}</priority>{inner}</url>")
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
-           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
+           '        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n'
            + "\n".join(rows) + "\n</urlset>\n")
     (OUT / "sitemap.xml").write_text(xml, encoding="utf-8")
     (OUT / "robots.txt").write_text(
@@ -666,6 +726,7 @@ def main():
     pages.append(("services", build_services(), "0.9"))
     for svc in SERVICES:
         pages.append((slugify(svc["name"]), build_service(svc), "0.9"))
+    pages.append(("our-work", build_work(), "0.7"))
     pages.append(("service-areas", build_areas_index(), "0.7"))
     for area in AREAS:
         pages.append((f'home-renovations-in-{slugify(area["name"])}', build_area(area), "0.8"))
@@ -716,7 +777,13 @@ def main():
     for slug, html, _ in pages:
         (OUT / (f"{slug}.html" if slug else "index.html")).write_text(html, encoding="utf-8")
 
-    write_sitemap([(s, p) for s, _, p in pages if s not in ("404", "thank-you")])
+    img_map = {"our-work": [ph["file"] for ph in photos.PHOTOS] + [photos.HERO["file"]]}
+    for svc in SERVICES:
+        slug = slugify(svc["name"])
+        pics = [ph["file"] for ph in photos.PHOTOS if ph["service"] == slug]
+        if pics:
+            img_map[slug] = pics
+    write_sitemap([(s, p) for s, _, p in pages if s not in ("404", "thank-you")], img_map)
     write_headers()
     print(f"built {len(pages)} pages")
 

@@ -1,6 +1,12 @@
 /* Additions the original stylesheet does not carry: long-form prose, cost
    tables and form field labels. Everything else comes from styles.css. */
 
+/* a lone photo gets the full width rather than one orphaned tile */
+.gallery-grid.single{grid-template-columns:1fr}
+.gallery-grid.single img{height:auto;aspect-ratio:16/10}
+.gallery-grid.pair{grid-template-columns:repeat(2,1fr)}
+.gallery-grid.pair img{height:auto;aspect-ratio:4/3}
+
 /* keep every card's link on the same baseline */
 .card{display:flex;flex-direction:column}
 .card .more{margin-top:auto;padding-top:14px}
