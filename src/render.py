@@ -251,8 +251,8 @@ def build_home():
     ]
     body += section(
         head("04", "Recent Work", "Our own jobs, photographed as we work",
-             "No stock images anywhere on this site. Every photograph is a Plinth job, from the "
-             "stripped-out room through to the finished kitchen.")
+             "Every photograph in this section is a Plinth job, from the stripped-out room "
+             "through to the finished kitchen.")
         + gallery(home_gallery)
         + '<div class="center-cta"><a class="btn btn-ghost" href="/our-work">'
           "See all our work &rarr;</a></div>",
@@ -333,7 +333,7 @@ def build_service(svc):
     body = page_hero(
         svc["name"], lead["h1"], lead["cta_line"], kicker=lead["eyebrow"],
     )
-    svc_photos = [ph for ph in photos.PHOTOS if ph["service"] == slug]
+    svc_photos = [ph for ph in photos.PHOTOS + photos.STOCK if ph["service"] == slug]
     body += section(
         head("01", svc["name"], svc["intro_heading"])
         + f'<div class="prose reveal"><p>{escape(svc["intro_body"])}</p></div>'
@@ -476,7 +476,7 @@ def build_about():
     )
     body += section(
         head("02", "Our work", "What the work actually looks like",
-             "Finished rooms and the stages that get you there. All photographs are our own.")
+             "Finished rooms and the stages that get you there.")
         + gallery([photos.by_file("kitchen-renovation-cape-town.jpg"),
                    photos.by_file("bathroom-renovation-cape-town.jpg"),
                    photos.by_file("renovated-home-exterior-cape-town.jpg")])
@@ -500,7 +500,7 @@ def build_work():
         "contractors never photograph.", kicker="Our own photographs",
     )
     body += section(
-        head("01", "Recent work", "Every photograph on this site is a Plinth job",
+        head("01", "Recent work", "Every photograph in this gallery is a Plinth job",
              "Finished rooms and work in progress, in the order a job actually runs: stripped out, "
              "framed, plastered, finished.")
         + gallery(photos.PHOTOS + [photos.HERO], eager=3)
@@ -670,7 +670,8 @@ def copy_assets():
     shutil.copyfile(ORIG / "logo.jpg", OUT / "logo.jpg")
     shutil.copyfile(ORIG / "hero-video.mp4", OUT / "hero-video.mp4")
     # only the photos this build actually points at
-    img_names = [photos.HERO["file"]] + [ph["file"] for ph in photos.PHOTOS] + ["IMG-20260902-WA0017.jpg"]
+    img_names = ([photos.HERO["file"]] + [ph["file"] for ph in photos.PHOTOS]
+                 + [ph["file"] for ph in photos.STOCK] + ["IMG-20260902-WA0017.jpg"])
     for name in img_names:
         src = SRC / "_images" / name
         if not src.exists():

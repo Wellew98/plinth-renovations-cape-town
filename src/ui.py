@@ -112,7 +112,18 @@ def gallery(items, eager=0, layout=None):
             f'<figcaption>{escape(p["caption"])}</figcaption></figure>'
         )
     cls = "gallery-grid" + (f" {layout}" if layout else "")
-    return f'<div class="{cls}">' + "".join(figs) + "</div>"
+    out = f'<div class="{cls}">' + "".join(figs) + "</div>"
+
+    credits = [p for p in items if p.get("credit")]
+    if credits:
+        lines = []
+        for p in credits:
+            lic = p.get("licence", "")
+            lic_url = p.get("licence_url", "")
+            lic_html = f' <a href="{lic_url}" rel="noopener nofollow">{lic}</a>' if lic_url else (" " + lic if lic else "")
+            lines.append(f'{p["credit"]}{lic_html}')
+        out += '<p class="img-credit">' + "<br>".join(lines) + "</p>"
+    return out
 
 
 def section(inner, cls="", style=""):

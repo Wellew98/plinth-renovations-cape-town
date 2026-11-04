@@ -80,3 +80,37 @@ def by_file(name):
         if p["file"] == name:
             return p
     raise KeyError(name)
+
+
+# ---------------------------------------------------------------------------
+# Licensed stock used ONLY where Plinth has no photograph of its own. These
+# are labelled as illustrative on the page and credited, because they are not
+# our work and no visitor should be left to assume they are.
+# Replace with Plinth's own job photographs as soon as they exist.
+# ---------------------------------------------------------------------------
+STOCK = [
+    {
+        "src": "roof-membrane.jpg",
+        "file": "roof-waterproofing-membrane-installation.jpg",
+        "alt": "Rubber membrane laid over new timber roof trusses during a flat roof waterproofing installation",
+        "caption": "Membrane laid over new roof structure",
+        "service": "waterproofing",
+        "illustrative": True,
+        "credit": "Illustrative photograph, not a Plinth job: Luanr36, Wikimedia Commons",
+        "credit_url": "https://commons.wikimedia.org/wiki/File:Butynol_roofing.jpg",
+        "licence": "CC BY-SA 4.0",
+        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
+    },
+    {
+        "src": "water-damaged-ceiling.jpg",
+        "file": "water-damaged-ceiling-damp.jpg",
+        "alt": "Ceiling with water staining and peeling paint, the visible result of a leak or rising damp",
+        "caption": "What a slow leak leaves behind",
+        "service": "damp-proofing",
+        "illustrative": True,
+        "credit": "Illustrative photograph, not a Plinth job: Tomwsulcer, Wikimedia Commons (public domain)",
+        "credit_url": "https://commons.wikimedia.org/wiki/File:Ceiling_sheetrock_damaged_by_water_so_paint_was_peeling.jpg",
+        "licence": "CC0",
+        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    },
+]

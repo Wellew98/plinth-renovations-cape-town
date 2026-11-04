@@ -1,14 +1,14 @@
-"""Builds the site's image set from Plinth's own project photographs.
-
-No stock, no remote URLs: every image is a real Plinth job, resized for web and
-written under its search-facing filename from photos.py.
+"""Builds the image set: Plinth's own project photographs, plus the two
+licensed stopgaps where no Plinth photo exists (clearly flagged in photos.py
+and credited on the page). Everything is resized for web and written under its
+search-facing filename.
 """
 import shutil
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont
 
-from photos import HERO, PHOTOS
+from photos import HERO, PHOTOS, STOCK
 
 SRC = Path(r"C:\Users\DELL\OneDrive\Desktop\PLINTH\images")
 BRAND = Path(r"C:\Users\DELL\OneDrive\Desktop\PLINTH")
@@ -86,6 +86,16 @@ d.text((66, 522), "Renovations, waterproofing and damp repair, Cape Town",
 d.text((66, 560), "plinthrenovations.co.za  ·  066 150 5770",
        font=font("arial.ttf", 22), fill=(190, 186, 178))
 cover.save(OUT.parent / "og-cover.jpg", "JPEG", quality=86, optimize=True)
+
+# licensed stopgaps, used only where Plinth has no photograph of its own
+for ph in STOCK:
+    src = Path(__file__).resolve().parent / "_stock" / ph["src"]
+    if not src.exists():
+        print("missing stock:", ph["src"])
+        continue
+    im = Image.open(src).convert("RGB")
+    im.thumbnail((1600, 1600), Image.LANCZOS)
+    im.save(OUT / ph["file"], "JPEG", quality=82, optimize=True, progressive=True)
 
 total = sum(p.stat().st_size for p in OUT.glob("*")) // 1024
 print("images written to", OUT)
