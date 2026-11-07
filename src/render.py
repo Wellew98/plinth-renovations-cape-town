@@ -670,6 +670,26 @@ def copy_assets():
     shutil.copyfile(ORIG / "logo.jpg", OUT / "logo.jpg")
     # the source file is 4.2 MB for five seconds; the re-encode is 395 KB at
     # SSIM 0.979, which is visually the same clip over a hero-sized video tag
+    # 301s from the old plinthrenovations.co.za URLs, in place for the day this
+    # domain moves here: gallery and projects both become /our-work, the stub
+    # blog folds into /faq, and the rest keep their meaning.
+    (OUT / "_redirects").write_text(
+        "\n".join([
+            "# old site -> this site (active only once the domain points here)",
+            "/index.html            /                301",
+            "/about.html            /about           301",
+            "/services.html         /services        301",
+            "/estimate.html         /estimate        301",
+            "/faq.html              /faq             301",
+            "/areas.html            /service-areas   301",
+            "/gallery.html          /our-work        301",
+            "/projects.html         /our-work        301",
+            "/blog.html             /faq             301",
+            "",
+        ]),
+        encoding="utf-8",
+    )
+
     vid = SRC / "assets" / "hero-video.mp4"
     shutil.copyfile(vid if vid.exists() else ORIG / "hero-video.mp4", OUT / "hero-video.mp4")
     # only the photos this build actually points at
