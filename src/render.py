@@ -668,7 +668,10 @@ def copy_assets():
     shutil.copyfile(ORIG / "script.js", OUT / "script.js")
     shutil.copyfile(SRC / "extra.css", OUT / "extra.css")
     shutil.copyfile(ORIG / "logo.jpg", OUT / "logo.jpg")
-    shutil.copyfile(ORIG / "hero-video.mp4", OUT / "hero-video.mp4")
+    # the source file is 4.2 MB for five seconds; the re-encode is 395 KB at
+    # SSIM 0.979, which is visually the same clip over a hero-sized video tag
+    vid = SRC / "assets" / "hero-video.mp4"
+    shutil.copyfile(vid if vid.exists() else ORIG / "hero-video.mp4", OUT / "hero-video.mp4")
     # only the photos this build actually points at
     img_names = ([photos.HERO["file"]] + [ph["file"] for ph in photos.PHOTOS]
                  + [ph["file"] for ph in photos.STOCK] + ["IMG-20260902-WA0017.jpg"])
