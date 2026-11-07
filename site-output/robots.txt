@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://plinth-renovations-cape-town.pages.dev/sitemap.xml
+Sitemap: https://plinthrenovations.co.za/sitemap.xml

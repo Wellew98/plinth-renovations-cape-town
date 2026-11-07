@@ -14,7 +14,7 @@ TEL = "+27661505770"
 STREET = "64 Oxford Street, Richmond Estate"
 CITY = "Goodwood, Cape Town, 7460"
 HOURS_TOP = "Mon to Fri 7AM to 6PM | Sat 8AM to 2PM"
-DOMAIN = "https://plinth-renovations-cape-town.pages.dev"
+DOMAIN = "https://plinthrenovations.co.za"
 
 # stroke icons, 24x24, matching the weight used in the original cards
 ICONS = {
