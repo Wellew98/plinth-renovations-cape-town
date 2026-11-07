@@ -547,7 +547,7 @@ def build_contact():
 
 FORM_FIELDS = """
 <div class="form-card reveal">
-  <form action="#" method="POST">
+  <form id="estimate-form" action="https://wa.me/27661505770" method="POST">
     <div class="two">
       <div><label for="name">Your name</label><input id="name" name="name" type="text" required></div>
       <div><label for="phone">Phone or WhatsApp</label><input id="phone" name="phone" type="tel" required></div>
@@ -563,10 +563,11 @@ FORM_FIELDS = """
       </select></div>
     <div><label for="details">Tell us about the job</label>
       <textarea id="details" name="details" rows="5" placeholder="What needs doing, how big it is, and when you would like it done."></textarea></div>
-    <button class="btn btn-gold" type="submit" style="width:100%">Request Free Estimate</button>
-    <p class="table-note">We reply within one business day. If it is urgent, call 066 150 5770.</p>
+    <button class="btn btn-gold" type="submit" style="width:100%">Send on WhatsApp</button>
+    <p class="table-note wa-note">This opens WhatsApp with your details written out. Nothing is sent until you press send there. Rather talk? Call 066 150 5770.</p>
   </form>
 </div>
+<script src="form-whatsapp.js?v=1" defer></script>
 """
 
 
@@ -667,6 +668,7 @@ def copy_assets():
     shutil.copyfile(ORIG / "styles.css", OUT / "styles.css")
     shutil.copyfile(ORIG / "script.js", OUT / "script.js")
     shutil.copyfile(SRC / "extra.css", OUT / "extra.css")
+    shutil.copyfile(SRC / "assets" / "form-whatsapp.js", OUT / "form-whatsapp.js")
     shutil.copyfile(ORIG / "logo.jpg", OUT / "logo.jpg")
     # the source file is 4.2 MB for five seconds; the re-encode is 395 KB at
     # SSIM 0.979, which is visually the same clip over a hero-sized video tag

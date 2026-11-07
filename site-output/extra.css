@@ -49,6 +49,10 @@
   .cost-table td:last-child{padding-bottom:0}
 }
 
+/* estimate form handing off to WhatsApp */
+.wa-note--ready{color:#2f6b3a;font-weight:500}
+.wa-note--ready a{color:#2f6b3a;text-decoration:underline}
+
 /* credit line under a gallery that contains licensed stock */
 .img-credit{margin:16px 0 0;text-align:center;font-size:12.5px;line-height:1.7;color:#7a7365}
 .img-credit a{color:#8a6a2f;text-decoration:underline}
