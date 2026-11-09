@@ -9,6 +9,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 from photos import HERO, PHOTOS, STOCK
+from library import LIBRARY
 
 SRC = Path(r"C:\Users\DELL\OneDrive\Desktop\_archive\PLINTH\images")
 BRAND = Path(r"C:\Users\DELL\OneDrive\Desktop\_archive\PLINTH")
@@ -96,6 +97,17 @@ for ph in STOCK:
     im = Image.open(src).convert("RGB")
     im.thumbnail((1600, 1600), Image.LANCZOS)
     im.save(OUT / ph["file"], "JPEG", quality=82, optimize=True, progressive=True)
+
+# licensed library: subject-matched photography for the service galleries
+LIB_SRC = Path(__file__).resolve().parent / "_library"
+for name, _alt in LIBRARY:
+    src = LIB_SRC / name
+    if not src.exists():
+        print("missing library image:", name)
+        continue
+    im = Image.open(src).convert("RGB")
+    im.thumbnail((1400, 1400), Image.LANCZOS)
+    im.save(OUT / name, "JPEG", quality=80, optimize=True, progressive=True)
 
 total = sum(p.stat().st_size for p in OUT.glob("*")) // 1024
 print("images written to", OUT)

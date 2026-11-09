@@ -1,14 +1,15 @@
-"""The photography set, named for search and described accurately.
+"""Photography used on the site, named for search and described accurately.
 
-Every file here is a real Plinth job, taken from the company's own photographs.
-The names carry the service and the city, which is what a Cape Town search looks
-like; the alts and captions say what is visible in the frame, including the
-work-in-progress shots, because a young company showing its stages is more
-credible than a wall of finished rooms.
+These are NOT documented Plinth jobs. They are photographs Wellington downloaded
+in 2025 while building the previous site; their provenance and licence are not
+recorded. They are retained because he uses them and asked that relevance matter
+more than origin, but nothing on the site should claim they are Plinth's own work.
 
-There is no stock photography in this set. Two licensed images were used as
-stopgaps while the library was thin; both were removed once the rest of the
-original batch was put back into service.
+Licensed, subject-matched photography lives in library.py and is used for the
+service galleries.
+
+The filenames carry the service and the city, because that is what a Cape Town
+search looks like; the alts say what is visible in the frame.
 """
 
 HERO = {

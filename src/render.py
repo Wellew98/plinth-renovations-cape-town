@@ -12,6 +12,7 @@ from html import escape
 from pathlib import Path
 
 import photos
+from library import LIBRARY
 import ui
 from ui import (
     BUSINESS, CITY, DOMAIN, PHONE, STREET, TEL,
@@ -422,10 +423,13 @@ def build_service(svc):
         + "</div>"
         + (gallery(svc_photos, layout="single" if len(svc_photos) == 1 else "pair") if svc_photos else "")
     )
-    body += section(
-        head("02", "What it covers", svc["detail_heading"], svc["detail_intro"]) + grid(sub_cards),
-        cls="ghost",
-    )
+    strip = spec.get("gallery") or []
+    if strip:
+        alts = dict(LIBRARY)
+        items = [{"file": n, "alt": alts.get(n, ""), "caption": ""} for n in strip]
+        body += section('<div class="reveal" style="padding-top:8px">' + gallery(items) + "</div>", cls="ghost")
+    body += section(head("02", "What it covers", svc["detail_heading"], svc["detail_intro"]) + grid(sub_cards),
+        cls="ghost")
     body += section(head("03", "Cost", cost["heading"]) + cost_html + cta_band(
         f'Get a written {svc["name"].lower()} estimate', svc["cta_subtext"]), cls="cream")
     body += section(
@@ -555,6 +559,11 @@ def build_coverage_area(a):
         + f'<div class="reveal prose">{paras}</div>'
         + f'<div style="margin-top:26px">{gallery([img], layout="single")}</div>'
     )
+    cstrip = spec.get("gallery") or []
+    if cstrip:
+        calts = dict(LIBRARY)
+        citems = [{"file": n, "alt": calts.get(n, ""), "caption": ""} for n in cstrip]
+        body += section('<div class="reveal">' + gallery(citems) + "</div>", cls="ghost")
     body += section(
         head("02", "Services", f"What we do in {a['area']}",
              "Every service below has its own page. The work is the same as anywhere else in "
@@ -904,7 +913,8 @@ def copy_assets():
     shutil.copyfile(vid if vid.exists() else ORIG / "hero-video.mp4", OUT / "hero-video.mp4")
     # only the photos this build actually points at
     img_names = ([photos.HERO["file"]] + [ph["file"] for ph in photos.PHOTOS]
-                 + [ph["file"] for ph in photos.STOCK] + ["IMG-20260902-WA0017.jpg"])
+                 + [ph["file"] for ph in photos.STOCK] + [name for name, _ in LIBRARY]
+                 + ["IMG-20260902-WA0017.jpg"])
     for name in img_names:
         src = SRC / "_images" / name
         if not src.exists():
