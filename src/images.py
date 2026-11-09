@@ -10,8 +10,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 from photos import HERO, PHOTOS, STOCK
 
-SRC = Path(r"C:\Users\DELL\OneDrive\Desktop\PLINTH\images")
-BRAND = Path(r"C:\Users\DELL\OneDrive\Desktop\PLINTH")
+SRC = Path(r"C:\Users\DELL\OneDrive\Desktop\_archive\PLINTH\images")
+BRAND = Path(r"C:\Users\DELL\OneDrive\Desktop\_archive\PLINTH")
 LOGO = BRAND / "logo.jpg"
 OUT = Path(__file__).resolve().parent / "_images"
 OUT.mkdir(parents=True, exist_ok=True)

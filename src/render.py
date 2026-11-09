@@ -22,7 +22,7 @@ from ui import (
 SRC = Path(__file__).resolve().parent
 ROOT = SRC.parent
 OUT = ROOT / "site-output"
-ORIG = Path(r"C:\Users\DELL\OneDrive\Desktop\PLINTH")
+ORIG = Path(r"C:\Users\DELL\OneDrive\Desktop\_archive\PLINTH")
 
 content = json.loads((SRC / "content.json").read_text(encoding="utf-8"))
 

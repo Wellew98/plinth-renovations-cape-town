@@ -27,6 +27,17 @@
 .form-card .two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .form-card .btn{margin-top:6px}
 
+/* desktop hero: the original design is dark copy over a bright film, held
+   together by a white halo on the type. Where the footage runs bright behind
+   the lead paragraph the halo is not enough, so a cream veil lifts the text
+   side only and fades out before the middle of the frame: the film still
+   carries the right two-thirds untouched. */
+@media (min-width:701px){
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
+    background:linear-gradient(90deg,rgba(255,253,247,.62) 0%,rgba(255,253,247,.46) 40%,rgba(255,253,247,.30) 62%,rgba(255,253,247,.12) 78%,rgba(255,253,247,0) 92%)}
+  .hero .wrap{position:relative;z-index:3}
+}
+
 @media (max-width:700px){
   /* at phone width the hero photo sits directly behind dark text, so it gets a
      cream scrim: the film still reads, the copy stays legible */
