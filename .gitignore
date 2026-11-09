@@ -6,3 +6,6 @@ package-lock.json
 Thumbs.db
 .wrangler/
 node_modules/
+
+# local archive mirrors are not site source
+_archive/
