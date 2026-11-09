@@ -408,8 +408,11 @@ def build_service(svc):
     pkey = PHOTO_KEY.get(svc["key"], "waterproofing")
     spec = SPEC[svc["key"]]
     if spec.get("image"):
-        svc_photos = [{"file": spec["image"], "alt": spec.get("image_alt", ""),
-                       "caption": spec.get("image_alt", "")}]
+        ph = dict(photos.by_file(spec["image"]))
+        if spec.get("image_alt"):
+            ph["alt"] = spec["image_alt"]
+            ph["caption"] = spec["image_alt"]
+        svc_photos = [ph]
     else:
         svc_photos = [ph for ph in photos.PHOTOS + photos.STOCK if ph["service"] == pkey]
     body += section(
@@ -543,7 +546,10 @@ def build_coverage_area(a):
         [("Service Areas", "/service-areas"), (a["area"], None)],
         a["h1"], a["intro"].split("\n\n")[0], kicker=f'{a["area"]} \u00b7 Cape Town', cta=True,
     )
-    img = {"file": spec["image"], "alt": spec["image_alt"], "caption": spec["image_alt"]}
+    img = dict(photos.by_file(spec["image"]))
+    if spec.get("image_alt"):
+        img["alt"] = spec["image_alt"]
+        img["caption"] = spec["image_alt"]
     body += section(
         head("01", "The area", f'{a["area"]}, as we find it', "")
         + f'<div class="reveal prose">{paras}</div>'

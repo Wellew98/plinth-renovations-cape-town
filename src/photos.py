@@ -1,9 +1,14 @@
 """The photography set, named for search and described accurately.
 
-Every file here is a real Plinth job. The names carry the service and the city,
-which is what a Cape Town search actually looks like; the alts and captions say
-what is visible in the frame, including the work-in-progress shots, because a
-young company showing its stages is more credible than a wall of finished rooms.
+Every file here is a real Plinth job, taken from the company's own photographs.
+The names carry the service and the city, which is what a Cape Town search looks
+like; the alts and captions say what is visible in the frame, including the
+work-in-progress shots, because a young company showing its stages is more
+credible than a wall of finished rooms.
+
+There is no stock photography in this set. Two licensed images were used as
+stopgaps while the library was thin; both were removed once the rest of the
+original batch was put back into service.
 """
 
 HERO = {
@@ -17,100 +22,161 @@ PHOTOS = [
     {
         "src": "IMG-20260903-WA0033.jpg",
         "file": "kitchen-renovation-cape-town.jpg",
-        "alt": "Finished kitchen renovation with a stone island, timber cabinetry and pendant lights",
+        "alt": "Finished kitchen with a stone island, timber cabinetry and pendant lights",
         "caption": "Kitchen: stone island, timber joinery",
         "service": "kitchen-renovations",
     },
     {
         "src": "svc-bathroom.jpg",
         "file": "bathroom-renovation-cape-town.jpg",
-        "alt": "Completed bathroom renovation with a walk-in shower, floating vanity and full-height tiling",
+        "alt": "Completed bathroom with a walk-in shower, floating vanity and full-height tiling",
         "caption": "Bathroom: walk-in shower, floating vanity",
         "service": "bathroom-renovations",
     },
     {
         "src": "IMG-20260903-WA0028.jpg",
         "file": "glass-roof-patio-extension-cape-town.jpg",
-        "alt": "Timber frame and glass roof extension over a patio, under construction",
+        "alt": "Timber frame and glass roof being fitted over a paved patio, with installers on the frame",
         "caption": "Glass roof patio extension, frame going up",
         "service": "home-extensions",
     },
     {
         "src": "IMG-20260902-WA0018.jpg",
         "file": "interior-renovation-in-progress-cape-town.jpg",
-        "alt": "Interior renovation in progress with new ceilings, cove lighting and dust sheeting",
-        "caption": "Interior fit-out: new ceilings and cove lighting",
+        "alt": "Worker plastering an interior wall during a fit-out, with a ladder and tools on site",
+        "caption": "Interior fit-out in progress",
         "service": "home-renovations",
     },
     {
         "src": "IMG-20260902-WA0022.jpg",
         "file": "plasterboard-bulkhead-ceiling-cape-town.jpg",
-        "alt": "New plasterboard bulkhead meeting an existing wall, taped and ready for skimming",
-        "caption": "Bulkhead formed and taped for skim",
+        "alt": "New plasterboard bulkhead meeting an off-shutter concrete wall before skimming",
+        "caption": "Bulkhead meeting concrete, before skim",
         "service": "plastering",
     },
     {
         "src": "IMG-20260902-WA0015.jpg",
-        "file": "curved-ceiling-plaster-detail-cape-town.jpg",
-        "alt": "Curved plaster ceiling detail marked out in a passage before skimming",
-        "caption": "Curved ceiling detail, set out before skim",
+        "file": "conduit-first-fix-wall-cape-town.jpg",
+        "alt": "Wall marked out and chased for first-fix conduit before plastering",
+        "caption": "Wall set out for first-fix conduit",
         "service": "plastering",
     },
     {
         "src": "IMG-20260902-WA0013.jpg",
         "file": "renovation-strip-out-cape-town.jpg",
-        "alt": "Room stripped back to its ceiling and walls before renovation work begins",
+        "alt": "Room stripped back during a renovation, with a new bulkhead formed and services exposed",
         "caption": "Stripped back before the new work",
         "service": "painting",
     },
     {
         "src": "IMG-20260902-WA0005.jpg",
         "file": "home-extension-under-construction-cape-town.jpg",
-        "alt": "Double-storey home extension under construction with new slab and openings formed",
-        "caption": "Extension shell, slab and openings",
+        "alt": "New build with a concrete slab poured and the timber roof structure going up",
+        "caption": "Extension shell, slab and roof structure",
         "service": "home-extensions",
+    },
+    {
+        "src": "IMG-20260902-WA0004.jpg",
+        "file": "plaster-ceiling-bulkheads-cape-town.jpg",
+        "alt": "Coffered plaster ceiling under construction, with the crew working on the bulkheads",
+        "caption": "Coffered ceiling, bulkheads being built",
+        "service": "plastering",
+    },
+    {
+        "src": "IMG-20260902-WA0010.jpg",
+        "file": "exposed-roof-trusses-cape-town.jpg",
+        "alt": "Exposed timber roof trusses and ceiling brandering seen from below",
+        "caption": "Roof trusses and brandering from below",
+        "service": "waterproofing",
+    },
+    {
+        "src": "IMG-20260902-WA0011.jpg",
+        "file": "cornice-plastering-cape-town.jpg",
+        "alt": "Plasterer working a cornice detail from a step ladder",
+        "caption": "Cornice detail being plastered",
+        "service": "plastering",
+    },
+    {
+        "src": "IMG-20260902-WA0014.jpg",
+        "file": "ceiling-opened-for-repair-cape-town.jpg",
+        "alt": "Ceiling opened up with services and ducting exposed during a repair",
+        "caption": "Ceiling opened to reach the services",
+        "service": "waterproofing",
+    },
+    {
+        "src": "IMG-20260902-WA0016.jpg",
+        "file": "recessed-ceiling-led-lighting-cape-town.jpg",
+        "alt": "Recessed ceiling with LED cove lighting after painting and finishing",
+        "caption": "Recessed ceiling and LED cove",
+        "service": "painting",
+    },
+    {
+        "src": "IMG-20260902-WA0017.jpg",
+        "file": "commercial-ceiling-coffers-cape-town.jpg",
+        "alt": "Commercial hall with blue coffered ceiling panels and white bulkheads",
+        "caption": "Commercial coffered ceiling",
+        "service": "painting",
+    },
+    {
+        "src": "IMG-20260902-WA0019.jpg",
+        "file": "glass-corridor-ceiling-cape-town.jpg",
+        "alt": "Corridor with floor-to-ceiling glazing and a finished ceiling detail",
+        "caption": "Corridor glazing and ceiling",
+        "service": "painting",
+    },
+    {
+        "src": "IMG-20260902-WA0021.jpg",
+        "file": "corridor-ceiling-lighting-cape-town.jpg",
+        "alt": "Corridor ceiling with LED cove lighting and painted bulkheads",
+        "caption": "Corridor ceiling and cove lighting",
+        "service": "painting",
+    },
+    {
+        "src": "IMG-20260902-WA0007.jpg",
+        "file": "corridor-cove-lighting-cape-town.jpg",
+        "alt": "Corridor with LED cove lighting set into a painted ceiling",
+        "caption": "Cove lighting in a painted ceiling",
+        "service": "painting",
+    },
+    {
+        "src": "IMG-20260902-WA0012.jpg",
+        "file": "timber-slatted-corridor-cape-town.jpg",
+        "alt": "Corridor with a slatted timber feature wall and recessed lighting",
+        "caption": "Slatted timber feature wall",
+        "service": "home-renovations",
+    },
+    {
+        "src": "IMG-20260902-WA0006.jpg",
+        "file": "boardroom-fitout-cape-town.jpg",
+        "alt": "Boardroom fit-out with a slatted timber wall and glass partitioning",
+        "caption": "Boardroom fit-out, timber and glass",
+        "service": "home-renovations",
+    },
+    {
+        "src": "IMG-20260903-WA0030.jpg",
+        "file": "stone-vanity-bathroom-cape-town.jpg",
+        "alt": "Timber vanity with a stone counter and mirror in a finished bathroom",
+        "caption": "Timber vanity, stone counter",
+        "service": "tiling",
+    },
+    {
+        "src": "IMG-20260903-WA0031.jpg",
+        "file": "kitchen-timber-ceiling-cape-town.jpg",
+        "alt": "Kitchen with a timber ceiling, pendant lights and stone worktops",
+        "caption": "Kitchen with timber ceiling",
+        "service": "kitchen-renovations",
     },
 ]
 
 
 def by_file(name):
-    if HERO["file"] == name:
-        return HERO
-    for p in PHOTOS:
+    for p in [HERO] + PHOTOS + STOCK:
         if p["file"] == name:
             return p
     raise KeyError(name)
 
 
-# ---------------------------------------------------------------------------
-# Licensed stock used ONLY where Plinth has no photograph of its own. These
-# are labelled as illustrative on the page and credited, because they are not
-# our work and no visitor should be left to assume they are.
-# Replace with Plinth's own job photographs as soon as they exist.
-# ---------------------------------------------------------------------------
-STOCK = [
-    {
-        "src": "roof-membrane.jpg",
-        "file": "roof-waterproofing-membrane-installation.jpg",
-        "alt": "Rubber membrane laid over new timber roof trusses during a flat roof waterproofing installation",
-        "caption": "Membrane laid over new roof structure",
-        "service": "waterproofing",
-        "illustrative": True,
-        "credit": "Illustrative photograph, not a Plinth job: Luanr36, Wikimedia Commons",
-        "credit_url": "https://commons.wikimedia.org/wiki/File:Butynol_roofing.jpg",
-        "licence": "CC BY-SA 4.0",
-        "licence_url": "https://creativecommons.org/licenses/by-sa/4.0",
-    },
-    {
-        "src": "water-damaged-ceiling.jpg",
-        "file": "water-damaged-ceiling-damp.jpg",
-        "alt": "Ceiling with water staining and peeling paint, the visible result of a leak or rising damp",
-        "caption": "What a slow leak leaves behind",
-        "service": "damp-proofing",
-        "illustrative": True,
-        "credit": "Illustrative photograph, not a Plinth job: Tomwsulcer, Wikimedia Commons (public domain)",
-        "credit_url": "https://commons.wikimedia.org/wiki/File:Ceiling_sheetrock_damaged_by_water_so_paint_was_peeling.jpg",
-        "licence": "CC0",
-        "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    },
-]
+# No licensed stock remains. The two stopgap images (a Wikimedia roof membrane
+# and a public-domain water-damaged ceiling) were retired on 2026-11-09 and
+# replaced with Plinth's own photographs from the original batch.
+STOCK = []

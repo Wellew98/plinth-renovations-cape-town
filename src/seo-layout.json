@@ -231,8 +231,8 @@
       "compact": true,
       "done": false,
       "content_notes": "Money page, highest CPC in the set. Absorbs companies, contractors and specialists as H2s. Damp and mould live here as sections.",
-      "image": "roof-waterproofing-membrane-installation.jpg",
-      "image_alt": "Rubber membrane laid over new roof trusses during a Cape Town waterproofing project"
+      "image": "ceiling-opened-for-repair-cape-town.jpg",
+      "image_alt": "Ceiling opened up with services and ducting exposed during a repair"
     },
     {
       "key": "roof-waterproofing",
@@ -256,8 +256,8 @@
       "compact": true,
       "done": false,
       "content_notes": "Highest CPC after Durbanville. Absorbs torch on waterproofing cape town. Does not chase the parent waterproofing term.",
-      "image": "roof-waterproofing-membrane-installation.jpg",
-      "image_alt": "Waterproofing membrane being installed on a flat roof in Cape Town"
+      "image": "exposed-roof-trusses-cape-town.jpg",
+      "image_alt": "Exposed timber roof trusses and ceiling brandering seen from below"
     },
     {
       "key": "roof-repairs",
@@ -281,8 +281,8 @@
       "compact": true,
       "done": false,
       "content_notes": "New page from research. Absorbs leaking roof repairs cape town at 20 and 5.00.",
-      "image": "water-damaged-ceiling-damp.jpg",
-      "image_alt": "Water-stained ceiling with peeling paint, the visible result of a roof leak"
+      "image": "home-extension-under-construction-cape-town.jpg",
+      "image_alt": "New build with a concrete slab poured and the timber roof structure going up"
     },
     {
       "key": "painting",
@@ -306,8 +306,8 @@
       "compact": true,
       "done": false,
       "content_notes": "Biggest volume in the set. Absorbs painting contractors, painting companies, house painters, painting services as H2s.",
-      "image": "renovation-strip-out-cape-town.jpg",
-      "image_alt": "Room stripped back to bare walls and ceiling before painting and renovation"
+      "image": "recessed-ceiling-led-lighting-cape-town.jpg",
+      "image_alt": "Recessed ceiling with LED cove lighting after painting and finishing"
     },
     {
       "key": "plastering",
@@ -331,8 +331,8 @@
       "compact": true,
       "done": false,
       "content_notes": "Absorbs stucco Italiano cape town at 20 and 4.58.",
-      "image": "plasterboard-bulkhead-ceiling-cape-town.jpg",
-      "image_alt": "New plasterboard bulkhead meeting an existing wall, taped and ready for plaster"
+      "image": "plaster-ceiling-bulkheads-cape-town.jpg",
+      "image_alt": "Coffered plaster ceiling under construction, with the crew working on the bulkheads"
     },
     {
       "key": "tiling",
@@ -356,8 +356,8 @@
       "compact": true,
       "done": false,
       "content_notes": "Confirmed by Wellington. Volume play not money play, 0.68 CPC. Do not over-invest.",
-      "image": "bathroom-renovation-cape-town.jpg",
-      "image_alt": "Tiled bathroom with a walk-in shower, floating vanity and large-format floor tiles"
+      "image": "stone-vanity-bathroom-cape-town.jpg",
+      "image_alt": "Timber vanity with a stone counter and mirror in a finished bathroom"
     },
     {
       "key": "kitchens",
@@ -382,7 +382,7 @@
       "done": false,
       "content_notes": "Absorbs kitchen remodel and kitchen refurbishment cape town.",
       "image": "kitchen-renovation-cape-town.jpg",
-      "image_alt": "Finished kitchen renovation with a stone island, timber cabinetry and tiled splashback"
+      "image_alt": "Finished kitchen with a stone island, timber cabinetry and pendant lights"
     },
     {
       "key": "bathrooms",
@@ -407,7 +407,7 @@
       "done": false,
       "content_notes": "Links to waterproofing page. Absorbs bathroom renovations durbanville as a section, not a page.",
       "image": "bathroom-renovation-cape-town.jpg",
-      "image_alt": "Completed bathroom renovation with a walk-in shower and floating vanity"
+      "image_alt": "Completed bathroom with a walk-in shower, floating vanity and full-height tiling"
     },
     {
       "key": "home-renovations",
@@ -432,7 +432,7 @@
       "done": false,
       "content_notes": "Absorbs home renovation contractors (9.84 CPC), renovation contractors, affordable home renovations, apartment renovations.",
       "image": "interior-renovation-in-progress-cape-town.jpg",
-      "image_alt": "Interior renovation in progress with new ceilings, cove lighting and plastering"
+      "image_alt": "Worker plastering an interior wall during a fit-out, with a ladder and tools on site"
     },
     {
       "key": "waterproofing-durbanville",
@@ -456,8 +456,8 @@
       "compact": true,
       "done": false,
       "content_notes": "Highest CPC area term in the whole set. Separate page from painters durbanville, different intent.",
-      "image": "roof-waterproofing-membrane-installation.jpg",
-      "image_alt": "Roof waterproofing membrane being installed on a Durbanville property"
+      "image": "exposed-roof-trusses-cape-town.jpg",
+      "image_alt": "Exposed timber roof trusses and ceiling brandering seen from below"
     },
     {
       "key": "painters-durbanville",
@@ -481,8 +481,8 @@
       "compact": true,
       "done": false,
       "content_notes": "90 plus 30 from durbanville painters, same intent, one page. Second-strongest area page.",
-      "image": "renovation-strip-out-cape-town.jpg",
-      "image_alt": "Interior stripped and prepared for painting in Durbanville"
+      "image": "corridor-ceiling-lighting-cape-town.jpg",
+      "image_alt": "Corridor ceiling with LED cove lighting and painted bulkheads"
     },
     {
       "key": "waterproofing-somerset-west",
@@ -506,8 +506,8 @@
       "compact": true,
       "done": false,
       "content_notes": "30 for waterproofing, 20 for paint contractors at 5.53 stays a section on the areas hub.",
-      "image": "roof-waterproofing-membrane-installation.jpg",
-      "image_alt": "Roof membrane installation on a Somerset West home"
+      "image": "home-extension-under-construction-cape-town.jpg",
+      "image_alt": "New build with a concrete slab poured and the timber roof structure going up"
     },
     {
       "key": "waterproofing-southern-suburbs",
@@ -531,8 +531,8 @@
       "compact": true,
       "done": false,
       "content_notes": "90 across six terms in the southern suburbs, two of them waterproofing at 20 each.",
-      "image": "water-damaged-ceiling-damp.jpg",
-      "image_alt": "Ceiling water damage in a southern suburbs home before repair"
+      "image": "ceiling-opened-for-repair-cape-town.jpg",
+      "image_alt": "Ceiling opened up with services and ducting exposed during a repair"
     },
     {
       "key": "leaking-ceiling-repair",
@@ -556,8 +556,8 @@
       "compact": true,
       "done": false,
       "content_notes": "Owns a 97-phrase cluster, the only real problem topic in the data. Ceiling language, not waterproofing language.",
-      "image": "water-damaged-ceiling-damp.jpg",
-      "image_alt": "Ceiling water damage and peeling paint from a leak above"
+      "image": "ceiling-opened-for-repair-cape-town.jpg",
+      "image_alt": "Ceiling opened up with services and ducting exposed during a repair"
     },
     {
       "key": "privacy",
@@ -644,7 +644,7 @@
       "hub": "service-areas",
       "word_target": 380,
       "image": "renovated-home-exterior-cape-town.jpg",
-      "image_alt": "Renovated Cape Town family home after external repainting",
+      "image_alt": "Renovated Cape Town home exterior with new paving, planting and a covered entrance",
       "page_type": "coverage",
       "note": "No measured keyword. Coverage page: the building activity is real even where Google reports no search volume."
     },
@@ -660,8 +660,8 @@
       "cat2": "Coverage page",
       "hub": "service-areas",
       "word_target": 380,
-      "image": "home-extension-under-construction-cape-town.jpg",
-      "image_alt": "Extension under construction with new brickwork",
+      "image": "glass-roof-patio-extension-cape-town.jpg",
+      "image_alt": "Timber frame and glass roof being fitted over a paved patio, with installers on the frame",
       "page_type": "coverage",
       "note": "No measured keyword. Coverage page: the building activity is real even where Google reports no search volume."
     },
@@ -678,7 +678,7 @@
       "hub": "service-areas",
       "word_target": 380,
       "image": "renovation-strip-out-cape-town.jpg",
-      "image_alt": "Room stripped out to the brickwork before renovation",
+      "image_alt": "Room stripped back during a renovation, with a new bulkhead formed and services exposed",
       "page_type": "coverage",
       "note": "No measured keyword. Coverage page: the building activity is real even where Google reports no search volume."
     },
@@ -694,8 +694,8 @@
       "cat2": "Coverage page",
       "hub": "service-areas",
       "word_target": 380,
-      "image": "glass-roof-patio-extension-cape-town.jpg",
-      "image_alt": "Glass roof installed over a paved patio",
+      "image": "glass-corridor-ceiling-cape-town.jpg",
+      "image_alt": "Corridor with floor-to-ceiling glazing and a finished ceiling detail",
       "page_type": "coverage",
       "note": "No measured keyword. Coverage page: the building activity is real even where Google reports no search volume."
     },
@@ -711,8 +711,8 @@
       "cat2": "Coverage page",
       "hub": "service-areas",
       "word_target": 380,
-      "image": "plasterboard-bulkhead-ceiling-cape-town.jpg",
-      "image_alt": "New plasterboard bulkhead ceiling being finished",
+      "image": "corridor-cove-lighting-cape-town.jpg",
+      "image_alt": "Corridor with LED cove lighting set into a painted ceiling",
       "page_type": "coverage",
       "note": "No measured keyword. Coverage page: the building activity is real even where Google reports no search volume."
     },
@@ -728,8 +728,8 @@
       "cat2": "Coverage page",
       "hub": "service-areas",
       "word_target": 380,
-      "image": "roof-waterproofing-membrane-installation.jpg",
-      "image_alt": "Torch-on membrane being installed on a flat roof",
+      "image": "cornice-plastering-cape-town.jpg",
+      "image_alt": "Plasterer working a cornice detail from a step ladder",
       "page_type": "coverage",
       "note": "No measured keyword. Coverage page: the building activity is real even where Google reports no search volume."
     },
@@ -745,8 +745,8 @@
       "cat2": "Coverage page",
       "hub": "service-areas",
       "word_target": 380,
-      "image": "water-damaged-ceiling-damp.jpg",
-      "image_alt": "Water-damaged ceiling with failed paint",
+      "image": "kitchen-timber-ceiling-cape-town.jpg",
+      "image_alt": "Kitchen with a timber ceiling, pendant lights and stone worktops",
       "page_type": "coverage",
       "note": "No measured keyword. Coverage page: the building activity is real even where Google reports no search volume."
     }
@@ -756,9 +756,8 @@
     "/thank-you"
   ],
   "_image_exempt": {
-    "roof-waterproofing-membrane-installation.jpg": "Only roof-membrane photograph in the library; used where it is literally the subject",
-    "water-damaged-ceiling-damp.jpg": "Only water-damage photograph; shows the result, not a claimed project address",
-    "bathroom-renovation-cape-town.jpg": "Tiles are only visible in the bathroom photograph",
-    "renovation-strip-out-cape-town.jpg": "Only preparation photograph; painting and Durbanville painting both start here"
+    "ceiling-opened-for-repair-cape-town.jpg": "Only ceiling-repair photograph; the leak, waterproofing and southern-suburbs pages each show it once",
+    "exposed-roof-trusses-cape-town.jpg": "Only exposed-roof photograph in the library; used on the roof waterproofing and Durbanville pages",
+    "home-extension-under-construction-cape-town.jpg": "Only roof-structure photograph; roof repairs and Somerset West both need a roof in frame"
   }
 }
