@@ -145,7 +145,7 @@ def main():
         fallback_titles[p.title].append(url)
         fallback_metas[p.meta].append(url)
         fallback_h1[tuple(p.h1s)].append(url)
-        if spec.get("image"):
+        if spec.get("compact") and spec.get("image"):
             image_use[spec["image"]].append(url)
 
     for what, bucket in (("duplicate title", fallback_titles), ("duplicate meta", fallback_metas), ("duplicate h1", fallback_h1)):

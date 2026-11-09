@@ -229,12 +229,18 @@ pages total, down from 28, and fourteen of them own a measured keyword.
 | `/leaking-ceiling-repair` | leaking ceiling repair | 20 | $5.61 | none | new |
 
 **What happens to the six existing area pages.** They are `/home-renovations-in-*`
-pages on suburbs, targeting `renovations in Goodwood` and similar. Measured demand for
-those phrasings is zero or near it. They do not stay as they are. Each suburb's real
-demand is either captured by a compact page above (Durbanville, Somerset West, Southern
-Suburbs), by a section on `/service-areas` (Bellville, Brackenfell, Parow, Table View),
-or is not there at all (Goodwood, Milnerton). The six old URLs 301 to their closest
-survivor so no link equity leaks.
+pages on suburbs, targeting `renovations in <suburb>` and similar. Measured demand for
+those exact phrasings is zero or near it.
+
+> **Correction, same day, after review.** The first draft retired these six into hubs on
+> the strength of that number. That was the wrong inference. Zero measured search volume
+> is not the absence of building activity: Google reports nothing below its threshold,
+> and my 297-keyword set only contains the suburb-by-service permutations I thought to
+> generate. Bellville and Brackenfell had measurable volume (30 and 20 across three and
+> two terms) and were still being demoted. All six pages come back at their original
+> URLs as **local coverage pages**, labelled `page_type: coverage` in the sheet so they
+> are never counted as compact keyword pages. They exist because the work is there, not
+> because a keyword is.
 
 **Pages that retire, and where they go.** Three current pages have no keyword behind them:
 
@@ -242,11 +248,12 @@ survivor so no link equity leaks.
 | --- | --- | --- |
 | `/damp-proofing` | 301 to `/waterproofing-cape-town` | damp proofing, rising damp and mould all measured 0 across four phrasings each |
 | `/home-extensions` | 301 to `/home-renovations-cape-town` | `home extensions cape town` measured 10 at low click value; it becomes an H2 on the renovations page |
-| six `/home-renovations-in-*` | 301 to their nearest survivor, or to `/service-areas` | the `renovations in <suburb>` phrasing has no measured demand |
+| six `/home-renovations-in-*` | **restored at their own URLs** | the phrase has no measured demand, but the areas have real work and the URLs were indexed; coverage pages are not keyword pages |
 
-The six area redirects: `durbanville` to `/waterproofing-durbanville`, `southern-suburbs`
-to `/waterproofing-southern-suburbs`, and `bellville`, `brackenfell`, `parow` and
-`table-view` to `/service-areas`, where they live as written sections.
+Those six URLs do not redirect any more: they render. Each coverage page links on to the
+services and to its neighbouring areas, `/service-areas` carries all seven, and the
+compact per-area pages (Durbanville, Somerset West, Southern Suburbs) sit above them
+still carrying their measured keywords.
 
 `solutions`, `roof-waterproofing`, `roof-repairs`, `tiling`, `leaking-ceiling-repair`
 and `waterproofing-somerset-west` are new. The four legal pages (`privacy`, `terms`,
@@ -356,8 +363,9 @@ pages.
 
 **Task 9: slugs and 301s, one deploy.** `/waterproofing` to `/waterproofing-cape-town`,
 `/painting` to `/painters-cape-town`, plus `/kitchen-renovations`, `/bathroom-renovations`,
-`/home-renovations` and the six `/home-renovations-in-*` area pages, each to its closest
-survivor. Verify with `curl -sI` against the live host.
+`/home-renovations` and `/home-extensions`, each to its closest survivor. The six
+`/home-renovations-in-*` URLs are **not** redirected: they are rebuilt as coverage pages.
+Verify with `curl -sI` against the live host.
 
 **Task 10: hubs.** `/services`, `/solutions` and `/service-areas` become real pages
 listing every compact page as cards, with the sub-threshold suburbs written in as
@@ -449,9 +457,9 @@ that matter and I will transcribe those with Whisper rather than guess at all 30
 
 ## 11. What I need from you before writing
 
-1. **Approve the page map in section 2.** Twenty-seven pages, fourteen of them compact:
-   four new service pages, four new area pages, one solution page, seven renames with
-   301s, and six old area pages retired into hubs and redirects.
+1. **Approve the page map in section 2.** Thirty-four pages, fourteen of them compact:
+   four new service pages, four compact area pages, seven local coverage pages, one
+   solution page, and seven renames with 301s.
 2. **Approve the word cut.** Service pages drop from roughly 900 words to 400 to 500.
    Home drops from 1,376 to about 500. That is the course, and it is a real reduction in
    surface area.
@@ -473,11 +481,11 @@ Tasks 5 to 12 are done and deployed. What follows is evidence, not intention.
 
 **Tasks 7 to 9, the copy.** Home keeps the hero film and the three credibility pills, with eight service cards plus the send-photos card. All fourteen compact pages land inside the 400 to 500 word band. The technical substance of the old copy was kept and compressed, not replaced: box gutters, parapets, torch-on versus liquid, hose testing, fall correction, the three kitchen and bathroom tiers.
 
-**Task 9, slugs and 301s.** Twelve legacy URLs redirect with 301 and a verified `Location` header: /waterproofing, /painting, /plastering, /kitchens, /bathrooms, /home-renovations, /damp-proofing, /home-extensions, /areas, /gallery, /projects, /blog, plus the six old `home-renovations-in-*` area URLs. All verified live.
+**Task 9, slugs and 301s.** Legacy URLs redirect with 301 and a verified `Location` header: /waterproofing, /painting, /plastering, /kitchen-renovations, /bathroom-renovations, /home-renovations, /damp-proofing, /home-extensions, /areas, /gallery, /projects, /blog. Two of those (`/kitchen-renovations`, `/bathroom-renovations`) shipped 404 in the first deploy because the redirect was written for `/kitchens` and `/bathrooms`, paths that never existed; caught from the owner's report, fixed and re-verified. The six `home-renovations-in-*` URLs are pages, not redirects.
 
 **Tasks 10 and 11, hubs and orphans.** `/services`, `/solutions` and `/service-areas` are real pages. The visible breadcrumb now reads Home > Services > [page] and the JSON-LD matches it. `accessibility` and `disclaimer` are linked from the footer on every page; nothing is orphaned.
 
-**Task 12, images.** One image per compact page, named and described in the sheet. Four shares are documented in `_image_exempt` rather than hidden: the roof membrane shot serves both waterproofing pages, the water-damaged ceiling shot serves roof repairs and ceiling repair, the bathroom shot serves tiling, and the four area pages use their parent service's photograph. The library has ten real photographs for fourteen pages; inventing four more would break the imagery rules.
+**Task 12, images.** One image per compact page, named and described in the sheet. Four shares are documented in `_image_exempt` rather than hidden: the roof membrane shot serves both waterproofing pages, the water-damaged ceiling shot serves roof repairs and ceiling repair, the bathroom shot serves tiling, and the four area pages use their parent service's photograph. The library has ten real photographs for fourteen compact pages; inventing four more would break the imagery rules. The seven coverage pages each carry a declared image too, but they are exempt from the uniqueness rule: the course rule applies to compact keyword pages, so it is enforced among those only.
 
 **Infrastructure retired.** The old Worker `plinth-renovations` is deleted; its `workers.dev` hostname no longer resolves. The old GitHub repo `Wellew98/plinth-renovations` is archived read-only, with a 7 MB mirror at `_archive/old-repo.git`. Full deletion needs the `delete_repo` OAuth scope, which the current gh token does not carry.
 
@@ -486,3 +494,31 @@ Tasks 5 to 12 are done and deployed. What follows is evidence, not intention.
 **Corrections made while executing.** The map has fourteen compact pages, not sixteen; two places in this plan said sixteen and are fixed. Four legal pages were kept, so the site is 27 pages, not 23. Damp proofing and home extensions were not in the first draft of the map: both have no page-sized demand and now 301 into waterproofing and home renovations respectively.
 
 **Still owed.** Sitemap submission in Search Console (27 URLs) and, if you want the old repo gone rather than archived, a gh token with `delete_repo`. DataForSEO balance unchanged at $0.46: the rebuild needed no further requests.
+
+## 13. Area coverage, corrected after review
+
+Raising the question found two things.
+
+**A real regression.** `/kitchen-renovations` and `/bathroom-renovations` returned 404
+live. The slugs were renamed correctly (the measured keyword is `kitchen renovations cape
+town`, 260/mo) but the 301s had been written for `/kitchens` and `/bathrooms`, which never
+existed. Fixed in commit `773c85c`; both now 301 to their new URLs, verified by header.
+
+**A wrong inference.** Cutting area pages to four on the strength of measured search
+volume treated "no measured demand" as "no activity". Those are different claims, and
+only the first is supported by the data. Restored, in commit after `773c85c`:
+
+| Area | Measured volume | Page now |
+| --- | --- | --- |
+| Durbanville | 290 / 15 terms | compact `/waterproofing-durbanville`, `/painters-durbanville`, plus coverage page |
+| Somerset West | 100 / 5 | compact `/waterproofing-somerset-west`, plus coverage page |
+| Southern Suburbs | 90 / 6 | compact `/waterproofing-southern-suburbs`, plus coverage page |
+| Bellville | 30 / 3 | coverage page (was a hub section) |
+| Brackenfell | 20 / 2 | coverage page (was a hub section) |
+| Parow | 10 / 1 | coverage page (was a hub section) |
+| Table View | 10 / 1 | coverage page (was a hub section) |
+
+Site is 34 pages: 14 compact, 7 coverage, 3 hubs, 4 legal and the rest brand pages.
+Coverage pages run 366 to 391 words, each with its own housing stock, access notes,
+failure patterns and neighbouring areas — not merge-field clones. `seo_check.py` reports
+34/34, 0 problems; sitemap has 34 URLs, all returning 200.

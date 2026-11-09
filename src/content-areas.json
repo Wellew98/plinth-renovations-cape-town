@@ -1,0 +1,152 @@
+{
+  "_note": "Local coverage pages, restored at their original URLs. These are not compact keyword pages: no measured term exists for most of them. They exist because the building activity is real and the old site had them. Content must be genuinely distinct per area: housing stock, access, failure patterns. No invented projects.",
+  "areas": [
+    {
+      "key": "area-bellville",
+      "area": "Bellville",
+      "slug": "home-renovations-in-bellville",
+      "title": "Home Renovations in Bellville | Plinth Renovations",
+      "meta": "Renovations, waterproofing and repairs in Bellville. Older family homes, flat-roof additions and extensions joined badly. Free written estimate.",
+      "h1": "Home Renovations in Bellville",
+      "intro": "Bellville is mostly family housing built between the 1950s and 1980s, and most of it has been added to at least once. A carport became a room, a flat roof went over a stoep, a second bathroom appeared. Those additions are where the problems sit now.\n\nWe work Bellville from Goodwood, which is a short drive, so a site visit costs you nothing and a return trip is not a production. Renovations, waterproofing, painting, plastering and repairs, one crew and one written scope.",
+      "items": [
+        {"name": "Renovation work", "desc": "Kitchens, bathrooms and layout changes in houses that have already been altered before.", "link": "/home-renovations-cape-town"},
+        {"name": "Waterproofing", "desc": "Flat-roof additions, parapets and the joins where new work meets old walls.", "link": "/waterproofing-cape-town"},
+        {"name": "Painting and plastering", "desc": "Interior and exterior work, including plaster repairs on north-facing walls.", "link": "/painters-cape-town"},
+        {"name": "Leaks and repairs", "desc": "Ceilings, roofs and the damage left behind after a long-standing leak.", "link": "/leaking-ceiling-repair"}
+      ],
+      "problems": [
+        "Rain driven onto north-facing walls finds old cracks and works into the plaster.",
+        "Flat-roofed stoep and garage additions leak at the parapet, not in the middle.",
+        "Extensions joined to the original house without a proper flashing let water into both."
+      ],
+      "nearby": [["Brackenfell", "/home-renovations-in-brackenfell"], ["Parow", "/home-renovations-in-parow"], ["Durbanville", "/waterproofing-durbanville"]]
+    },
+    {
+      "key": "area-brackenfell",
+      "area": "Brackenfell",
+      "slug": "home-renovations-in-brackenfell",
+      "title": "Home Renovations in Brackenfell | Plinth Renovations",
+      "meta": "Renovations and waterproofing in Brackenfell. Double-storey homes, boundary walls and wind-driven rain on exposed plots. Free written estimate.",
+      "h1": "Home Renovations in Brackenfell",
+      "intro": "Brackenfell grew mostly from the 1970s onward, and the housing shows it: double-storey family homes, large plots, plenty of room to extend, and boundary walls running the length of every street. The newer estates on the northern edge bring their own rules about what may be built.\n\nWhat makes work here different is exposure. There is little to break the north-westerly wind, so rain arrives at an angle and hits gable ends and side walls that other suburbs never have trouble with. We specify for that rather than for the average Cape Town house.",
+      "items": [
+        {"name": "Extensions and additions", "desc": "Double-storey additions and outbuildings on plots with space for them.", "link": "/home-renovations-cape-town"},
+        {"name": "Waterproofing", "desc": "Gable ends, parapets and boundary walls taking wind-driven rain.", "link": "/waterproofing-cape-town"},
+        {"name": "Roof repairs", "desc": "Storm damage, loose tiles and flashings after a north-westerly front.", "link": "/roof-repairs-cape-town"},
+        {"name": "Plastering", "desc": "Cracked plaster and failed paint on the exposed side of the house.", "link": "/plastering-cape-town"}
+      ],
+      "problems": [
+        "Wind-driven rain pushes water sideways into gable ends and around window frames.",
+        "Long boundary walls crack at the piers and lean after years of wind load.",
+        "Damp appears on the windward wall where the plaster was never sealed."
+      ],
+      "nearby": [["Bellville", "/home-renovations-in-bellville"], ["Durbanville", "/waterproofing-durbanville"], ["Parow", "/home-renovations-in-parow"]]
+    },
+    {
+      "key": "area-parow",
+      "area": "Parow",
+      "slug": "home-renovations-in-parow",
+      "title": "Home Renovations in Parow | Plinth Renovations",
+      "meta": "Renovations, damp repairs and plastering in Parow. Older homes with pressed ceilings, timber floors and backyard structures. Free written estimate.",
+      "h1": "Home Renovations in Parow",
+      "intro": "Parow has some of the oldest housing stock we work on in the northern suburbs: 1940s to 1960s homes with pressed ceilings, timber floors, small plots and a backyard structure that was added long after the house was built. The plumbing and wiring are usually as old as the walls.\n\nThat changes how a renovation is planned. You cannot open a wall in a Parow house and assume what is behind it matches the drawing. We look before we quote, and we allow for what older construction usually hides: no damp course, shallow foundations, pipes that have been patched more than once.",
+      "items": [
+        {"name": "Renovations", "desc": "Kitchens and bathrooms where the plumbing and wiring are being replaced anyway.", "link": "/home-renovations-cape-town"},
+        {"name": "Damp and waterproofing", "desc": "Rising damp in old plaster, and leaks at chimneys and parapets.", "link": "/waterproofing-cape-town"},
+        {"name": "Ceiling repairs", "desc": "Pressed ceilings, sagging board and water stains that keep coming back.", "link": "/leaking-ceiling-repair"},
+        {"name": "Plastering and painting", "desc": "Repairing old plaster properly instead of skimming over the problem.", "link": "/plastering-cape-town"}
+      ],
+      "problems": [
+        "Rising damp in walls built without a damp course, showing as paint that blisters low down.",
+        "Old chimneys and parapets leaking where the flashing has perished.",
+        "Ceilings sagging quietly after years of a leak nobody fixed."
+      ],
+      "nearby": [["Bellville", "/home-renovations-in-bellville"], ["Brackenfell", "/home-renovations-in-brackenfell"], ["Goodwood", "/service-areas"]]
+    },
+    {
+      "key": "area-table-view",
+      "area": "Table View",
+      "slug": "home-renovations-in-table-view",
+      "title": "Home Renovations in Table View | Plinth Renovations",
+      "meta": "Renovations and waterproofing in Table View. Salt air, flat roofs and balconies, sandy soil. Coastal detailing done properly. Free written estimate.",
+      "h1": "Home Renovations in Table View",
+      "intro": "Table View is coastal in a way that changes the specification: salt in the air, sand under the paving, wind that carries both. Flat roofs and balconies are common, and aluminium fittings, fixings and flashings take a beating that inland suburbs never see.\n\nA lot of the housing here is also used differently from how it was built, with rooms let out or the house run as a holiday rental, so finishes need to survive turnover as well as weather. We choose materials for the coast rather than the catalogue default.",
+      "items": [
+        {"name": "Balconies and flat roofs", "desc": "Waterproofing details for the coastal wind and driving rain.", "link": "/waterproofing-cape-town"},
+        {"name": "Renovations", "desc": "Kitchens, bathrooms and interior changes built for heavy use.", "link": "/home-renovations-cape-town"},
+        {"name": "Exterior painting", "desc": "Coating systems that hold up against salt and sun rather than failing in two years.", "link": "/painters-cape-town"},
+        {"name": "Roof repairs", "desc": "Corroded fixings, lifted flashings and storm damage.", "link": "/roof-repairs-cape-town"}
+      ],
+      "problems": [
+        "Salt corrosion on fixings, flashings and aluminium frames, long before the roof itself fails.",
+        "Render eroding on the windward face, exposing the wall underneath.",
+        "Balcony waterproofing that was never detailed at the door threshold."
+      ],
+      "nearby": [["Milnerton", "/service-areas"], ["Bellville", "/home-renovations-in-bellville"], ["Brackenfell", "/home-renovations-in-brackenfell"]]
+    },
+    {
+      "key": "area-southern-suburbs",
+      "area": "Southern Suburbs",
+      "slug": "home-renovations-in-southern-suburbs",
+      "title": "Home Renovations in the Southern Suburbs | Plinth",
+      "meta": "Renovations and waterproofing in Cape Town's southern suburbs. Older homes, pitched roofs, cellars and winter rain against the mountain.",
+      "h1": "Home Renovations in the Southern Suburbs",
+      "intro": "The southern suburbs hold the oldest housing we work on: Victorian and Edwardian homes in Claremont, Wynberg, Rondebosch and Newlands, with timber floors, high ceilings, slate or clay tile roofs, and often a cellar or a room below street level. Rain here comes off the mountain and sits longer than it does on the flats.\n\nWork on these houses needs a lighter hand than a new build. Original details are worth keeping, and the building often has heritage considerations that decide what may change on the facade. We repair what can be repaired, and we are explicit about what cannot.",
+      "items": [
+        {"name": "Renovations", "desc": "Older homes where the structure and services need attention first.", "link": "/home-renovations-cape-town"},
+        {"name": "Roof repairs", "desc": "Slate and clay tile roofs, valleys and flashings on pitched roofs.", "link": "/roof-repairs-cape-town"},
+        {"name": "Waterproofing", "desc": "Cellars, retaining walls and below-street rooms that take water in winter.", "link": "/waterproofing-cape-town"},
+        {"name": "Plastering and painting", "desc": "Lime and gypsum plaster repaired to match, then painted to suit.", "link": "/plastering-cape-town"}
+      ],
+      "problems": [
+        "Valley and flashing leaks on pitched roofs after heavy winter rain.",
+        "Damp in cellars and rooms below street level where there is no barrier.",
+        "Paint failing on south-facing walls that never dry out between fronts."
+      ],
+      "nearby": [["Wynberg", "/waterproofing-southern-suburbs"], ["Claremont", "/waterproofing-southern-suburbs"], ["Table View", "/home-renovations-in-table-view"]]
+    },
+    {
+      "key": "area-durbanville",
+      "area": "Durbanville",
+      "slug": "home-renovations-in-durbanville",
+      "title": "Home Renovations in Durbanville | Plinth Renovations",
+      "meta": "Renovations and waterproofing in Durbanville. Older town-centre homes and newer estates, clay soils and large plots. Free written estimate.",
+      "h1": "Home Renovations in Durbanville",
+      "intro": "Durbanville is two housing markets in one: the older town centre with houses from the 1950s onward on large plots, and the newer estates on the edges where the design rules decide what you may build before we do. Both are within easy reach of Goodwood.\n\nThe ground is the local factor. Clay soils move with the seasons, so cracks open and close in plaster and paving in a way that sandy northern suburbs do not see. That matters when a renovation adds load or when a wall has been patched repeatedly instead of repaired.",
+      "items": [
+        {"name": "Renovations", "desc": "Kitchens, bathrooms and additions in both older homes and estate houses.", "link": "/home-renovations-cape-town"},
+        {"name": "Waterproofing", "desc": "Roofs, valleys and walls, including the highest-CPC area term we measured.", "link": "/waterproofing-durbanville"},
+        {"name": "Painting", "desc": "Interior and exterior painting, with surface preparation done first.", "link": "/painters-durbanville"},
+        {"name": "Plaster repairs", "desc": "Cracks that keep returning because the cause was never addressed.", "link": "/plastering-cape-town"}
+      ],
+      "problems": [
+        "Clay soil movement opening cracks in plaster and paving that reappear after filling.",
+        "Roof leaks at valleys and flashings on larger, steeper roofs.",
+        "Damp on walls that stay shaded and never dry out properly in winter."
+      ],
+      "nearby": [["Bellville", "/home-renovations-in-bellville"], ["Brackenfell", "/home-renovations-in-brackenfell"], ["Somerset West", "/waterproofing-somerset-west"]]
+    },
+    {
+      "key": "area-somerset-west",
+      "area": "Somerset West",
+      "slug": "home-renovations-in-somerset-west",
+      "title": "Home Renovations in Somerset West | Plinth Renovations",
+      "meta": "Renovations and waterproofing in Somerset West. Older homes on large plots against the Helderberg, wind and mountain runoff.",
+      "h1": "Home Renovations in Somerset West",
+      "intro": "Somerset West sits under the Helderberg, and the slope decides a lot of what goes wrong. Water comes down the mountain and across large plots rather than sitting where it fell, so retaining walls, drainage and the level of the house relative to the ground matter as much as the roof does.\n\nThe housing stock is mixed: older homes in the town centre, large properties with pools and outbuildings, and newer estates. We travel from Goodwood for work here, so we plan it as fewer, longer visits rather than a daily run.",
+      "items": [
+        {"name": "Renovations", "desc": "Larger homes, outbuildings and interior work on substantial plots.", "link": "/home-renovations-cape-town"},
+        {"name": "Waterproofing", "desc": "Roofs, walls and the junctions where additions meet the original house.", "link": "/waterproofing-somerset-west"},
+        {"name": "Roof repairs", "desc": "Storm damage and leaks after winter fronts coming off the mountain.", "link": "/roof-repairs-cape-town"},
+        {"name": "Painting and plaster", "desc": "Exterior work on walls that take weather from one direction all winter.", "link": "/painters-cape-town"}
+      ],
+      "problems": [
+        "Mountain runoff reaching the house because nothing slows it on the slope above.",
+        "Leaks where additions and outbuildings meet the original walls.",
+        "Damp at the base of walls where soil and paving hold water against them."
+      ],
+      "nearby": [["Strand", "/service-areas"], ["Durbanville", "/home-renovations-in-durbanville"], ["Southern Suburbs", "/home-renovations-in-southern-suburbs"]]
+    }
+  ]
+}

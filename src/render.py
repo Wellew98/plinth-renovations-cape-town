@@ -43,6 +43,8 @@ def _compact_services():
 
 
 SERVICES = _compact_services()
+
+AREA_PAGES = json.loads((SRC / "content-areas.json").read_text(encoding="utf-8"))["areas"]
 AREAS = content["areas"]          # legacy area feed, redirects only
 HOME = content["home"]
 SITE = content["site"]
@@ -525,16 +527,66 @@ def build_area(area):
     )
 
 
+def build_coverage_area(a):
+    spec = SPEC[a["key"]]
+    paras = "".join(f"<p>{escape(p)}</p>" for p in a["intro"].split("\n\n"))
+    items = "".join(
+        card("Service", i["name"], i["desc"], i["link"], link_label=i["name"], icon="plaster")
+        for i in a["items"]
+    )
+    probs = "".join(f'<li style="margin-bottom:14px">{escape(p)}</li>' for p in a["problems"])
+    near = "".join(
+        f'<a class="btn btn-ghost" style="margin:0 8px 12px 0" href="{n[1]}">{escape(n[0])}</a>'
+        for n in a["nearby"]
+    )
+    body = page_hero(
+        [("Service Areas", "/service-areas"), (a["area"], None)],
+        a["h1"], a["intro"].split("\n\n")[0], kicker=f'{a["area"]} \u00b7 Cape Town', cta=True,
+    )
+    img = {"file": spec["image"], "alt": spec["image_alt"], "caption": spec["image_alt"]}
+    body += section(
+        head("01", "The area", f'{a["area"]}, as we find it', "")
+        + f'<div class="reveal prose">{paras}</div>'
+        + f'<div style="margin-top:26px">{gallery([img], layout="single")}</div>'
+    )
+    body += section(
+        head("02", "Services", f"What we do in {a['area']}",
+             "Every service below has its own page. The work is the same as anywhere else in "
+             "Cape Town; the houses it goes into are not.") + grid(items),
+        cls="ghost",
+    )
+    body += section(
+        head("03", "What fails here", f"The {a['area']} problems we get called for",
+             "These come up more often in this area than in the city as a whole.")
+        + f'<div class="reveal"><ul class="checks">{probs}</ul></div>'
+    )
+    body += section(
+        head("04", "Around", "Nearby areas we also cover", "")
+        + f'<div class="reveal" style="margin-bottom:18px">{near}</div>'
+        + cta_band(f"Get an estimate in {a['area']}",
+                   "Free site visit, written scope, fixed price before anything starts."),
+        cls="sage",
+    )
+    return page(
+        spec["url"].strip("/"), a["title"], a["meta"], body,
+        crumbs=[("Service Areas", "/service-areas"), (a["area"], spec["url"])],
+    )
+
+
 def build_areas_index():
     cards = [
         card("Service area", a["name"], a["teaser"], f'/{a["slug"]}',
              link_label="See this area", icon=None)
         for a in SERVICES if a["hub"] == "service-areas"
+    ] + [
+        card("Local area", a["area"], a["intro"].split(". ")[0] + ".", f'/{a["slug"]}',
+             link_label=f'{a["area"]}', icon=None)
+        for a in AREA_PAGES
     ]
     nearby = [
         "Goodwood", "Richmond Estate", "Monte Vista", "Edgemead", "Bothasig",
         "Milnerton", "Century City", "Plattekloof", "Kuils River", "Bloubergstrand",
-        "Bellville", "Durbanville", "Parow", "Table View", "Brackenfell", "Stellenbosch",
+        "Stellenbosch", "Gordon's Bay", "Strand", "Kuils River",
     ]
     body = page_hero(
         "Service Areas", "Where Plinth Works in Cape Town",
@@ -548,7 +600,7 @@ def build_areas_index():
     )
     body += section(
         head("02", "Coverage", "The rest of our service area",
-             "No separate page for these suburbs, but we work there regularly.")
+             "These suburbs have no page of their own yet. We work in them regularly, so ask.")
         + '<div class="reveal"><p class="sub">' + " · ".join(nearby) + "</p></div>"
         + cta_band("Check whether we cover your street", "One call is faster than a form."),
         cls="sage",
@@ -837,12 +889,6 @@ def copy_assets():
             "/home-extensions.html       /home-renovations-cape-town        301",
             "",
             "# retired area pages",
-            "/home-renovations-in-durbanville        /waterproofing-durbanville        301",
-            "/home-renovations-in-southern-suburbs   /waterproofing-southern-suburbs   301",
-            "/home-renovations-in-bellville          /service-areas                    301",
-            "/home-renovations-in-brackenfell        /service-areas                    301",
-            "/home-renovations-in-parow              /service-areas                    301",
-            "/home-renovations-in-table-view         /service-areas                    301",
             "",
         ]),
         encoding="utf-8",
@@ -909,6 +955,8 @@ def main():
     for svc in SERVICES:
         pages.append((svc["slug"], build_service(svc), "0.9"))
     pages.append(("solutions", build_solutions(), "0.8"))
+    for a in AREA_PAGES:
+        pages.append((a["slug"], build_coverage_area(a), "0.6"))
     pages.append(("our-work", build_work(), "0.7"))
     pages.append(("service-areas", build_areas_index(), "0.7"))
     pages.append(("about", build_about(), "0.6"))
