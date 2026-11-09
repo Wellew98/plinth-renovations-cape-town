@@ -31,6 +31,7 @@ ICONS = {
 NAV = [
     ("/", "Home"),
     ("/services", "Services"),
+    ("/solutions", "Solutions"),
     ("/our-work", "Our Work"),
     ("/service-areas", "Areas"),
     ("/about", "About"),
@@ -91,13 +92,29 @@ def hero(kicker, h1, lead, trust, actions, video=None, poster=None):
     )
 
 
-def page_hero(crumb, h1, lead="", kicker=""):
+def page_hero(crumb, h1, lead="", kicker="", cta=False):
     kick = f'<div class="eyebrow">{escape(kicker)}</div>' if kicker else ""
     lead_html = f"<p>{escape(lead)}</p>" if lead else ""
+    if isinstance(crumb, (list, tuple)):
+        parts = ['<a href="/" style="color:#c9a86a">Home</a>']
+        for label, url in crumb:
+            if url:
+                parts.append(f'<a href="{url}" style="color:#c9a86a">{escape(label)}</a>')
+            else:
+                parts.append(f"<span>{escape(label)}</span>")
+        crumb_html = " &rsaquo; ".join(parts)
+    else:
+        crumb_html = f'<a href="/" style="color:#c9a86a">Home</a> &rsaquo; {escape(crumb)}'
+    btns = (
+        '<div class="hero-actions" style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">'
+        '<a class="btn btn-gold" href="/estimate">Get a Free Estimate</a>'
+        '<a class="btn btn-ghost" href="https://wa.me/27661505770" target="_blank" rel="noopener">'
+        'WhatsApp 066 150 5770</a></div>'
+    ) if cta else ""
     return (
         f'<section class="page-hero"><div class="wrap">'
-        f'<div class="crumb"><a href="/" style="color:#c9a86a">Home</a> &rsaquo; {escape(crumb)}</div>'
-        f"{kick}<h1>{escape(h1)}</h1>{lead_html}</div></section>"
+        f'<div class="crumb">{crumb_html}</div>'
+        f"{kick}<h1>{escape(h1)}</h1>{lead_html}{btns}</div></section>"
     )
 
 
@@ -248,7 +265,8 @@ def footer():
         + "</div>"
         '<div class="foot-bottom"><span>&copy; <span id="yr"></span> '
         "Plinth Renovations and Construction &middot; Cape Town</span>"
-        '<span><a href="/privacy">Privacy Policy</a> &middot; <a href="/terms">Terms</a></span>'
+        '<span><a href="/privacy">Privacy Policy</a> &middot; <a href="/terms">Terms</a>'
+        ' &middot; <a href="/accessibility">Accessibility</a> &middot; <a href="/disclaimer">Disclaimer</a></span>'
         "</div></div></footer>"
     )
 

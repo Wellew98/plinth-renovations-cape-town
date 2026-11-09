@@ -1,0 +1,634 @@
+{
+  "services": [
+    {
+      "key": "waterproofing",
+      "name": "Waterproofing",
+      "leader": {
+        "eyebrow": "Waterproofing, Cape Town",
+        "h1": "Waterproofing Cape Town",
+        "cta_line": "Most leaks here are not in the middle of the roof. They are at a parapet, a box gutter or a balcony edge that was never detailed properly."
+      },
+      "intro_heading": "Where Cape Town roofs leak",
+      "intro_body": "Waterproofing in Cape Town starts with finding where water enters, not where the stain appears. The north-westerly front pushes rain sideways across roofs and under tiles, so most leaks sit at a junction, not mid-roof.\n\nIt fails in two ways: the membrane reaches the end of its life, which is predictable, or the detail was wrong from the start. No primer, a fall running back towards the wall, a flashing sealed with silicone instead of metal. We read moisture through the plaster, hose test where needed, and specify for the substrate.",
+      "detail_heading": "Waterproofing Cape Town: roofs, parapets, balconies",
+      "detail_intro": "Different substrates, different details.",
+      "subitems": [
+        {
+          "name": "Roof waterproofing",
+          "desc": "Torch-on, liquid and acrylic systems, chosen for the roof type and pitch."
+        },
+        {
+          "name": "Parapets and flashings",
+          "desc": "Upstands rebuilt, flashings replaced in metal, junctions opened and re-detailed."
+        },
+        {
+          "name": "Balconies and terraces",
+          "desc": "Falls corrected, upstands raised, the failing edge detail rebuilt."
+        },
+        {
+          "name": "Box gutters and penetrations",
+          "desc": "Silt removed, outlets resized, skylights and solar mounts sealed."
+        }
+      ],
+      "cost": {
+        "heading": "What waterproofing costs",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Area and access",
+            "A walkable roof costs less than scaffolding or rope access."
+          ],
+          [
+            "Substrate and condition",
+            "Sound concrete takes a coating. Failed screed or membrane comes off first."
+          ],
+          [
+            "Number of details",
+            "Ten penetrations cost more labour than 40 square metres of roof."
+          ]
+        ],
+        "note": "Quoted after a site visit and moisture check. We do not price per square metre over the phone; the details decide the job."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Inspect",
+            "detail": "Roof, parapets, flashings, gutters and the ceiling void where reachable."
+          },
+          {
+            "step": "2. Trace the water",
+            "detail": "Moisture readings and a hose test to find the entry point."
+          },
+          {
+            "step": "3. Specify",
+            "detail": "A written system matched to substrate, pitch and exposure."
+          },
+          {
+            "step": "4. Apply and test",
+            "detail": "Failed material stripped, surface primed, junctions detailed, water tested."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "We find the entry point",
+          "detail": "A hose test and moisture meter save a second repair."
+        },
+        {
+          "point": "Details before surface",
+          "detail": "Junctions are finished before the field is covered."
+        },
+        {
+          "point": "Photographed at every layer",
+          "detail": "You see what is under the membrane before it is covered."
+        }
+      ],
+      "teaser": "Roofs, parapets, balconies and gutters, with the leak traced first.",
+      "cta_subtext": "Book a free site visit; we trace the leak before quoting."
+    },
+    {
+      "key": "roof-waterproofing",
+      "name": "Roof Waterproofing",
+      "leader": {
+        "eyebrow": "Roof waterproofing, Cape Town",
+        "h1": "Roof Waterproofing Cape Town",
+        "cta_line": "A roof does not fail all at once. It fails at one flashing, one upstand, one box gutter that nobody cleaned."
+      },
+      "intro_heading": "What roof waterproofing involves",
+      "intro_body": "Roof waterproofing in Cape Town is a specification decision before it is a labour one. The same house can need a torch-on membrane on a flat concrete slab, an acrylic coating on fibre cement, and lead flashings at the chimney, because each surface behaves differently in sideways rain.\n\nWe identify the roof type and pitch, then choose a system that suits both. Flat roofs need fall correction before membrane; tile and slate roofs need flashings at valleys, not a coating over the tiles.",
+      "detail_heading": "Roof waterproofing Cape Town: the systems we install",
+      "detail_intro": "Chosen for the roof, not for what is left in the van.",
+      "subitems": [
+        {
+          "name": "Torch-on membranes",
+          "desc": "For flat concrete roofs and parapets, laid in layers with primed edges and sealed laps."
+        },
+        {
+          "name": "Liquid rubber and acrylic",
+          "desc": "For roofs that cannot take a torch, including fibre cement and complex shapes."
+        },
+        {
+          "name": "Tile and slate roofs",
+          "desc": "Flashing, valley and ridge work, plus replacing broken tiles rather than coating over them."
+        },
+        {
+          "name": "Box gutters",
+          "desc": "Silt removed, outlets resized, lining replaced where standing water has gone through."
+        }
+      ],
+      "cost": {
+        "heading": "How long roof waterproofing lasts",
+        "columns": [
+          "System",
+          "Realistic life"
+        ],
+        "rows": [
+          [
+            "Torch-on membrane, correctly detailed",
+            "Ten to fifteen years before recoating"
+          ],
+          [
+            "Liquid applied system",
+            "Five to ten years, dependent on prep and exposure"
+          ],
+          [
+            "Acrylic coating",
+            "Three to five years, and it is a coating not a repair"
+          ]
+        ],
+        "note": "Life depends on preparation, not product. Membrane on a dirty, wet surface fails early."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Inspect the roof",
+            "detail": "Surface, pitch, drainage, and every junction that interrupts it."
+          },
+          {
+            "step": "2. Check the ceiling",
+            "detail": "Where water shows inside tells us which part of the roof is lying."
+          },
+          {
+            "step": "3. Prepare",
+            "detail": "Strip failed material, correct falls, prime the substrate."
+          },
+          {
+            "step": "4. Detail and cover",
+            "detail": "Upstands and flashings first, then the field, then a water test."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "Falls before membrane",
+          "detail": "Standing water is a design fault, not a coating fault."
+        },
+        {
+          "point": "Metal, not silicone",
+          "detail": "Flashings are replaced in metal where they should be."
+        },
+        {
+          "point": "Ten-year workmanship view",
+          "detail": "We specify for the second decade, not the first winter."
+        }
+      ],
+      "teaser": "Torch-on, liquid and flashing work for flat, tile and slate roofs.",
+      "cta_subtext": "Send a photo of the roof and we will tell you which system it needs."
+    },
+    {
+      "key": "roof-repairs",
+      "name": "Roof Repairs",
+      "leader": {
+        "eyebrow": "Roof repairs, Cape Town",
+        "h1": "Roof Repairs Cape Town",
+        "cta_line": "Storm damage, a lifted flashing, a cracked tile. Fix the cause before the ceiling pays for it."
+      },
+      "intro_heading": "What a roof repair is for",
+      "intro_body": "Roof repairs in Cape Town cover the damage that waterproofing cannot: tiles lifted by north-westerly wind, flashings torn at a gable, a valley blocked with debris, a sheet that pulled its fasteners. These are fixing jobs, not coating jobs.\n\nWe separate repair from replacement honestly. A ridge with three cracked tiles is a repair. A roof at the end of its life with fasteners rusted through is not, and recoating it only postpones the conversation by a winter.",
+      "detail_heading": "Roof repairs Cape Town: what we fix",
+      "detail_intro": "The parts of a roof that take the wind first.",
+      "subitems": [
+        {
+          "name": "Leaking roof repairs",
+          "desc": "The leak traced to a flashing, valley or penetration before anything is replaced."
+        },
+        {
+          "name": "Storm and wind damage",
+          "desc": "Lifted sheets, broken tiles and torn waterproofing secured and replaced."
+        },
+        {
+          "name": "Flashings and valleys",
+          "desc": "Metal replaced at gables, chimneys and wall junctions where sealant has failed."
+        },
+        {
+          "name": "Fasteners and sheets",
+          "desc": "Rusted screws and pulled sheets re-fixed, with the cause of the movement checked."
+        }
+      ],
+      "cost": {
+        "heading": "What a roof repair costs",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Access",
+            "A double-storey roof needing scaffolding costs more before any work starts."
+          ],
+          [
+            "Extent",
+            "One flashing is an hour. A storm-damaged section is a day and materials."
+          ],
+          [
+            "Roof type",
+            "Tile, slate, IBR and concrete slab each need different fixing methods."
+          ]
+        ],
+        "note": "We quote repairs in writing after inspecting, and we say when a repair is not worth doing."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Inspect",
+            "detail": "Roof, flashings and the ceiling below, from the inside where possible."
+          },
+          {
+            "step": "2. Trace the leak",
+            "detail": "Hose test or moisture reading so the repair is at the entry point."
+          },
+          {
+            "step": "3. Quote in writing",
+            "detail": "Scope, materials and access, priced separately from any waterproofing."
+          },
+          {
+            "step": "4. Repair and test",
+            "detail": "Work completed, then a water test on the repaired area."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "Repair before replace",
+          "detail": "We will tell you when a repair is the wrong money."
+        },
+        {
+          "point": "We check the inside",
+          "detail": "The stain on the ceiling rarely sits under the hole."
+        },
+        {
+          "point": "Storm work done properly",
+          "detail": "Secured against the next front, not just this week."
+        }
+      ],
+      "teaser": "Storm damage, flashings, valleys and tiles, with the leak traced first.",
+      "cta_subtext": "Send photos of the damage and we will tell you what the repair involves."
+    },
+    {
+      "key": "leaking-ceiling-repair",
+      "name": "Leaking Ceiling Repair",
+      "leader": {
+        "eyebrow": "Ceiling leaks, Cape Town",
+        "h1": "Leaking Ceiling Repair",
+        "cta_line": "A brown ring on the ceiling is the end of the story. The leak started somewhere else, days or months earlier."
+      },
+      "intro_heading": "Fix a leak in the ceiling",
+      "intro_body": "Leaking ceiling repair begins above the ceiling, not on it. Water travels along a joist, a truss or a sheet before it drops, so the stain is usually not under the entry point. Paint hides the evidence while damage continues into insulation and plasterboard.\n\nWe find the source first: roof, flashing, valley, geyser, plumbing or a balcony above. Then we repair it, replace soft board and treat the stain so it does not bleed through new paint.",
+      "detail_heading": "Leaking ceiling repair: how it works",
+      "detail_intro": "The ceiling is the last thing to fix, not the first.",
+      "subitems": [
+        {
+          "name": "Find the source",
+          "desc": "Roof, flashing, geyser, plumbing or the balcony above, traced before any ceiling work."
+        },
+        {
+          "name": "Water damaged ceiling",
+          "desc": "Soft board and blown plaster cut out and replaced, not skimmed over."
+        },
+        {
+          "name": "Ceiling stains and mould",
+          "desc": "Stain sealed and the cause treated, so it does not return with the next rain."
+        },
+        {
+          "name": "Plaster and cornice",
+          "desc": "Cornice matched and the patch blended into the existing finish."
+        }
+      ],
+      "cost": {
+        "heading": "What a ceiling repair costs",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Finding the leak",
+            "An inch of ceiling access is cheaper than a second repair next winter."
+          ],
+          [
+            "Damage extent",
+            "A stain is a patch. A sagging board is a section replacement."
+          ],
+          [
+            "What is above",
+            "Roof, geyser or plumbing changes which trade does the repair."
+          ]
+        ],
+        "note": "Most ceiling repairs are small. The expensive ones were painted over for two seasons."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Look inside",
+            "detail": "Ceiling void inspected for the path the water took."
+          },
+          {
+            "step": "2. Find the entry",
+            "detail": "Roof and plumbing checked, hose tested where the source is unclear."
+          },
+          {
+            "step": "3. Fix the cause",
+            "detail": "The leak repaired before the ceiling is touched."
+          },
+          {
+            "step": "4. Repair and finish",
+            "detail": "Board replaced, plastered, sealed and painted to match."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "Cause before ceiling",
+          "detail": "No point fixing plaster that will be wet again next week."
+        },
+        {
+          "point": "We check the geyser",
+          "detail": "Plenty of ceiling leaks are plumbing, not roofing."
+        },
+        {
+          "point": "Finish matched",
+          "detail": "Patched ceilings should not look patched."
+        }
+      ],
+      "teaser": "The source found first, then the ceiling repaired, sealed and painted to match.",
+      "cta_subtext": "Send a photo of the stain and tell us when it appears. That usually narrows it fast."
+    },
+    {
+      "key": "painting",
+      "name": "Painting",
+      "leader": {
+        "eyebrow": "Painting, Cape Town",
+        "h1": "Painters Cape Town",
+        "cta_line": "Paint fails on preparation, not on the tin. We fix the surface before the colour goes on."
+      },
+      "intro_heading": "Painting that lasts a Cape winter",
+      "intro_body": "Painters in Cape Town work on walls that take rain sideways and sun the rest of the year. Exterior paint fails early when the surface was not prepared: chalky plaster, damp patches, old gloss not keyed, cracks filled with the wrong filler.\n\nWe prepare first, repair what is failing, treat damp before painting over it, and use a coating system matched to the surface. Interior work is sequenced around a lived-in house, with rooms returned to use the same day where possible.",
+      "detail_heading": "Painters Cape Town: interior and exterior",
+      "detail_intro": "Interior and exterior, plus the surfaces that get skipped.",
+      "subitems": [
+        {
+          "name": "Interior walls and ceilings",
+          "desc": "Patch, prime, then two coats, with furniture protected and rooms handed back daily."
+        },
+        {
+          "name": "Exterior walls",
+          "desc": "Damp and chalky plaster treated, cracks repaired, then a weather-resistant system."
+        },
+        {
+          "name": "Roof coating",
+          "desc": "Roofs coated for reflection and protection, after leaks are repaired, not instead of."
+        },
+        {
+          "name": "Damp-affected walls",
+          "desc": "The damp source dealt with before paint, otherwise it comes through in months."
+        }
+      ],
+      "cost": {
+        "heading": "What house painting costs",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Preparation required",
+            "Chalky or damp walls take more hours than the painting itself."
+          ],
+          [
+            "Area and height",
+            "Double-storey exteriors need scaffolding before anyone lifts a brush."
+          ],
+          [
+            "Coating system",
+            "Standard acrylic, washable interior paint and roof coatings sit at different prices."
+          ]
+        ],
+        "note": "We quote after seeing the surfaces. A per-square-metre price quoted blind is usually a price for the easy version."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Assess",
+            "detail": "Surface condition, damp, previous coatings and what will fail next."
+          },
+          {
+            "step": "2. Prepare",
+            "detail": "Clean, scrape, fill and sand. This is most of the job."
+          },
+          {
+            "step": "3. Prime and repair",
+            "detail": "Correct primer for the surface, repairs done before topcoat."
+          },
+          {
+            "step": "4. Apply and inspect",
+            "detail": "Two coats, then a walkthrough with you before we pack up."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "Preparation is the job",
+          "detail": "The visible difference between a five-year paint job and a two-year one."
+        },
+        {
+          "point": "We repair before we paint",
+          "detail": "Cracks and damp are treated, not hidden."
+        },
+        {
+          "point": "Neat in a lived-in house",
+          "detail": "Dust sheets, daily clean-up, rooms usable."
+        }
+      ],
+      "teaser": "Interior and exterior painting with the preparation that makes it last.",
+      "cta_subtext": "Tell us the rooms or the walls and we will quote after seeing the surfaces."
+    },
+    {
+      "key": "plastering",
+      "name": "Plastering",
+      "leader": {
+        "eyebrow": "Plastering, Cape Town",
+        "h1": "Plastering Cape Town",
+        "cta_line": "Blown plaster is a symptom. Paint over it and it comes back with the next damp spell."
+      },
+      "intro_heading": "Plastering and plaster repair",
+      "intro_body": "Plastering in Cape Town means two different jobs: new plaster on a wall or ceiling, and repairing plaster that has failed. The second is more common. Hollow, blown or salt-damaged plaster usually has moisture behind it, and covering it only buys a season.\n\nWe cut back to sound material, treat the cause, then plaster to match the existing finish. Skim coats, crack repair, cornices and stucco Italiano are all done by the same team, which matters when the finish has to line up with a wall done twenty years ago.",
+      "detail_heading": "Plastering Cape Town: repairs and finishing",
+      "detail_intro": "Repair, skim and finish, matched to what is already there.",
+      "subitems": [
+        {
+          "name": "Plaster repair",
+          "desc": "Blown and hollow plaster cut back, the cause treated, then replastered to match."
+        },
+        {
+          "name": "Skimming walls",
+          "desc": "A fresh skim over sound plaster to give paint a flat surface."
+        },
+        {
+          "name": "Stucco Italiano",
+          "desc": "Textured decorative finishes applied by hand, with samples approved first."
+        },
+        {
+          "name": "Cornices and ceilings",
+          "desc": "Cornice profiles matched, board replaced, joints taped and finished."
+        }
+      ],
+      "cost": {
+        "heading": "What plastering costs",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Repair or replace",
+            "Sound plaster can be skimmed. Blown plaster has to come off."
+          ],
+          [
+            "Height and access",
+            "Ceilings and double volumes need scaffolding and more labour."
+          ],
+          [
+            "Matching existing",
+            "Textured and decorative finishes cost more to match than flat plaster."
+          ]
+        ],
+        "note": "We check for moisture before quoting a repair, because plaster over a wet wall fails again."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Assess",
+            "detail": "Tap for hollow areas and check the wall for moisture."
+          },
+          {
+            "step": "2. Cut back",
+            "detail": "Failed plaster removed to sound material, not feathered over."
+          },
+          {
+            "step": "3. Treat the cause",
+            "detail": "Damp, leak or bridging dealt with before new plaster."
+          },
+          {
+            "step": "4. Plaster and finish",
+            "detail": "Applied, floated and finished ready for paint."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "We cut back, not cover up",
+          "detail": "The reason repairs last past one season."
+        },
+        {
+          "point": "Moisture checked first",
+          "detail": "A meter reading decides the method."
+        },
+        {
+          "point": "Ready for the painter",
+          "detail": "Flat, dry and cured, with a date we commit to."
+        }
+      ],
+      "teaser": "Plaster repair, skimming, cornices and stucco Italiano finishes.",
+      "cta_subtext": "Send a photo of the wall and we will tell you whether it needs a skim or a repair."
+    },
+    {
+      "key": "tiling",
+      "name": "Tiling",
+      "leader": {
+        "eyebrow": "Tiling, Cape Town",
+        "h1": "Tiling Cape Town",
+        "cta_line": "Tiles fail at the substrate, not the tile. Level, dry and waterproof underneath is the whole job."
+      },
+      "intro_heading": "Tiling floors, walls and wet areas",
+      "intro_body": "Tiling in Cape Town is mostly about what happens before the first tile is laid: screeding to a level, waterproofing a shower correctly, priming a surface that will take adhesive. Tiles laid on an uneven or wet substrate crack, lift or sound hollow within a year.\n\nWe screed, waterproof and tile with the same team, so nobody is blaming the previous trade. That matters most in bathrooms, where the waterproofing, the fall and the tile lines all have to agree.",
+      "detail_heading": "Tiling Cape Town: floors, bathrooms, kitchens",
+      "detail_intro": "Floors, walls and wet areas, with the preparation done properly.",
+      "subitems": [
+        {
+          "name": "Bathroom tiling",
+          "desc": "Waterproofing and fall tested before tiling, with joints lined to the room."
+        },
+        {
+          "name": "Kitchen floors and splashbacks",
+          "desc": "Level floors and splashbacks cut around existing services neatly."
+        },
+        {
+          "name": "Screeding and levelling",
+          "desc": "Floors brought to level first, because adhesive is not a levelling compound."
+        },
+        {
+          "name": "Repairs and regrouting",
+          "desc": "Hollow tiles replaced, grout and silicone renewed where water has got behind."
+        }
+      ],
+      "cost": {
+        "heading": "Tiling cost per square metre",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Substrate",
+            "Screeding and waterproofing sit underneath the per-metre rate."
+          ],
+          [
+            "Tile size and format",
+            "Large format and mosaic take longer to lay than standard tiles."
+          ],
+          [
+            "Area and cuts",
+            "Small rooms with many cuts cost more per square metre than open floors."
+          ]
+        ],
+        "note": "We quote labour and preparation separately from tiles, so you can see what the material actually costs."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Measure and check",
+            "detail": "Levels, substrate and waterproofing condition assessed first."
+          },
+          {
+            "step": "2. Prepare",
+            "detail": "Screed, prime and waterproof as the area requires."
+          },
+          {
+            "step": "3. Tile and align",
+            "detail": "Set out from the visible wall so cuts fall where they are least seen."
+          },
+          {
+            "step": "4. Grout and seal",
+            "detail": "Grout, silicone and a final clean, with spare tiles left for you."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "Waterproofing before tile",
+          "detail": "In wet areas the membrane goes down first, and we show you."
+        },
+        {
+          "point": "Set out properly",
+          "detail": "Cuts hidden, lines aligned, no slivers at the door."
+        },
+        {
+          "point": "One team",
+          "detail": "Screed, waterproof and tile by the same people."
+        }
+      ],
+      "teaser": "Bathroom and kitchen tiling with screeding and waterproofing done first.",
+      "cta_subtext": "Send the room size and a photo of the floor and we will quote the preparation and the tiling."
+    }
+  ]
+}

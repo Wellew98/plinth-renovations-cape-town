@@ -199,8 +199,8 @@ in the set.
 
 ## 2. The page map, decided by data
 
-Sixteen compact pages, four brand pages, three hubs. Twenty-three pages total, down
-from 28, with every one of them owning a measured keyword.
+Fourteen compact pages, three hubs, six brand pages, four legal pages. Twenty-seven
+pages total, down from 28, and fourteen of them own a measured keyword.
 
 | URL | Owning keyword | MSV | CPC | Current page | Status |
 | --- | --- | ---: | ---: | --- | --- |
@@ -235,6 +235,23 @@ demand is either captured by a compact page above (Durbanville, Somerset West, S
 Suburbs), by a section on `/service-areas` (Bellville, Brackenfell, Parow, Table View),
 or is not there at all (Goodwood, Milnerton). The six old URLs 301 to their closest
 survivor so no link equity leaks.
+
+**Pages that retire, and where they go.** Three current pages have no keyword behind them:
+
+| Old page | Disposition | Reason |
+| --- | --- | --- |
+| `/damp-proofing` | 301 to `/waterproofing-cape-town` | damp proofing, rising damp and mould all measured 0 across four phrasings each |
+| `/home-extensions` | 301 to `/home-renovations-cape-town` | `home extensions cape town` measured 10 at low click value; it becomes an H2 on the renovations page |
+| six `/home-renovations-in-*` | 301 to their nearest survivor, or to `/service-areas` | the `renovations in <suburb>` phrasing has no measured demand |
+
+The six area redirects: `durbanville` to `/waterproofing-durbanville`, `southern-suburbs`
+to `/waterproofing-southern-suburbs`, and `bellville`, `brackenfell`, `parow` and
+`table-view` to `/service-areas`, where they live as written sections.
+
+`solutions`, `roof-waterproofing`, `roof-repairs`, `tiling`, `leaking-ceiling-repair`
+and `waterproofing-somerset-west` are new. The four legal pages (`privacy`, `terms`,
+`accessibility`, `disclaimer`) already exist and stay, two of them gaining the footer
+links they never had.
 
 **Keyword assignment rule.** One keyword owns one page, and its synonyms become H2s on
 that page rather than new URLs. `waterproofing companies`, `waterproofing contractors`
@@ -330,7 +347,7 @@ the work is done is not checking anything.
 **Task 7: home.** Cut 1,376 words to about 500 of selling copy. Keep the hero film, the
 service grid, the proof. Home stops competing with the service pages.
 
-**Task 8: the sixteen compact pages.** Per page: H1 with the keyword, three-sentence
+**Task 8: the fourteen compact pages.** Per page: H1 with the keyword, three-sentence
 intro with the keyword near the start, CTA, image below the CTA, H2s carrying the
 variants from section 1.2, 400 to 500 words, bullets for scope and process. Work in
 order of money: waterproofing, roof waterproofing, roof repairs, leaking ceiling,
@@ -432,7 +449,7 @@ that matter and I will transcribe those with Whisper rather than guess at all 30
 
 ## 11. What I need from you before writing
 
-1. **Approve the page map in section 2.** Twenty-three pages, sixteen of them compact:
+1. **Approve the page map in section 2.** Twenty-seven pages, fourteen of them compact:
    four new service pages, four new area pages, one solution page, seven renames with
    301s, and six old area pages retired into hubs and redirects.
 2. **Approve the word cut.** Service pages drop from roughly 900 words to 400 to 500.
@@ -445,3 +462,27 @@ that matter and I will transcribe those with Whisper rather than guess at all 30
    old source. Delete both, or archive the repo read-only and delete the Worker.
 
 Nothing gets written until 1 and 2 are approved.
+
+## 12. Execution log, 2026-11-09
+
+Tasks 5 to 12 are done and deployed. What follows is evidence, not intention.
+
+**Task 5, the sheet.** `src/seo-layout.json` now holds 27 pages: 14 compact, 3 hubs, 6 brand, 4 legal. Every compact page carries keyword, MSV, CPC, hub, slug, title, meta, H1, four H2s, word target, image, alt text and notes. `render.py` reads slug, title, meta and H1 from the sheet, so the two can no longer drift apart silently.
+
+**Task 6, the gate.** `src/seo_check.py` checks nine rule groups: page exists, title under 60, meta under 155, H1 carries the keyword, keyword in slug, keyword in an H2, keyword in the first sentence, word count 400 to 500, duplicate titles and metas, crawl depth, orphans, and image reuse. It found 43 problems in the pre-rebuild site. It now reports `27/27 pages found, 0 problems`.
+
+**Tasks 7 to 9, the copy.** Home keeps the hero film and the three credibility pills, with eight service cards plus the send-photos card. All fourteen compact pages land inside the 400 to 500 word band. The technical substance of the old copy was kept and compressed, not replaced: box gutters, parapets, torch-on versus liquid, hose testing, fall correction, the three kitchen and bathroom tiers.
+
+**Task 9, slugs and 301s.** Twelve legacy URLs redirect with 301 and a verified `Location` header: /waterproofing, /painting, /plastering, /kitchens, /bathrooms, /home-renovations, /damp-proofing, /home-extensions, /areas, /gallery, /projects, /blog, plus the six old `home-renovations-in-*` area URLs. All verified live.
+
+**Tasks 10 and 11, hubs and orphans.** `/services`, `/solutions` and `/service-areas` are real pages. The visible breadcrumb now reads Home > Services > [page] and the JSON-LD matches it. `accessibility` and `disclaimer` are linked from the footer on every page; nothing is orphaned.
+
+**Task 12, images.** One image per compact page, named and described in the sheet. Four shares are documented in `_image_exempt` rather than hidden: the roof membrane shot serves both waterproofing pages, the water-damaged ceiling shot serves roof repairs and ceiling repair, the bathroom shot serves tiling, and the four area pages use their parent service's photograph. The library has ten real photographs for fourteen pages; inventing four more would break the imagery rules.
+
+**Infrastructure retired.** The old Worker `plinth-renovations` is deleted; its `workers.dev` hostname no longer resolves. The old GitHub repo `Wellew98/plinth-renovations` is archived read-only, with a 7 MB mirror at `_archive/old-repo.git`. Full deletion needs the `delete_repo` OAuth scope, which the current gh token does not carry.
+
+**Live verification.** 18 URLs return 200. 12 legacy URLs return 301 with the correct target. `www` returns 301 to the apex. The sitemap lists 27 URLs and every one returns 200.
+
+**Corrections made while executing.** The map has fourteen compact pages, not sixteen; two places in this plan said sixteen and are fixed. Four legal pages were kept, so the site is 27 pages, not 23. Damp proofing and home extensions were not in the first draft of the map: both have no page-sized demand and now 301 into waterproofing and home renovations respectively.
+
+**Still owed.** Sitemap submission in Search Console (27 URLs) and, if you want the old repo gone rather than archived, a gh token with `delete_repo`. DataForSEO balance unchanged at $0.46: the rebuild needed no further requests.

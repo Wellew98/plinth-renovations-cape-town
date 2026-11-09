@@ -1,0 +1,634 @@
+{
+  "services": [
+    {
+      "key": "kitchens",
+      "name": "Kitchen Renovations",
+      "leader": {
+        "eyebrow": "Kitchen renovations, Cape Town",
+        "h1": "Kitchen Renovations Cape Town",
+        "cta_line": "A kitchen is plumbing, electrical and waterproofing behind cabinetry. Get the order wrong and the finishes pay for it."
+      },
+      "intro_heading": "What a kitchen renovation involves",
+      "intro_body": "Kitchen renovations in Cape Town are decided by the services, not the doors. Sinks, hob positions, plug points and the fall of the waste pipe set the layout long before a worktop is chosen.\n\nWe plan the room around what is already in the walls, strip out, do the plumbing and electrical first fix, then fit cabinetry, worktops, tiling and finishes with one team. If the layout changes, we say what that costs honestly, because moving a drain is a different job to replacing doors.",
+      "detail_heading": "Kitchen renovations Cape Town: what is involved",
+      "detail_intro": "From a refresh to moving walls, with services checked before anything is closed up.",
+      "subitems": [
+        {
+          "name": "Layout and planning",
+          "desc": "Measured plan around existing plumbing and electrical, with the changes priced."
+        },
+        {
+          "name": "Cabinetry and worktops",
+          "desc": "Units fitted level and scribed to the wall, worktops templated and joined cleanly."
+        },
+        {
+          "name": "Plumbing and electrical",
+          "desc": "First fix before closing up, with points where the appliances actually go."
+        },
+        {
+          "name": "Tiling and splashbacks",
+          "desc": "Level surfaces and neat cuts around sockets, done after first fix."
+        }
+      ],
+      "cost": {
+        "heading": "What a kitchen renovation costs",
+        "columns": [
+          "Scope",
+          "What it involves"
+        ],
+        "rows": [
+          [
+            "Refresh",
+            "New doors, worktop and splashback on the same layout, existing services kept."
+          ],
+          [
+            "Full renovation",
+            "New cabinetry, worktop, tiling and appliances with services largely in place."
+          ],
+          [
+            "Layout change",
+            "Walls moved, plumbing and electrical relocated, often a new window or opening."
+          ]
+        ],
+        "note": "Each scope is quoted separately so you can see what the layout change actually adds."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Measure and plan",
+            "detail": "Layout drawn around services, with the scope written down."
+          },
+          {
+            "step": "2. Strip out",
+            "detail": "Old units removed, walls and floor checked for damage."
+          },
+          {
+            "step": "3. First fix",
+            "detail": "Plumbing, electrical and waterproofing before closing up."
+          },
+          {
+            "step": "4. Fit and hand over",
+            "detail": "Cabinetry, worktop, tiling, then a snag list worked through with you."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "One team for the room",
+          "detail": "No waiting for a plumber between trades."
+        },
+        {
+          "point": "Services checked first",
+          "detail": "Before the wall is closed, not after."
+        },
+        {
+          "point": "A kitchen during the work",
+          "detail": "We keep a usable sink and power point as long as possible."
+        }
+      ],
+      "teaser": "Cabinetry, worktops, plumbing and tiling by one team, from refresh to layout change.",
+      "cta_subtext": "Send your kitchen measurements and a photo and we will scope the options."
+    },
+    {
+      "key": "bathrooms",
+      "name": "Bathroom Renovations",
+      "leader": {
+        "eyebrow": "Bathroom renovations, Cape Town",
+        "h1": "Bathroom Renovations Cape Town",
+        "cta_line": "A bathroom is the one room where a shortcut behind the tiles costs more than the tiles did."
+      },
+      "intro_heading": "What a bathroom renovation involves",
+      "intro_body": "Bathroom renovations in Cape Town live or die on waterproofing and fall. Water that cannot drain away from the shower finds the wall, the ceiling below and the adjacent room, usually a year after the job looked finished.\n\nWe strip to structure, rebuild the falls, waterproof, flood test, then tile and fit. It is slower than tiling over what is there, and it is the difference between a bathroom that lasts and one that gets redone.",
+      "detail_heading": "Bathroom renovations Cape Town: what is involved",
+      "detail_intro": "Waterproofing, drainage and tiling in the right order.",
+      "subitems": [
+        {
+          "name": "Strip-out and repairs",
+          "desc": "Old tiles and sanitaryware out, with rotten board and damaged screed replaced."
+        },
+        {
+          "name": "Waterproofing and flood test",
+          "desc": "Membrane applied and flood tested before a single tile is fixed."
+        },
+        {
+          "name": "Falls and drainage",
+          "desc": "Falls built to the outlet so water leaves instead of pooling at the door."
+        },
+        {
+          "name": "Tiling, fittings and ventilation",
+          "desc": "Tiling set out properly, sanitaryware fitted, extractor vented outside."
+        }
+      ],
+      "cost": {
+        "heading": "What a bathroom renovation costs",
+        "columns": [
+          "Scope",
+          "What it involves"
+        ],
+        "rows": [
+          [
+            "Refresh",
+            "Retile and new sanitaryware on the same layout, with sound waterproofing."
+          ],
+          [
+            "Full renovation",
+            "Strip to structure, new waterproofing, tiling, plumbing and fittings."
+          ],
+          [
+            "Layout change",
+            "Walls moved, shower enlarged, plumbing relocated, new window or door."
+          ]
+        ],
+        "note": "We price the waterproofing and tiling separately so the hidden part of the job is visible."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Measure and specify",
+            "detail": "Layout, fittings and what the walls actually contain."
+          },
+          {
+            "step": "2. Strip out",
+            "detail": "Removed to structure, with unexpected damage priced before proceeding."
+          },
+          {
+            "step": "3. First fix and falls",
+            "detail": "Plumbing, electrical and screed falls built to the outlet."
+          },
+          {
+            "step": "4. Waterproof, tile, fit",
+            "detail": "Flood test, then tiling and sanitaryware, then a snag walk."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "We flood test before we tile",
+          "detail": "A day of waiting beats a leak into the room below."
+        },
+        {
+          "point": "Falls that drain",
+          "detail": "Water should leave the shower, not sit in it."
+        },
+        {
+          "point": "Ventilation outside",
+          "detail": "Extractors ducted out, not into the roof void."
+        }
+      ],
+      "teaser": "Strip to structure, waterproof, flood test, then tile and fit.",
+      "cta_subtext": "Send your bathroom measurements and a photo and we will scope the work."
+    },
+    {
+      "key": "home-renovations",
+      "name": "Home Renovations",
+      "leader": {
+        "eyebrow": "Home renovations, Cape Town",
+        "h1": "Home Renovations Cape Town",
+        "cta_line": "Renovation contractors are judged on the sequencing. Structure and services first, finishes last, in that order."
+      },
+      "intro_heading": "What a home renovation involves",
+      "intro_body": "Home renovations in Cape Town range from one room to a whole house, and the difference in cost is rarely the finishes. It is whether walls move, whether the electrical and plumbing need replacing, and how much of the house is live while the work happens.\n\nWe survey, check the structure rather than assume it, write a scope with sections priced separately, and phase the work so you can keep living in part of the house. Extensions, open-plan changes and full refurbishments all run on that sequence.",
+      "detail_heading": "Home renovations Cape Town: what is involved",
+      "detail_intro": "Single rooms, whole houses and the structural work in between.",
+      "subitems": [
+        {
+          "name": "Open-plan changes",
+          "desc": "Walls removed or opened up with the structure checked before anything is cut."
+        },
+        {
+          "name": "Kitchens and bathrooms",
+          "desc": "The two rooms that carry most of the plumbing, waterproofing and cost."
+        },
+        {
+          "name": "Home extensions",
+          "desc": "Extra rooms and additions, including the roof tie-in and junction that fails first."
+        },
+        {
+          "name": "Full refurbishment",
+          "desc": "Whole-house work sequenced in phases so part of the house stays usable."
+        }
+      ],
+      "cost": {
+        "heading": "What a home renovation costs",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Whether walls move",
+            "Structural openings need checking, beams and often approval."
+          ],
+          [
+            "Services condition",
+            "Rewiring and replumbing are invisible and expensive, and unavoidable in old houses."
+          ],
+          [
+            "How much is replaced",
+            "Refinishing what exists costs a fraction of replacing it."
+          ]
+        ],
+        "note": "We price in sections so you can drop scope deliberately rather than guess at a total."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Survey",
+            "detail": "Structure, services and condition checked, not assumed."
+          },
+          {
+            "step": "2. Scope and sequence",
+            "detail": "Written sections, priced separately, with a realistic order of work."
+          },
+          {
+            "step": "3. Structure and first fix",
+            "detail": "Openings, plumbing and electrical before surfaces close up."
+          },
+          {
+            "step": "4. Finish and hand over",
+            "detail": "Finishes, snag list, and the paperwork for anything approved."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "One point of contact",
+          "detail": "You deal with one person across all the trades."
+        },
+        {
+          "point": "Sectioned pricing",
+          "detail": "You can see what each part costs and cut deliberately."
+        },
+        {
+          "point": "Phased for a lived-in house",
+          "detail": "Work sequenced so life continues around it."
+        }
+      ],
+      "teaser": "From one room to a whole house, with structure checked before anything opens up.",
+      "cta_subtext": "Tell us which rooms and what you want changed, and we will scope it in sections."
+    },
+    {
+      "key": "waterproofing-durbanville",
+      "name": "Waterproofing Durbanville",
+      "leader": {
+        "eyebrow": "Waterproofing, Durbanville",
+        "h1": "Waterproofing Durbanville",
+        "cta_line": "Durbanville roofs take the north-westerly front first. That is why the leaks start on the western elevation."
+      },
+      "intro_heading": "Waterproofing in Durbanville",
+      "intro_body": "Waterproofing in Durbanville is mostly about wind-driven rain on the western and northern faces, and about walls that stay damp because water sits against them. Older properties in the area often have parapets and box gutters detailed before the materials we use now, and newer estates have flat roofs and balconies with the same junction problems.\n\nWe work across Durbanville from Goodwood, trace the entry point, and specify for the substrate. Roofs, parapets, balconies and damp wall bases are all handled by the same team.",
+      "detail_heading": "Waterproofing Durbanville: roofs and walls",
+      "detail_intro": "The details that take the wind first.",
+      "subitems": [
+        {
+          "name": "Roof leaks",
+          "desc": "Torch-on and liquid systems for flat roofs, with flashings and upstands re-detailed."
+        },
+        {
+          "name": "Parapets and box gutters",
+          "desc": "Cracked parapet walls and silted gutters, rebuilt and lined properly."
+        },
+        {
+          "name": "Balconies and terraces",
+          "desc": "Falls corrected, upstands raised, edge details rebuilt where they fail first."
+        },
+        {
+          "name": "Damp wall bases",
+          "desc": "The outside treated where the damp starts, rather than replastering inside each year."
+        }
+      ],
+      "cost": {
+        "heading": "What waterproofing in Durbanville costs",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Roof access",
+            "Single storey and walkable roofs cost less before work begins."
+          ],
+          [
+            "Number of details",
+            "Parapets, box gutters and penetrations carry the labour."
+          ],
+          [
+            "Substrate condition",
+            "Failed membrane or crumbled screed has to come off first."
+          ]
+        ],
+        "note": "Quoted after a site visit and moisture check, with the system named in writing."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Inspect",
+            "detail": "Roof, parapets, gutters and the ceiling void where we can reach it."
+          },
+          {
+            "step": "2. Trace",
+            "detail": "Moisture readings and a hose test to find the entry point."
+          },
+          {
+            "step": "3. Specify",
+            "detail": "A written system for the substrate, pitch and wind exposure."
+          },
+          {
+            "step": "4. Apply and test",
+            "detail": "Details first, then the field, then a water test."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "We know the wind direction",
+          "detail": "Western elevations and parapets fail first here, so we start there."
+        },
+        {
+          "point": "Based nearby in Goodwood",
+          "detail": "Short travel, easy return visit if something needs checking."
+        },
+        {
+          "point": "Photographed at every layer",
+          "detail": "You see the membrane before it is covered."
+        }
+      ],
+      "teaser": "Roofs, parapets, balconies and damp walls across Durbanville.",
+      "cta_subtext": "Book a site visit in Durbanville and we will trace the leak before quoting."
+    },
+    {
+      "key": "painters-durbanville",
+      "name": "Painters Durbanville",
+      "leader": {
+        "eyebrow": "Painters, Durbanville",
+        "h1": "Painters Durbanville",
+        "cta_line": "Exterior paint in Durbanville takes sun on one face and driving rain on the other. Preparation decides which one wins."
+      },
+      "intro_heading": "Painting in Durbanville",
+      "intro_body": "Painters in Durbanville work on walls that are chalky, cracked or holding damp that has been painted over before. Paint applied to a damp or unprepared wall fails within two winters, usually on the elevation that takes the weather.\n\nWe wash, scrape and repair first, treat damp at its source, then use a coating system matched to the surface. Interior work is done room by room with daily clean-up, so the house stays usable.",
+      "detail_heading": "Painters Durbanville: interior and exterior",
+      "detail_intro": "Interior, exterior and the surfaces that usually get skipped.",
+      "subitems": [
+        {
+          "name": "Interior painting",
+          "desc": "Walls, ceilings and trim, patched and primed, with rooms handed back daily."
+        },
+        {
+          "name": "Exterior walls",
+          "desc": "Chalky plaster and cracks repaired, then a weather-resistant coating system."
+        },
+        {
+          "name": "Roof painting",
+          "desc": "Roofs coated for protection and heat, after leaks are repaired."
+        },
+        {
+          "name": "Damp before paint",
+          "desc": "The cause treated first, because paint over damp fails within a season."
+        }
+      ],
+      "cost": {
+        "heading": "What painting in Durbanville costs",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Preparation",
+            "Chalky, cracked or damp walls take longer than the painting."
+          ],
+          [
+            "Height and access",
+            "Double storeys need scaffolding before a brush is lifted."
+          ],
+          [
+            "Coating system",
+            "Interior washable, exterior acrylic and roof coatings differ in price."
+          ]
+        ],
+        "note": "We quote after seeing the surfaces, not from a photo of the good wall."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Assess",
+            "detail": "Surfaces, damp and previous coatings checked before quoting."
+          },
+          {
+            "step": "2. Prepare",
+            "detail": "Clean, scrape, fill, sand. Most of the work happens here."
+          },
+          {
+            "step": "3. Prime and repair",
+            "detail": "The right primer, with cracks and damp treated first."
+          },
+          {
+            "step": "4. Apply and inspect",
+            "detail": "Two coats, then a walkthrough before we pack up."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "Preparation is the job",
+          "detail": "The difference between five years and two."
+        },
+        {
+          "point": "Damp treated, not hidden",
+          "detail": "We deal with the cause before the colour goes on."
+        },
+        {
+          "point": "Neat in a lived-in house",
+          "detail": "Dust sheets, daily clean-up, rooms back in use."
+        }
+      ],
+      "teaser": "Interior and exterior painting across Durbanville, prepared to last.",
+      "cta_subtext": "Tell us the rooms or walls and we will quote after seeing the surfaces."
+    },
+    {
+      "key": "waterproofing-somerset-west",
+      "name": "Waterproofing Somerset West",
+      "leader": {
+        "eyebrow": "Waterproofing, Somerset West",
+        "h1": "Waterproofing Somerset West",
+        "cta_line": "Older Somerset West homes were built before the membranes we use now. The junctions are where they leak."
+      },
+      "intro_heading": "Waterproofing in Somerset West",
+      "intro_body": "Waterproofing in Somerset West runs into older construction: slate and timber roofs, parapets without upstands, gutters sized for a different rainfall. Add wind off the Helderberg and water gets pushed into places a coating will not reach.\n\nWe inspect the roof, gutters and wall junctions, trace where the water actually enters, and specify a repair that suits the age of the building rather than covering it in a modern product that traps moisture.",
+      "detail_heading": "Waterproofing Somerset West: older roofs",
+      "detail_intro": "Older roofs and walls, repaired on their own terms.",
+      "subitems": [
+        {
+          "name": "Roof waterproofing",
+          "desc": "Torch-on and liquid systems for flat sections, plus tile and slate repairs."
+        },
+        {
+          "name": "Gutters and downpipes",
+          "desc": "Silt cleared, outlets resized and joints sealed where water backs up."
+        },
+        {
+          "name": "Damp in older walls",
+          "desc": "Breathable treatment where a modern seal would trap moisture in the wall."
+        },
+        {
+          "name": "Balconies and parapets",
+          "desc": "Upstands raised and edge details rebuilt where the original has failed."
+        }
+      ],
+      "cost": {
+        "heading": "What waterproofing in Somerset West costs",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Age of the building",
+            "Older roofs need more preparation before a system goes on."
+          ],
+          [
+            "Access",
+            "Steep pitches and double storeys need scaffolding."
+          ],
+          [
+            "Materials matched",
+            "Breathable systems for older walls cost more than a standard coating."
+          ]
+        ],
+        "note": "We quote after inspecting, and we say when a repair is not the right money."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Inspect",
+            "detail": "Roof, gutters, parapets and the inside of the ceiling void."
+          },
+          {
+            "step": "2. Trace",
+            "detail": "Moisture readings and a hose test where the source is unclear."
+          },
+          {
+            "step": "3. Specify for the age",
+            "detail": "A system that suits the building rather than one that traps damp."
+          },
+          {
+            "step": "4. Apply and test",
+            "detail": "Preparation, detailing, application, then a water test."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "Older buildings respected",
+          "detail": "Breathable treatments where sealing would make it worse."
+        },
+        {
+          "point": "We travel from Goodwood",
+          "detail": "Site visits scheduled in one trip, not three."
+        },
+        {
+          "point": "Written specification",
+          "detail": "The system is named before work starts."
+        }
+      ],
+      "teaser": "Roofs, gutters, parapets and older walls across Somerset West.",
+      "cta_subtext": "Book a visit in Somerset West and we will trace the leak before quoting."
+    },
+    {
+      "key": "waterproofing-southern-suburbs",
+      "name": "Waterproofing Southern Suburbs",
+      "leader": {
+        "eyebrow": "Waterproofing, southern suburbs",
+        "h1": "Waterproofing Southern Suburbs",
+        "cta_line": "Southern suburbs rain sits on the mountain side of the house. Cellars, boundary walls and old roofs take it first."
+      },
+      "intro_heading": "Waterproofing in the southern suburbs",
+      "intro_body": "Waterproofing in Cape Town's southern suburbs deals with older housing stock, steep sites and walls that hold water against them through winter. Cellars, under-house storage and boundary walls on a slope are common, and each fails differently.\n\nWe inspect, trace the water to its entry point, and choose between positive-side treatment, drainage and replastering depending on what is actually reachable. Where we cannot get to the wet side, we say so and design for the dry side instead.",
+      "detail_heading": "Waterproofing Southern Suburbs: roofs and cellars",
+      "detail_intro": "The parts of an older southern suburbs house that take water.",
+      "subitems": [
+        {
+          "name": "Roofs and parapets",
+          "desc": "Torch-on and liquid systems, with flashings and upstands re-detailed."
+        },
+        {
+          "name": "Cellars and basements",
+          "desc": "Positive-side treatment where reachable, drainage where it is not."
+        },
+        {
+          "name": "Boundary and retaining walls",
+          "desc": "Weep holes, drainage and coping, so water leaves instead of pushing through."
+        },
+        {
+          "name": "Damp walls and plaster",
+          "desc": "The source treated, then salt-damaged plaster cut back and replastered."
+        }
+      ],
+      "cost": {
+        "heading": "What waterproofing here costs",
+        "columns": [
+          "Factor",
+          "Why it moves the number"
+        ],
+        "rows": [
+          [
+            "Access to the wet side",
+            "Reachable walls cost less than ones behind finishes or soil."
+          ],
+          [
+            "Depth and drainage",
+            "Basements need drainage design before surface treatment."
+          ],
+          [
+            "Wall construction",
+            "Older double-leaf and stone walls need different methods."
+          ]
+        ],
+        "note": "Quoted after inspection. Where the wet side is unreachable we explain what the alternative buys you."
+      },
+      "process": {
+        "heading": "How we work",
+        "steps": [
+          {
+            "step": "1. Inspect",
+            "detail": "Roof, walls, cellar and the ground levels around the building."
+          },
+          {
+            "step": "2. Trace",
+            "detail": "Moisture readings to separate rising, penetrating and condensation."
+          },
+          {
+            "step": "3. Specify",
+            "detail": "Positive side where possible, drainage or dry-side design where not."
+          },
+          {
+            "step": "4. Apply and check",
+            "detail": "Work done, then checked again after the first real rain."
+          }
+        ]
+      },
+      "whyus": [
+        {
+          "point": "We name the damp type",
+          "detail": "Rising, penetrating and condensation need different fixes."
+        },
+        {
+          "point": "Honest about limits",
+          "detail": "If the wet side is unreachable, we say what that means."
+        },
+        {
+          "point": "We come back after rain",
+          "detail": "The only test that counts in the southern suburbs."
+        }
+      ],
+      "teaser": "Roofs, cellars, retaining walls and damp plaster across the southern suburbs.",
+      "cta_subtext": "Book a visit and we will identify which damp it is before quoting."
+    }
+  ]
+}

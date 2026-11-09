@@ -25,11 +25,74 @@ OUT = ROOT / "site-output"
 ORIG = Path(r"C:\Users\DELL\OneDrive\Desktop\_archive\PLINTH")
 
 content = json.loads((SRC / "content.json").read_text(encoding="utf-8"))
+LAYOUT = json.loads((SRC / "seo-layout.json").read_text(encoding="utf-8"))
+SPEC = {s["key"]: s for s in LAYOUT["pages"]}
 
-SERVICES = content["services"]
-AREAS = content["areas"]
+
+def _compact_services():
+    out = []
+    for name in ("content-compact-1.json", "content-compact-2.json"):
+        for svc in json.loads((SRC / name).read_text(encoding="utf-8"))["services"]:
+            spec = SPEC[svc["key"]]
+            svc["slug"] = spec["url"].strip("/")
+            svc["title_tag"] = spec["title"]
+            svc["meta_description"] = spec["meta"]
+            svc["hub"] = spec.get("hub") or "services"
+            out.append(svc)
+    return out
+
+
+SERVICES = _compact_services()
+AREAS = content["areas"]          # legacy area feed, redirects only
 HOME = content["home"]
 SITE = content["site"]
+
+HUBS = {
+    "services": ("Services", "/services"),
+    "service-areas": ("Service Areas", "/service-areas"),
+    "solutions": ("Solutions", "/solutions"),
+}
+
+# photographs were catalogued against the old service slugs
+PHOTO_KEY = {
+    "waterproofing": "waterproofing",
+    "roof-waterproofing": "waterproofing",
+    "roof-repairs": "waterproofing",
+    "leaking-ceiling-repair": "waterproofing",
+    "waterproofing-durbanville": "waterproofing",
+    "waterproofing-somerset-west": "waterproofing",
+    "waterproofing-southern-suburbs": "waterproofing",
+    "painting": "painting",
+    "painters-durbanville": "painting",
+    "plastering": "plastering",
+    "tiling": "plastering",
+    "kitchens": "kitchen-renovations",
+    "bathrooms": "bathroom-renovations",
+    "home-renovations": "home-renovations",
+}
+AREA_KEYS = [s["key"] for s in SPEC.values() if s.get("hub") == "service-areas"]
+
+TAG_OVERRIDE = {
+    "roof-waterproofing": "Weatherproofing",
+    "roof-repairs": "Repairs",
+    "leaking-ceiling-repair": "Water damage",
+    "tiling": "Finishes",
+    "waterproofing-durbanville": "Weatherproofing",
+    "painters-durbanville": "Finishes",
+    "waterproofing-somerset-west": "Weatherproofing",
+    "waterproofing-southern-suburbs": "Weatherproofing",
+}
+
+ICON_OVERRIDE = {
+    "roof-waterproofing": "water",
+    "roof-repairs": "water",
+    "leaking-ceiling-repair": "damp",
+    "tiling": "plaster",
+    "waterproofing-durbanville": "water",
+    "painters-durbanville": "paint",
+    "waterproofing-somerset-west": "water",
+    "waterproofing-southern-suburbs": "water",
+}
 
 ICON_FOR = {
     "Waterproofing": "water",
@@ -52,6 +115,10 @@ TAG_FOR = {
     "Plastering": "Finishes",
     "Home Extensions": "Remodeling",
 }
+
+for _svc in SERVICES:
+    _svc["tag"] = TAG_OVERRIDE.get(_svc["key"]) or TAG_FOR.get(_svc["name"], "Services")
+    _svc["icon"] = ICON_OVERRIDE.get(_svc["key"]) or ICON_FOR.get(_svc["name"], "plaster")
 
 # The Plinth Standard and the enquiry flow are the owner's own published words.
 STANDARD = [
@@ -179,7 +246,7 @@ def business_schema(extra=None):
 
 
 def service_schema(svc):
-    slug = re.sub(r"[^a-z0-9]+", "-", svc["name"].lower()).strip("-")
+    slug = svc.get("slug") or re.sub(r"[^a-z0-9]+", "-", svc["name"].lower()).strip("-")
     return {
         "@context": "https://schema.org",
         "@type": "Service",
@@ -202,10 +269,12 @@ def slugify(name):
 
 def build_home():
     lead = HOME["leader"]
+    picks = ["waterproofing", "roof-repairs", "painting", "kitchens",
+             "bathrooms", "home-renovations", "plastering", "tiling"]
     cards = [
-        card(TAG_FOR[s["name"]], s["name"], s["teaser"], f'/{slugify(s["name"])}',
-             icon=ICON_FOR[s["name"]])
-        for s in SERVICES
+        card(s["tag"], s["name"], s["teaser"], f'/{s["slug"]}', icon=s["icon"])
+        for s in sorted(SERVICES, key=lambda s: picks.index(s["key"]) if s["key"] in picks else 99)
+        if s["key"] in picks
     ]
     # the original grid is 3x3; the ninth cell answers the "which one do I need" question
     cards.append(card("Not sure", "Not sure what it needs?",
@@ -259,9 +328,9 @@ def build_home():
     )
 
     area_cards = [
-        card("Service area", a["name"], a["teaser"], f'/home-renovations-in-{slugify(a["name"])}',
+        card("Service area", a["name"], a["teaser"], f'/{a["slug"]}',
              link_label="See this area", icon=None)
-        for a in AREAS
+        for a in SERVICES if a["hub"] == "service-areas"
     ]
     body += section(
         head("05", "Where We Work", "Areas we cover across Cape Town", HOME["areas_body"])
@@ -286,8 +355,7 @@ def build_home():
 
 def build_services():
     cards = [
-        card(TAG_FOR[s["name"]], s["name"], s["teaser"], f'/{slugify(s["name"])}',
-             icon=ICON_FOR[s["name"]])
+        card(s["tag"], s["name"], s["teaser"], f'/{s["slug"]}', icon=s["icon"])
         for s in SERVICES
     ]
     cards.append(card("Not sure", "Not sure what it needs?",
@@ -296,8 +364,8 @@ def build_services():
                       link_label="Send photos", icon=None))
     body = page_hero(
         "Services", "Renovation and Waterproofing Services in Cape Town",
-        "Eight services, one crew, one written scope. Every job includes a free written estimate "
-        "and a fixed price before work starts.", kicker="No Obligation · Flat-Rate Pricing",
+        "Waterproofing, repairs, painting, plastering, tiling and full renovations under one written "
+        "scope. Every job includes a free written estimate and a fixed price before work starts.", kicker="No Obligation · Flat-Rate Pricing",
     )
     body += section(
         head("01", "What We Do", "Pick the job, or send photos and we will tell you what it needs",
@@ -314,7 +382,8 @@ def build_services():
 
 
 def build_service(svc):
-    slug = slugify(svc["name"])
+    slug = svc["slug"]
+    hub_name, hub_url = HUBS[svc["hub"]]
     lead = svc["leader"]
     sub_cards = [
         card("", it["name"], it["desc"], "/estimate", link_label="Get estimate", icon=None)
@@ -331,12 +400,21 @@ def build_service(svc):
         f'<p class="table-note">{escape(cost["note"])}</p>'
     )
     body = page_hero(
-        svc["name"], lead["h1"], lead["cta_line"], kicker=lead["eyebrow"],
+        [(HUBS[svc["hub"]][0], HUBS[svc["hub"]][1]), (svc["name"], None)],
+        lead["h1"], lead["cta_line"], kicker=lead["eyebrow"], cta=True,
     )
-    svc_photos = [ph for ph in photos.PHOTOS + photos.STOCK if ph["service"] == slug]
+    pkey = PHOTO_KEY.get(svc["key"], "waterproofing")
+    spec = SPEC[svc["key"]]
+    if spec.get("image"):
+        svc_photos = [{"file": spec["image"], "alt": spec.get("image_alt", ""),
+                       "caption": spec.get("image_alt", "")}]
+    else:
+        svc_photos = [ph for ph in photos.PHOTOS + photos.STOCK if ph["service"] == pkey]
     body += section(
         head("01", svc["name"], svc["intro_heading"])
-        + f'<div class="prose reveal"><p>{escape(svc["intro_body"])}</p></div>'
+        + '<div class="prose reveal">'
+        + "".join(f"<p>{escape(x.strip())}</p>" for x in svc["intro_body"].split("\n\n") if x.strip())
+        + "</div>"
         + (gallery(svc_photos, layout="single" if len(svc_photos) == 1 else "pair") if svc_photos else "")
     )
     body += section(
@@ -353,18 +431,60 @@ def build_service(svc):
         + "</div>" + checklist("The Plinth Standard", STANDARD) + "</div>",
         cls="blueprint",
     )
+    others = [a for a in SERVICES if a["hub"] == "service-areas" and a["key"] != svc["key"]]
     area_links = "".join(
-        f'<a class="btn btn-ghost" style="margin:0 8px 12px 0" href="/home-renovations-in-{slugify(a["name"])}">'
-        f'{escape(a["name"])}</a>' for a in AREAS
+        f'<a class="btn btn-ghost" style="margin:0 8px 12px 0" href="/{a["slug"]}">'
+        f'{escape(a["name"])}</a>' for a in others
     )
     body += section(
         head("05", "Where we work", f'{svc["name"]} across Cape Town',
              "We are based in Goodwood and cover Cape Town within about 25km.")
-        + f'<div class="reveal">{area_links}</div>'
+        + f'<div class="reveal">{area_links}'
+        + f'<a class="btn btn-ghost" style="margin:0 8px 12px 0" href="/service-areas">All service areas</a>'
+        + f'<a class="btn btn-ghost" style="margin:0 8px 12px 0" href="/solutions">Not sure which service?</a></div>'
     )
     return page(
         slug, svc["title_tag"], svc["meta_description"], body,
-        schema=service_schema(svc), crumbs=[("Services", "/services"), (svc["name"], f"/{slug}")],
+        schema=service_schema(svc), crumbs=[(hub_name, hub_url), (svc["name"], f"/{slug}")],
+    )
+
+
+# ---------------------------------------------------------------- solutions
+
+def build_solutions():
+    cards = [
+        card("Water damage", "A leaking ceiling",
+             "Water showing on a ceiling inside the house. The entry point is almost always above, "
+             "and usually not directly over the stain.",
+             "/leaking-ceiling-repair", link_label="Ceiling leak repair", icon="damp"),
+        card("Roof", "A leak after rain",
+             "Water appears only when it rains, often on one side of the house or around a chimney.",
+             "/roof-repairs-cape-town", link_label="Roof repairs", icon="water"),
+        card("Damp", "A wall that comes back wet",
+             "Paint or plaster fails in the same place every winter, however often it is redone.",
+             "/waterproofing-cape-town", link_label="Waterproofing", icon="water"),
+    ]
+    body = page_hero(
+        "Solutions", "Start With the Problem, Not the Service",
+        "Most people cannot name the trade they need, and they should not have to. Describe what "
+        "the house is doing and this page points to the right one.", kicker="What is the house doing",
+    )
+    body += section(
+        head("01", "Problems", "Three ways a water problem shows up",
+             "Almost every call we get starts with one of these.") + grid(cards)
+    )
+    body += section(
+        head("02", "Not listed", "If none of these fit",
+             "Send a photo on WhatsApp and a sentence about when it appears. We will tell you which "
+             "service it is, or that it is not ours to do.")
+        + cta_band("Describe the problem", "Photos and a sentence are usually enough to point you the right way."),
+        cls="ghost",
+    )
+    return page(
+        "solutions", "Solutions | Plinth Renovations",
+        "Not sure whether you need waterproofing, a roof repair or a renovation? Start with what the "
+        "house is doing and work back to the trade.",
+        body, crumbs=[("Solutions", "/solutions")],
     )
 
 
@@ -407,9 +527,9 @@ def build_area(area):
 
 def build_areas_index():
     cards = [
-        card("Service area", a["name"], a["teaser"], f'/home-renovations-in-{slugify(a["name"])}',
+        card("Service area", a["name"], a["teaser"], f'/{a["slug"]}',
              link_label="See this area", icon=None)
-        for a in AREAS
+        for a in SERVICES if a["hub"] == "service-areas"
     ]
     nearby = [
         "Goodwood", "Richmond Estate", "Monte Vista", "Edgemead", "Bothasig",
@@ -687,6 +807,38 @@ def copy_assets():
             "/gallery.html          /our-work        301",
             "/projects.html         /our-work        301",
             "/blog.html             /faq             301",
+            "/areas                 /service-areas   301",
+            "/gallery               /our-work        301",
+            "/projects              /our-work        301",
+            "/blog                  /faq             301",
+            "",
+            "# compact keyword renames, 2026-11-09",
+            "/waterproofing              /waterproofing-cape-town           301",
+            "/waterproofing.html         /waterproofing-cape-town           301",
+            "/painting                   /painters-cape-town                301",
+            "/painting.html              /painters-cape-town                301",
+            "/plastering                 /plastering-cape-town              301",
+            "/plastering.html            /plastering-cape-town              301",
+            "/kitchens                   /kitchen-renovations-cape-town     301",
+            "/kitchens.html              /kitchen-renovations-cape-town     301",
+            "/bathrooms                  /bathroom-renovations-cape-town    301",
+            "/bathrooms.html             /bathroom-renovations-cape-town    301",
+            "/home-renovations           /home-renovations-cape-town        301",
+            "/home-renovations.html      /home-renovations-cape-town        301",
+            "",
+            "# no measured demand: folded into a survivor",
+            "/damp-proofing              /waterproofing-cape-town           301",
+            "/damp-proofing.html         /waterproofing-cape-town           301",
+            "/home-extensions            /home-renovations-cape-town        301",
+            "/home-extensions.html       /home-renovations-cape-town        301",
+            "",
+            "# retired area pages",
+            "/home-renovations-in-durbanville        /waterproofing-durbanville        301",
+            "/home-renovations-in-southern-suburbs   /waterproofing-southern-suburbs   301",
+            "/home-renovations-in-bellville          /service-areas                    301",
+            "/home-renovations-in-brackenfell        /service-areas                    301",
+            "/home-renovations-in-parow              /service-areas                    301",
+            "/home-renovations-in-table-view         /service-areas                    301",
             "",
         ]),
         encoding="utf-8",
@@ -751,11 +903,10 @@ def main():
     pages.append(("", build_home(), "1.0"))
     pages.append(("services", build_services(), "0.9"))
     for svc in SERVICES:
-        pages.append((slugify(svc["name"]), build_service(svc), "0.9"))
+        pages.append((svc["slug"], build_service(svc), "0.9"))
+    pages.append(("solutions", build_solutions(), "0.8"))
     pages.append(("our-work", build_work(), "0.7"))
     pages.append(("service-areas", build_areas_index(), "0.7"))
-    for area in AREAS:
-        pages.append((f'home-renovations-in-{slugify(area["name"])}', build_area(area), "0.8"))
     pages.append(("about", build_about(), "0.6"))
     pages.append(("contact", build_contact(), "0.7"))
     pages.append(("estimate", build_estimate(), "0.9"))
@@ -805,8 +956,8 @@ def main():
 
     img_map = {"our-work": [ph["file"] for ph in photos.PHOTOS] + [photos.HERO["file"]]}
     for svc in SERVICES:
-        slug = slugify(svc["name"])
-        pics = [ph["file"] for ph in photos.PHOTOS if ph["service"] == slug]
+        slug = svc["slug"]
+        pics = [ph["file"] for ph in photos.PHOTOS if ph["service"] == PHOTO_KEY.get(svc["key"], "waterproofing")]
         if pics:
             img_map[slug] = pics
     write_sitemap([(s, p) for s, _, p in pages if s not in ("404", "thank-you")], img_map)

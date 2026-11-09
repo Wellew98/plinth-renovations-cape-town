@@ -8,3 +8,35 @@
 /gallery.html          /our-work        301
 /projects.html         /our-work        301
 /blog.html             /faq             301
+/areas                 /service-areas   301
+/gallery               /our-work        301
+/projects              /our-work        301
+/blog                  /faq             301
+
+# compact keyword renames, 2026-11-09
+/waterproofing              /waterproofing-cape-town           301
+/waterproofing.html         /waterproofing-cape-town           301
+/painting                   /painters-cape-town                301
+/painting.html              /painters-cape-town                301
+/plastering                 /plastering-cape-town              301
+/plastering.html            /plastering-cape-town              301
+/kitchens                   /kitchen-renovations-cape-town     301
+/kitchens.html              /kitchen-renovations-cape-town     301
+/bathrooms                  /bathroom-renovations-cape-town    301
+/bathrooms.html             /bathroom-renovations-cape-town    301
+/home-renovations           /home-renovations-cape-town        301
+/home-renovations.html      /home-renovations-cape-town        301
+
+# no measured demand: folded into a survivor
+/damp-proofing              /waterproofing-cape-town           301
+/damp-proofing.html         /waterproofing-cape-town           301
+/home-extensions            /home-renovations-cape-town        301
+/home-extensions.html       /home-renovations-cape-town        301
+
+# retired area pages
+/home-renovations-in-durbanville        /waterproofing-durbanville        301
+/home-renovations-in-southern-suburbs   /waterproofing-southern-suburbs   301
+/home-renovations-in-bellville          /service-areas                    301
+/home-renovations-in-brackenfell        /service-areas                    301
+/home-renovations-in-parow              /service-areas                    301
+/home-renovations-in-table-view         /service-areas                    301
