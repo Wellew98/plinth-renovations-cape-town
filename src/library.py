@@ -1,9 +1,11 @@
 """Register the licensed library and give every service page a gallery."""
 
 LIBRARY = [
-    ("waterproofing-membrane-installation.jpg", "Worker rolling out a waterproofing membrane"),
+    ("waterproofing-membrane-installation.jpg", "Hands fitting a torch-on waterproofing membrane to a roof deck"),
     ("roof-tiles-close-up.jpg", "Clay roof tiles against a clear sky"),
-    ("wet-deck-waterproofing-detail.jpg", "Sealed decking with water beading on the surface"),
+    ("waterproofing-coating-application.jpg", "Worker applying a waterproof coating to a flat roof"),
+    ("roofer-rolling-out-membrane.jpg", "Roofer rolling out a waterproof membrane on a flat roof"),
+    ("rooftop-waterproofing-repair.jpg", "Roofer kneeling on a rooftop during a membrane repair"),
     ("roof-repair-worker-on-roof.jpg", "Roofer working across a flat roof"),
     ("roof-structure-steel-trusses.jpg", "Steel roof structure seen from below"),
     ("roof-edge-gutter-repair.jpg", "Gutter and fascia detail at a roof edge"),

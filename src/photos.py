@@ -171,6 +171,10 @@ PHOTOS = [
 
 
 def by_file(name):
+    from library import LIBRARY
+    for _n, _a in LIBRARY:
+        if _n == name:
+            return {"file": _n, "alt": _a, "caption": _a}
     for p in [HERO] + PHOTOS + STOCK:
         if p["file"] == name:
             return p

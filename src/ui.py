@@ -123,10 +123,11 @@ def gallery(items, eager=0, layout=None):
     figs = []
     for i, p in enumerate(items):
         load = "eager" if i < eager else "lazy"
+        cap = p.get("caption") or ""
+        fig_cap = f"<figcaption>{escape(cap)}</figcaption>" if cap else ""
         figs.append(
             f'<figure><img src="images/{p["file"]}" alt="{escape(p["alt"])}" '
-            f'loading="{load}" decoding="async">'
-            f'<figcaption>{escape(p["caption"])}</figcaption></figure>'
+            f'loading="{load}" decoding="async">{fig_cap}</figure>'
         )
     cls = "gallery-grid" + (f" {layout}" if layout else "")
     out = f'<div class="{cls}">' + "".join(figs) + "</div>"

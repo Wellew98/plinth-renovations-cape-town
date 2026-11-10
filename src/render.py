@@ -421,13 +421,14 @@ def build_service(svc):
         + '<div class="prose reveal">'
         + "".join(f"<p>{escape(x.strip())}</p>" for x in svc["intro_body"].split("\n\n") if x.strip())
         + "</div>"
-        + (gallery(svc_photos, layout="single" if len(svc_photos) == 1 else "pair") if svc_photos else "")
+        + (gallery([{k: v for k, v in ph.items() if k != "caption"} for ph in svc_photos],
+                   layout="single" if len(svc_photos) == 1 else "pair") if svc_photos else "")
     )
     strip = spec.get("gallery") or []
     if strip:
         alts = dict(LIBRARY)
         items = [{"file": n, "alt": alts.get(n, ""), "caption": ""} for n in strip]
-        body += section('<div class="reveal" style="padding-top:8px">' + gallery(items) + "</div>", cls="ghost")
+        body += section('<div class="reveal">' + gallery(items, layout="strip") + "</div>", cls="ghost strip-tight")
     body += section(head("02", "What it covers", svc["detail_heading"], svc["detail_intro"]) + grid(sub_cards),
         cls="ghost")
     body += section(head("03", "Cost", cost["heading"]) + cost_html + cta_band(
@@ -557,13 +558,13 @@ def build_coverage_area(a):
     body += section(
         head("01", "The area", f'{a["area"]}, as we find it', "")
         + f'<div class="reveal prose">{paras}</div>'
-        + f'<div style="margin-top:26px">{gallery([img], layout="single")}</div>'
+        + f'<div style="margin-top:26px">{gallery([{k: v for k, v in img.items() if k != "caption"}], layout="single")}</div>'
     )
     cstrip = spec.get("gallery") or []
     if cstrip:
         calts = dict(LIBRARY)
         citems = [{"file": n, "alt": calts.get(n, ""), "caption": ""} for n in cstrip]
-        body += section('<div class="reveal">' + gallery(citems) + "</div>", cls="ghost")
+        body += section('<div class="reveal">' + gallery(citems, layout="strip") + "</div>", cls="ghost strip-tight")
     body += section(
         head("02", "Services", f"What we do in {a['area']}",
              "Every service below has its own page. The work is the same as anywhere else in "
