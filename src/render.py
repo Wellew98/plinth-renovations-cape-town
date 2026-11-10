@@ -197,7 +197,7 @@ def page(slug, title, description, body, schema=None, crumbs=None):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20261103b">
-<link rel="stylesheet" href="extra.css?v=20261103b">
+<link rel="stylesheet" href="extra.css?v=20261110f">
 <noscript><style>.reveal{{opacity:1;transform:none}}</style></noscript>
 <link rel="icon" href="logo.jpg">
 {bc}
@@ -322,12 +322,12 @@ def build_home():
         photos.by_file("home-extension-under-construction-cape-town.jpg"),
     ]
     body += section(
-        head("04", "Recent Work", "Our own jobs, photographed as we work",
-             "Every photograph in this section is a Plinth job, from the stripped-out room "
-             "through to the finished kitchen.")
+        head("04", "In the field", "What the work actually looks like",
+             "Stripped out, opened up, made good and finished: the stages of a renovation "
+             "that most contractors never photograph.")
         + gallery(home_gallery)
-        + '<div class="center-cta"><a class="btn btn-ghost" href="/our-work">'
-          "See all our work &rarr;</a></div>",
+        + '<div class="center-cta"><a class="chip" href="/our-work">'
+          "See more of the work &rarr;</a></div>",
     )
 
     area_cards = [
@@ -443,15 +443,15 @@ def build_service(svc):
     )
     others = [a for a in SERVICES if a["hub"] == "service-areas" and a["key"] != svc["key"]]
     area_links = "".join(
-        f'<a class="btn btn-ghost" style="margin:0 8px 12px 0" href="/{a["slug"]}">'
-        f'{escape(a["name"])}</a>' for a in others
+        f'<a class="chip" href="/{a["slug"]}">{escape(a["name"])}</a>' for a in others
     )
     body += section(
         head("05", "Where we work", f'{svc["name"]} across Cape Town',
              "We are based in Goodwood and cover Cape Town within about 25km.")
-        + f'<div class="reveal">{area_links}'
-        + f'<a class="btn btn-ghost" style="margin:0 8px 12px 0" href="/service-areas">All service areas</a>'
-        + f'<a class="btn btn-ghost" style="margin:0 8px 12px 0" href="/solutions">Not sure which service?</a></div>'
+        + f'<div class="chips reveal">{area_links}'
+        + '<a class="chip" href="/service-areas">All service areas</a>'
+        + '<a class="chip" href="/solutions">Not sure which service?</a></div>',
+        cls="chips-tight",
     )
     return page(
         slug, svc["title_tag"], svc["meta_description"], body,
@@ -544,7 +544,7 @@ def build_coverage_area(a):
     )
     probs = "".join(f'<li style="margin-bottom:14px">{escape(p)}</li>' for p in a["problems"])
     near = "".join(
-        f'<a class="btn btn-ghost" style="margin:0 8px 12px 0" href="{n[1]}">{escape(n[0])}</a>'
+        f'<a class="chip" href="{n[1]}">{escape(n[0])}</a>'
         for n in a["nearby"]
     )
     body = page_hero(
@@ -578,7 +578,7 @@ def build_coverage_area(a):
     )
     body += section(
         head("04", "Around", "Nearby areas we also cover", "")
-        + f'<div class="reveal" style="margin-bottom:18px">{near}</div>'
+        + f'<div class="chips reveal" style="margin-bottom:18px">{near}</div>'
         + cta_band(f"Get an estimate in {a['area']}",
                    "Free site visit, written scope, fixed price before anything starts."),
         cls="sage",
@@ -683,12 +683,12 @@ def build_about():
 
 def build_work():
     body = page_hero(
-        "Our Work", "Our Work: Renovations in Cape Town",
-        "Kitchens, bathrooms, ceilings and extensions we have built, plus the stages most "
-        "contractors never photograph.", kicker="Our own photographs",
+        "Gallery", "Renovation work in Cape Town",
+        "Kitchens, bathrooms, ceilings and extensions, plus the stages most "
+        "contractors never photograph.", kicker="Strip-out to finish",
     )
     body += section(
-        head("01", "Recent work", "Every photograph in this gallery is a Plinth job",
+        head("01", "Gallery", "The work, stage by stage",
              "Finished rooms and work in progress, in the order a job actually runs: stripped out, "
              "framed, plastered, finished.")
         + gallery(photos.PHOTOS + [photos.HERO], eager=3)

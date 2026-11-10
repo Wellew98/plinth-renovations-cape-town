@@ -39,12 +39,28 @@
 }
 
 @media (max-width:700px){
-  /* at phone width the hero photo sits directly behind dark text, so it gets a
-     cream scrim: the film still reads, the copy stays legible */
+  /* The phone hero was veiled with a cream scrim so the dark copy stayed
+     legible — that is what turned the film milky. Invert it instead: dark
+     scrim, white type, and the footage keeps its colour. */
   .hero::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;
-    background:linear-gradient(180deg,rgba(255,253,247,.55),rgba(255,253,247,.86))}
+    background:linear-gradient(180deg,rgba(10,9,7,.52) 0%,rgba(10,9,7,.70) 55%,rgba(10,9,7,.82) 100%)}
   .hero .wrap{position:relative;z-index:3}
+  .hero h1{color:#fff;text-shadow:0 2px 20px rgba(0,0,0,.55)}
+  .hero p.lead{color:#f1ece4;text-shadow:0 1px 10px rgba(0,0,0,.6)}
+  .hero .kicker{color:#e8c78d;text-shadow:0 1px 8px rgba(0,0,0,.5)}
+  .hero .trust span{background:rgba(10,9,7,.42);border:1px solid rgba(255,255,255,.32);color:#fff}
+  .hero .btn-ghost{color:#fff;border-color:rgba(255,255,255,.85);background:rgba(255,255,255,.08)}
 }
+
+/* Area links: .btn-ghost is white type on transparent, built for the dark
+   bands. On the cream "Where we work" section it rendered white on white —
+   invisible text inside a large empty block. These are light-context chips. */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-block;padding:11px 18px;border:1.5px solid rgba(28,24,17,.24);
+  border-radius:999px;background:#fff;color:#1c1811;font-weight:600;font-size:15px;
+  line-height:1.25;text-decoration:none;transition:border-color .15s ease,color .15s ease}
+.chip:hover{border-color:#b8772a;color:#8a5f1e;text-decoration:none}
+@media (max-width:700px){.chips{gap:8px}.chip{padding:10px 15px;font-size:14px}}
 
 @media (max-width:600px){
   .form-card .two{grid-template-columns:1fr}
@@ -80,3 +96,8 @@
 }
 
 .strip-tight{padding-top:18px;padding-bottom:18px}
+
+/* the area-chip block sat in a full-height section and left a hand-sized
+   white gap above the footer on phones */
+.section.chips-tight{padding-bottom:26px}
+@media (max-width:700px){.section.chips-tight{padding-bottom:18px}}
