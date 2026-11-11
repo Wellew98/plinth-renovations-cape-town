@@ -9,8 +9,8 @@ const SHOTS = path.join(__dirname, '..', '_shots');
 
 const PAGES = [
   ['home', '/'],
-  ['waterproofing', '/waterproofing'],
-  ['damp', '/damp-proofing'],
+  ['waterproofing', '/waterproofing-cape-town'],
+  ['roof-repairs', '/roof-repairs-cape-town'],
   ['durbanville', '/home-renovations-in-durbanville'],
   ['services', '/services'],
   ['estimate', '/estimate'],

@@ -101,3 +101,16 @@
    white gap above the footer on phones */
 .section.chips-tight{padding-bottom:26px}
 @media (max-width:700px){.section.chips-tight{padding-bottom:18px}}
+
+/* five-column footer: brand, repairs and waterproofing, renovations, service
+   areas, resources. The shipped styles.css sets four columns; this file loads
+   after it, so the breakpoints have to be repeated here or phones inherit the
+   desktop grid. */
+.foot-grid{grid-template-columns:1.25fr .95fr .95fr .9fr .8fr;gap:30px}
+@media (max-width:1000px){.foot-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.foot-grid{grid-template-columns:1fr;gap:26px}}
+
+/* the two service headings sit in ~195px columns, so "Repairs and
+   Waterproofing" wraps to two lines while the others do not; reserve the second
+   line on every column so the four link lists start on the same baseline */
+@media (min-width:601px){.foot-grid h4{min-height:2.4em}}

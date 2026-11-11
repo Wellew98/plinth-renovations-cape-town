@@ -222,15 +222,24 @@ def cta_band(title, sub):
 
 
 def footer():
-    services = [
-        ("/waterproofing", "Waterproofing"),
-        ("/damp-proofing", "Damp Proofing"),
-        ("/painting", "Painting"),
-        ("/kitchen-renovations", "Kitchen Renovations"),
-        ("/bathroom-renovations", "Bathroom Renovations"),
-        ("/home-renovations", "Home Renovations"),
-        ("/plastering", "Plastering"),
-        ("/home-extensions", "Home Extensions"),
+    # Every link here must resolve 200 on the canonical host. Slugs changed on
+    # 2026-11-09; the old paths (/waterproofing, /damp-proofing, /painting,
+    # /home-extensions ...) now 301 and must never appear in rendered markup.
+    repairs = [
+        ("/waterproofing-cape-town", "Waterproofing"),
+        ("/roof-waterproofing-cape-town", "Roof Waterproofing"),
+        ("/roof-repairs-cape-town", "Roof Repairs"),
+        ("/leaking-ceiling-repair", "Leaking Ceiling Repair"),
+        ("/plastering-cape-town", "Plastering"),
+        ("/painters-cape-town", "Painting"),
+    ]
+    renovations = [
+        ("/kitchen-renovations-cape-town", "Kitchen Renovations"),
+        ("/bathroom-renovations-cape-town", "Bathroom Renovations"),
+        ("/home-renovations-cape-town", "Home Renovations"),
+        ("/tiling-cape-town", "Tiling"),
+        ("/solutions", "Solutions"),
+        ("/services", "All Services"),
     ]
     areas = [
         ("/home-renovations-in-durbanville", "Durbanville"),
@@ -260,7 +269,8 @@ def footer():
         f'<p><a href="tel:{TEL}">{PHONE}</a><br>'
         '<a href="https://web.facebook.com/people/Plinth-Renovations-Construction/61594305267891/" '
         'target="_blank" rel="noopener">Facebook</a></p></div>'
-        + col("Services", services)
+        + col("Repairs and Waterproofing", repairs)
+        + col("Renovations", renovations)
         + col("Service Areas", areas)
         + col("Resources", resources)
         + "</div>"

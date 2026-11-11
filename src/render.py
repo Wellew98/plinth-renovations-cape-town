@@ -8,6 +8,7 @@ area targeting come from the measured DataForSEO build.
 import json
 import re
 import shutil
+from datetime import datetime, timezone
 from html import escape
 from pathlib import Path
 
@@ -197,7 +198,7 @@ def page(slug, title, description, body, schema=None, crumbs=None):
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css?v=20261103b">
-<link rel="stylesheet" href="extra.css?v=20261110f">
+<link rel="stylesheet" href="extra.css?v=20261111a">
 <noscript><style>.reveal{{opacity:1;transform:none}}</style></noscript>
 <link rel="icon" href="logo.jpg">
 {bc}
@@ -827,8 +828,12 @@ def build_thankyou():
            'we will pick up during working hours.</p>' \
            f'<div class="hero-actions reveal"><a class="btn btn-gold" href="tel:{TEL}">{PHONE}</a>' \
            '<a class="btn btn-ghost" href="/">Back to home</a></div></div></section>'
-    return page("thank-you", "Thank You | Plinth Renovations",
+    html = page("thank-you", "Thank You | Plinth Renovations",
                 "Your project details have been received.", body)
+    # A confirmation page ranks for nothing and would only add a thin duplicate
+    # to the index. Keep it crawlable so the links still count, but out of Google.
+    return html.replace(
+        "</head>", '<meta name="robots" content="noindex, follow">\n</head>')
 
 
 def build_404():
@@ -930,13 +935,19 @@ def write_sitemap(slugs, images=None):
     """Image entries are declared per URL so the photographs are indexed too."""
     images = images or {}
     rows = []
+    # lastmod tells a new site's crawler that the URL changed, which is the one
+    # crawl-priority hint this domain can send while it waits to be indexed.
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
     for slug, prio in slugs:
         loc = f"{DOMAIN}/{slug}" if slug else DOMAIN + "/"
         inner = "".join(
             f"<image:image><image:loc>{DOMAIN}/images/{f}</image:loc></image:image>"
             for f in images.get(slug, [])
         )
-        rows.append(f"  <url><loc>{loc}</loc><priority>{prio}</priority>{inner}</url>")
+        rows.append(
+            f"  <url><loc>{loc}</loc><lastmod>{today}</lastmod>"
+            f"<priority>{prio}</priority>{inner}</url>"
+        )
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"\n'
            '        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n'

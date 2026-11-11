@@ -197,6 +197,41 @@ def main():
     for extra in sorted(built - expected - exempt_urls):
         fails["stray page"].append(f"{extra}: built but not in the layout sheet")
 
+    # ---- internal links must resolve to a real page, and must not take a 301 hop.
+    # The slug rename of 2026-11-09 left eight redirecting services in every footer
+    # on the site; nothing caught it, so the gate now resolves _redirects itself.
+    redirect_srcs = set()
+
+    def raw(path):
+        # Deliberately does NOT strip ".html": /about.html is a redirect source while
+        # /about is the page it lands on, and collapsing them hides the difference.
+        p = path.strip()
+        return p.rstrip("/") or "/"
+
+    red = OUT / "_redirects"
+    if red.exists():
+        for line in red.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line or line.startswith("#"):
+                continue
+            parts = line.split()
+            if len(parts) >= 2:
+                redirect_srcs.add(raw(parts[0]))
+
+    asset_ext = (".xml", ".txt", ".jpg", ".jpeg", ".png", ".webp", ".pdf", ".mp4", ".css", ".js")
+    linked = set()
+    for p in parsed.values():
+        for href in p.links:
+            linked.add(raw(href))
+    for dst in sorted(linked):
+        if dst in ("/", "") or dst.lower().endswith(asset_ext):
+            continue
+        if dst in redirect_srcs:
+            fails["internal link hits a redirect"].append(
+                f"{dst}: 301 per _redirects, link to the final URL instead")
+        elif dst not in built:
+            fails["internal link to missing page"].append(f"{dst}: no built page")
+
     total = sum(len(v) for v in fails.values())
     print(f"seo_check: {len(parsed)}/{len(pages)} pages found, {total} problems\n")
     for kind in sorted(fails, key=lambda k: -len(fails[k])):

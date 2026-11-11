@@ -7,4 +7,5 @@ cd "$(dirname "$0")"
 node build.js      # merges content-part*.json into content.json and generates pages
 python images.py   # writes src/_images from the owner's photographs
 python render.py   # clears site-output and rebuilds all pages in the original design
+python seo_check.py  # gate: fails the build on any SEO rule the layout sheet states
 echo "--- build complete ---"
