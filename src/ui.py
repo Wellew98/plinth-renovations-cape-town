@@ -15,6 +15,7 @@ STREET = "64 Oxford Street, Richmond Estate"
 CITY = "Goodwood, Cape Town, 7460"
 HOURS_TOP = "Mon to Fri 7AM to 6PM | Sat 8AM to 2PM"
 DOMAIN = "https://plinthrenovations.co.za"
+EMAIL = "info@plinthrenovations.co.za"
 
 # stroke icons, 24x24, matching the weight used in the original cards
 ICONS = {
@@ -267,6 +268,7 @@ def footer():
         "Built on vision, crafted with precision.<br>"
         f"{STREET},<br>{CITY}</p>"
         f'<p><a href="tel:{TEL}">{PHONE}</a><br>'
+        f'<a href="mailto:{EMAIL}">{EMAIL}</a><br>'
         '<a href="https://web.facebook.com/people/Plinth-Renovations-Construction/61594305267891/" '
         'target="_blank" rel="noopener">Facebook</a></p></div>'
         + col("Repairs and Waterproofing", repairs)

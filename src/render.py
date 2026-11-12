@@ -16,7 +16,7 @@ import photos
 from library import LIBRARY
 import ui
 from ui import (
-    BUSINESS, CITY, DOMAIN, PHONE, STREET, TEL,
+    BUSINESS, CITY, DOMAIN, EMAIL, PHONE, STREET, TEL,
     card, checklist, cta_band, faq, floaters, footer, gallery, grid, head, header,
     hero, page_hero, section, steps, ticks, topbar,
 )
@@ -226,6 +226,7 @@ def business_schema(extra=None):
         "name": BUSINESS,
         "url": DOMAIN + "/",
         "telephone": TEL,
+        "email": EMAIL,
         "image": DOMAIN + "/images/" + photos.HERO["file"],
         "address": {
             "@type": "PostalAddress",
@@ -706,12 +707,13 @@ def build_work():
 def build_contact():
     body = page_hero(
         "Contact", "Talk to Plinth About Your Project",
-        f"Call or WhatsApp {PHONE}. We answer during working hours and reply to messages within "
+        f"Call or WhatsApp {PHONE}, or email {EMAIL}. We answer during working hours and reply to messages within "
         "one business day.", kicker="Free written estimates",
     )
     details = (
         '<div class="why"><div class="reveal">'
         f"<p><strong>Phone and WhatsApp</strong><br><a href=\"tel:{TEL}\">{PHONE}</a></p>"
+        f"<p><strong>Email</strong><br><a href=\"mailto:{EMAIL}\">{EMAIL}</a></p>"
         f"<p><strong>Address</strong><br>{STREET},<br>{CITY}</p>"
         "<p><strong>Hours</strong><br>Monday to Friday, 7am to 6pm<br>Saturday, 8am to 2pm</p>"
         "<p><strong>Service area</strong><br>Cape Town within about 25km of Goodwood. "
@@ -728,13 +730,13 @@ def build_contact():
     body += section(head("01", "Contact", "How to reach us") + details, cls="ghost")
     return page(
         "contact", "Contact Plinth Renovations | Cape Town",
-        f"Call Plinth Renovations on {PHONE} or send project details for a free written estimate. "
+        f"Call Plinth Renovations on {PHONE} or email {EMAIL} for a free written estimate. "
         "Based in Goodwood, working across Cape Town.", body,
         schema=business_schema(), crumbs=[("Contact", "/contact")],
     )
 
 
-FORM_FIELDS = """
+FORM_FIELDS = f"""
 <div class="form-card reveal">
   <form id="estimate-form" action="https://wa.me/27661505770" method="POST">
     <div class="two">
@@ -753,7 +755,7 @@ FORM_FIELDS = """
     <div><label for="details">Tell us about the job</label>
       <textarea id="details" name="details" rows="5" placeholder="What needs doing, how big it is, and when you would like it done."></textarea></div>
     <button class="btn btn-gold" type="submit" style="width:100%">Send on WhatsApp</button>
-    <p class="table-note wa-note">This opens WhatsApp with your details written out. Nothing is sent until you press send there. Rather talk? Call 066 150 5770.</p>
+    <p class="table-note wa-note">This opens WhatsApp with your details written out. Nothing is sent until you press send there. Rather talk? Call 066 150 5770 or email <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
   </form>
 </div>
 <script src="form-whatsapp.js?v=1" defer></script>
